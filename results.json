@@ -1,0 +1,41 @@
+{
+  "generated": "2026-06-14 19:30",
+  "results": {
+    "MEX-RSA": {
+      "home": 2,
+      "away": 0
+    },
+    "KOR-CZE": {
+      "home": 2,
+      "away": 1
+    },
+    "CAN-BIH": {
+      "home": 1,
+      "away": 1
+    },
+    "USA-PAR": {
+      "home": 4,
+      "away": 1
+    },
+    "QAT-SUI": {
+      "home": 1,
+      "away": 1
+    },
+    "BRA-MAR": {
+      "home": 1,
+      "away": 1
+    },
+    "HAI-SCO": {
+      "home": 0,
+      "away": 1
+    },
+    "AUS-TUR": {
+      "home": 2,
+      "away": 0
+    },
+    "GER-CUW": {
+      "home": 7,
+      "away": 1
+    }
+  }
+}

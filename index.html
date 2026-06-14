@@ -455,30 +455,41 @@ function App() {
     return () => clearInterval(t);
   }, [matchData]);
 
-  /* Resultados em tempo real (openfootball) */
+  /* Resultados e classificações via results.json / standings.json (gerados pelo scraper) */
+  const [standingsData, setStandingsData] = useState(null);
+
   useEffect(() => {
     const load = async () => {
       try {
-        const r = await fetch('https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json', { cache: 'no-cache' });
-        if (!r.ok) return;
-        const data = await r.json();
-        setMatchData(prev => {
-          const next = [...prev]; let changed = false;
-          (data.matches || []).forEach(am => {
-            if (!am.score) return;
-            const hc = API_NAME[am.team1], ac = API_NAME[am.team2];
-            if (!hc || !ac) return;
-            const idx = next.findIndex(m => m.hc === hc && m.ac === ac);
-            if (idx < 0) return;
-            next[idx] = { ...next[idx], hs: am.score.ft[0], as: am.score.ft[1] };
-            changed = true;
+        const [rRes, rStd] = await Promise.all([
+          fetch('./results.json?_=' + Date.now()),
+          fetch('./standings.json?_=' + Date.now()),
+        ]);
+        if (rRes.ok) {
+          const data = await rRes.json();
+          const results = data.results || {};
+          setMatchData(prev => {
+            const next = [...prev]; let changed = false;
+            Object.entries(results).forEach(([key, score]) => {
+              const [hc, ac] = key.split('-');
+              const idx = next.findIndex(m => m.hc === hc && m.ac === ac);
+              if (idx < 0) return;
+              if (next[idx].hs !== score.home || next[idx].as !== score.away) {
+                next[idx] = { ...next[idx], hs: score.home, as: score.away };
+                changed = true;
+              }
+            });
+            return changed ? next : prev;
           });
-          return changed ? next : prev;
-        });
+        }
+        if (rStd.ok) {
+          const data = await rStd.json();
+          setStandingsData(data.standings || null);
+        }
       } catch (_) {}
     };
     load();
-    const t = setInterval(load, 300000);
+    const t = setInterval(load, 120000); // actualiza de 2 em 2 minutos
     return () => clearInterval(t);
   }, []);
 
@@ -1155,7 +1166,16 @@ function App() {
         const TeamPanel = ({ tc }) => {
           const grp      = GROUP[tc];
           const tName    = TEAM_NAMES[tc] || tc;
-          const standings = grp ? computeStandings(grp, matchData) : [];
+          // Usa standings.json se disponível, senão calcula localmente
+          const standings = grp
+            ? (standingsData && standingsData[grp]
+                ? standingsData[grp].map(t => ({
+                    tc: t.tla, name: TEAM_NAMES[t.tla] || t.nome,
+                    p: t.pj, w: t.v, d: t.e, l: t.d,
+                    gf: t.gf, ga: t.gc, gd: t.dg, pts: t.pts,
+                  }))
+                : computeStandings(grp, matchData))
+            : [];
           const allTM    = matchData
             .filter(mm => mm.hc === tc || mm.ac === tc)
             .sort((a,b) => parseInt(a.d)-parseInt(b.d));

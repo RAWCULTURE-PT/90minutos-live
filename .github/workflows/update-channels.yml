@@ -1,16 +1,15 @@
-name: Actualizar Canais TV
+name: Actualizar Canais TV + Resultados
 
 on:
   schedule:
-    - cron: '0 7 * * *'    # 08:00 Lisboa (UTC+1, horário de verão)
-    - cron: '0 13 * * *'   # 14:00 Lisboa
-  workflow_dispatch:        # permite correr manualmente no GitHub
+    - cron: '0 */2 * * *'   # de 2 em 2 horas (UTC), durante o Mundial
+  workflow_dispatch:          # permite correr manualmente no GitHub
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # necessário para fazer push ao repo
+      contents: write
 
     steps:
       - name: Checkout
@@ -22,16 +21,18 @@ jobs:
           python-version: '3.12'
 
       - name: Correr scraper
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: python scraper/update_channels.py
 
-      - name: Commit e push se channels.json mudou
+      - name: Commit e push se algo mudou
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add channels.json
+          git add channels.json results.json standings.json
           if git diff --staged --quiet; then
-            echo "channels.json sem alterações — nada a fazer."
+            echo "Sem alterações — nada a fazer."
           else
-            git commit -m "🤖 canais TV actualizados $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "🤖 dados actualizados $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push
           fi

@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
-Scraper diario Sport TV -> channels.json
-Corre via GitHub Actions duas vezes por dia (08h e 14h hora de Lisboa).
+Scraper Sport TV -> channels.json  +  football-data.org -> results.json / standings.json
+Corre via GitHub Actions de 2 em 2 horas durante o Mundial 2026.
 """
 import json
+import os
 import sys
 import urllib.request
 import urllib.parse
 from datetime import date, timedelta, datetime
+
+FOOTBALL_DATA_KEY = os.environ.get("FOOTBALL_DATA_API_KEY", "")
+FOOTBALL_DATA_URL = "https://api.football-data.org/v4"
 
 CHANNEL_ID_MAP = {
     "727":  "Sport TV 1",
@@ -30,29 +34,22 @@ ISO_TO_CODE = {
     "ARG": "ARG", "AUT": "AUT", "JOR": "JOR", "COD": "COD",
     "UZB": "UZB", "COL": "COL", "ENG": "ENG", "GHA": "GHA",
     "PAN": "PAN",
-    # ISO -> codigo FIFA/app
     "ZAF": "RSA", "CHE": "SUI", "PRY": "PAR", "HTI": "HAI",
     "DEU": "GER", "NLD": "NED", "SAU": "KSA", "URY": "URU",
     "DZA": "ALG", "PRT": "POR", "HRV": "CRO",
-    # Abreviaturas portuguesas usadas pela Sport TV em isoCountryCode
     "EUA": "USA", "ING": "ENG", "ALE": "GER", "ESC": "SCO",
 }
 
 WC_TEAMS = set(ISO_TO_CODE.values())
 
-# Stage ID da fase de grupos do Mundial 2026 na API Sport TV.
-# Quando as eliminatorias comecar, aparece um novo ID — o script alerta.
 WC_STAGE_IDS = {
-    "mg:stage:55z571cno4oj",   # fase de grupos
-    "mg:stage:boic86sby4nb",   # eliminatórias (placeholder/TBD)
-    "mg:stage:jqjmib2me4y0",   # eliminatórias (quartos/meias/final)
-    "mg:stage:ak3kmjuam700",   # eliminatórias (match host USA/CAN)
-    "mg:stage:j47c80l4ni32",   # eliminatórias (terceiro lugar / outro sub-quadro)
+    "mg:stage:55z571cno4oj",
+    "mg:stage:boic86sby4nb",
+    "mg:stage:jqjmib2me4y0",
+    "mg:stage:ak3kmjuam700",
+    "mg:stage:j47c80l4ni32",
 }
 
-# Canais corretos para jogos em destaque (fonte: Record.pt / guia TV).
-# A API Sport TV devolve 5422 (Sport TV 5) para quase tudo, mas estes jogos
-# passam em Sport TV 1 (e alguns em canais generalistas).
 CHANNEL_OVERRIDE = {
     "GER-CUW": ["Sport TV 1"],
     "FRA-SEN": ["RTP 1", "Sport TV 1"],
@@ -74,7 +71,6 @@ CHANNEL_OVERRIDE = {
     "SCO-BRA": ["Sport TV 1"],
 }
 
-# Canais generalistas para jogos de Portugal (fallback se não estiver em CHANNEL_OVERRIDE).
 FREE_TO_AIR = {
     "POR-COD": ["SIC"],
     "POR-UZB": ["TVI"],
@@ -91,7 +87,7 @@ def get_channel_name(channel_id):
     name = CHANNEL_ID_MAP.get(str(channel_id))
     if name:
         return name
-    sys.stderr.write(f"  [!] ID de canal desconhecido: {channel_id}\n")
+    sys.stderr.write("  [!] ID de canal desconhecido: " + str(channel_id) + "\n")
     return "Sport TV"
 
 
@@ -103,14 +99,71 @@ def fetch_day(d):
         with urllib.request.urlopen(req, timeout=15) as resp:
             return json.loads(resp.read())
     except Exception as e:
-        sys.stderr.write(f"  [!] Erro ao buscar {d}: {e}\n")
+        sys.stderr.write("  [!] Erro ao buscar " + str(d) + ": " + str(e) + "\n")
         return []
+
+
+def fetch_results_and_standings():
+    if not FOOTBALL_DATA_KEY:
+        sys.stderr.write("  [!] FOOTBALL_DATA_API_KEY nao definida\n")
+        return {}, {}
+
+    headers = {"X-Auth-Token": FOOTBALL_DATA_KEY, "User-Agent": "Mozilla/5.0"}
+    results = {}
+    standings = {}
+
+    # Resultados
+    try:
+        req = urllib.request.Request(FOOTBALL_DATA_URL + "/competitions/WC/matches", headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read())
+        for m in data.get("matches", []):
+            if m["status"] == "FINISHED":
+                home = m["homeTeam"]["tla"]
+                away = m["awayTeam"]["tla"]
+                results[home + "-" + away] = {
+                    "home": m["score"]["fullTime"]["home"],
+                    "away": m["score"]["fullTime"]["away"],
+                }
+        sys.stderr.write("  -> " + str(len(results)) + " resultados finais\n")
+    except Exception as e:
+        sys.stderr.write("  [!] Erro resultados: " + str(e) + "\n")
+
+    # Classificacoes
+    try:
+        req = urllib.request.Request(FOOTBALL_DATA_URL + "/competitions/WC/standings", headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read())
+        for g in data.get("standings", []):
+            letter = g["group"].replace("Group ", "")
+            standings[letter] = [
+                {
+                    "pos": t["position"],
+                    "tla": t["team"]["tla"],
+                    "nome": t["team"]["shortName"],
+                    "pj":  t["playedGames"],
+                    "v":   t["won"],
+                    "e":   t["draw"],
+                    "d":   t["lost"],
+                    "gf":  t["goalsFor"],
+                    "gc":  t["goalsAgainst"],
+                    "dg":  t["goalDifference"],
+                    "pts": t["points"],
+                }
+                for t in g["table"]
+            ]
+        sys.stderr.write("  -> " + str(len(standings)) + " grupos na classificacao\n")
+    except Exception as e:
+        sys.stderr.write("  [!] Erro classificacoes: " + str(e) + "\n")
+
+    return results, standings
 
 
 def main():
     channels = {}
     today = date.today()
-    sys.stderr.write(f"Sport TV scraper — {today} (+{DAYS_AHEAD} dias)\n\n")
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+    sys.stderr.write("Sport TV scraper -- " + str(today) + " (+" + str(DAYS_AHEAD) + " dias)\n\n")
 
     for i in range(DAYS_AHEAD):
         d = today + timedelta(days=i)
@@ -131,30 +184,34 @@ def main():
             if not is_wc_stage and not is_wc_teams:
                 continue
             if not lc or not vc or lc == vc:
-                continue  # equipas TBD ou jogo inválido
+                continue
             if is_wc_teams and not is_wc_stage:
-                sys.stderr.write(f"  [?] Novo stage_id {stage_id!r} em {lc}-{vc} — adicionar a WC_STAGE_IDS\n")
+                sys.stderr.write("  [?] Novo stage_id " + repr(stage_id) + " em " + lc + "-" + vc + "\n")
 
             ch  = get_channel_name(channel_id)
-            key = f"{lc}-{vc}"
+            key = lc + "-" + vc
             if key in CHANNEL_OVERRIDE:
                 channels[key] = CHANNEL_OVERRIDE[key]
             else:
-                fta = FREE_TO_AIR.get(key) or FREE_TO_AIR.get(f"{vc}-{lc}") or []
+                fta = FREE_TO_AIR.get(key) or FREE_TO_AIR.get(vc + "-" + lc) or []
                 channels[key] = fta + [ch]
             day_matches += 1
-            sys.stderr.write(f"  {d} {key}: {channels[key]}  raw={local_iso}-{visitor_iso} ch={channel_id!r}\n")
 
         if day_matches:
-            sys.stderr.write(f"  -> {day_matches} jogo(s) em {d}\n\n")
+            sys.stderr.write("  -> " + str(day_matches) + " jogo(s) em " + str(d) + "\n\n")
 
     channels["_"] = ["Sport TV 5"]
-    output = {"generated": datetime.now().strftime("%Y-%m-%d %H:%M"), "channels": channels}
-
     with open("channels.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
+        json.dump({"generated": now_str, "channels": channels}, f, indent=2, ensure_ascii=False)
+    sys.stderr.write("\nDone. " + str(len(channels)) + " entradas em channels.json\n")
 
-    sys.stderr.write(f"\nDone. {len(channels)} entradas em channels.json\n")
+    sys.stderr.write("\nfootball-data.org:\n")
+    results, standings = fetch_results_and_standings()
+    with open("results.json", "w", encoding="utf-8") as f:
+        json.dump({"generated": now_str, "results": results}, f, indent=2, ensure_ascii=False)
+    with open("standings.json", "w", encoding="utf-8") as f:
+        json.dump({"generated": now_str, "standings": standings}, f, indent=2, ensure_ascii=False)
+    sys.stderr.write("Done.\n")
 
 
 if __name__ == "__main__":
