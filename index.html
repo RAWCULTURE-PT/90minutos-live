@@ -117,7 +117,14 @@ const CH_MAP = {
   'COL-POR': ['RTP 1', 'Sport TV 5'],
   '_':       ['Sport TV 5'],
 };
+let _channelsData = null; // preenchido ao carregar channels.json
 function getChannels(hc, ac) {
+  if (_channelsData) {
+    const k = hc+'-'+ac, k2 = ac+'-'+hc;
+    if (_channelsData[k])   return _channelsData[k];
+    if (_channelsData[k2])  return _channelsData[k2];
+    if (_channelsData['_']) return _channelsData['_'];
+  }
   return CH_MAP[hc+'-'+ac] || CH_MAP[ac+'-'+hc] || CH_MAP['_'];
 }
 
@@ -345,6 +352,15 @@ function App() {
   const [activePeriod,  setActivePeriod]  = useState(null);
   const [teamView,      setTeamView]      = useState(null);
   const [shareMsg,      setShareMsg]      = useState('');
+  const [, setChTick] = useState(0); // força re-render quando channels.json carrega
+
+  /* Canais TV actualizados automaticamente pelo scraper diário */
+  useEffect(() => {
+    fetch('./channels.json?_=' + Date.now())
+      .then(r => r.json())
+      .then(data => { _channelsData = data.channels || null; setChTick(n => n + 1); })
+      .catch(() => { /* sem channels.json: usa CH_MAP hardcoded */ });
+  }, []);
 
   /* Relógio */
   useEffect(() => {
