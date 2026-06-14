@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-14 19:34",
+  "generated": "2026-06-14 20:55",
   "standings": {
     "A": [
       {
@@ -276,30 +276,30 @@
         "pos": 1,
         "tla": "JPN",
         "nome": "Japan",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       },
       {
         "pos": 1,
         "tla": "NED",
         "nome": "Netherlands",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       },
       {
-        "pos": 1,
+        "pos": 3,
         "tla": "SWE",
         "nome": "Sweden",
         "pj": 0,
@@ -312,7 +312,7 @@
         "pts": 0
       },
       {
-        "pos": 1,
+        "pos": 3,
         "tla": "TUN",
         "nome": "Tunisia",
         "pj": 0,
