@@ -123,39 +123,4 @@ def main():
             channel_id  = str(event.get("tvChannelId") or "")
 
             lc = ISO_TO_CODE.get(local_iso,   local_iso)
-            vc = ISO_TO_CODE.get(visitor_iso, visitor_iso)
-
-            is_wc_stage = stage_id in WC_STAGE_IDS
-            is_wc_teams = lc in WC_TEAMS and vc in WC_TEAMS and lc != vc
-
-            if not is_wc_stage and not is_wc_teams:
-                continue
-            if not lc or not vc or lc == vc:
-                continue  # equipas TBD ou jogo inválido
-            if is_wc_teams and not is_wc_stage:
-                sys.stderr.write(f"  [?] Novo stage_id {stage_id!r} em {lc}-{vc} — adicionar a WC_STAGE_IDS\n")
-
-            ch  = get_channel_name(channel_id)
-            key = f"{lc}-{vc}"
-            if key in CHANNEL_OVERRIDE:
-                channels[key] = CHANNEL_OVERRIDE[key]
-            else:
-                fta = FREE_TO_AIR.get(key) or FREE_TO_AIR.get(f"{vc}-{lc}") or []
-                channels[key] = fta + [ch]
-            day_matches += 1
-            sys.stderr.write(f"  {d} {key}: {channels[key]}  raw={local_iso}-{visitor_iso} ch={channel_id!r}\n")
-
-        if day_matches:
-            sys.stderr.write(f"  -> {day_matches} jogo(s) em {d}\n\n")
-
-    channels["_"] = ["Sport TV 5"]
-    output = {"generated": datetime.now().strftime("%Y-%m-%d %H:%M"), "channels": channels}
-
-    with open("channels.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-
-    sys.stderr.write(f"\nDone. {len(channels)} entradas em channels.json\n")
-
-
-if __name__ == "__main__":
-    main()
+            vc = ISO_TO_CODE.get(visitor_iso, visit
