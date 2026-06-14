@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90minutos.live — Em que canal passa o jogo hoje?</title>
+  <meta name="description" content="Guia de canais de futebol em Portugal. Descobre onde passam os jogos do Mundial 2026 e da Liga Portugal, em tempo real.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      safelist: [
+        'bg-blue-100','text-blue-800','border-blue-200',
+        'bg-green-100','text-green-800','border-green-200',
+        'bg-orange-100','text-orange-800','border-orange-200',
+        'bg-purple-100','text-purple-800','border-purple-200',
+        'bg-gray-100','text-gray-700','border-gray-200',
+        'bg-red-50','bg-green-50',
+        'bg-amber-50','text-amber-700','border-amber-200',
+        'bg-amber-100','text-amber-800','border-amber-200'
+      ]
+    }
+  </script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #f0f2f6; }
+    .font-bc { font-family: 'Barlow Condensed', sans-serif; }
+    @keyframes fade-up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .anim { animation: fade-up .2s ease both; }
+    @keyframes blink { 0%,100%{ opacity:1 } 50%{ opacity:.2 } }
+    .blink { animation: blink 1.4s ease-in-out infinite; }
+    @keyframes modal-in { from{ opacity:0; transform:translate(-50%,-50%) scale(.95); } to{ opacity:1; transform:translate(-50%,-50%) scale(1); } }
+    .modal-anim { animation: modal-in .2s ease both; }
+    .scrollbar-none { scrollbar-width: none; }
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+    select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo } = React;
+
+/* ─────────────────────────────────────────────
+   ICONS
+───────────────────────────────────────────── */
+const Ico = {
+  Search: ({size=15}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  ),
+  X: ({size=15}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  ),
+  ChevronDown: ({size=12}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  ),
+  Filter: ({size=13}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+    </svg>
+  ),
+  Star: ({size=13, filled=false}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+  ),
+  Calendar: ({size=13}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+  ),
+  Sort: ({size=13}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="9" y2="18"/>
+    </svg>
+  ),
+};
+
+/* ─────────────────────────────────────────────
+   CANAL → BADGE
+───────────────────────────────────────────── */
+function ChannelBadge({ channel }) {
+  const isSTV = channel.includes('Sport TV');
+  const isRTP = channel.startsWith('RTP');
+  const isSIC = channel === 'SIC';
+  const isTVI = channel === 'TVI';
+  /* paleta suave: azul · verde · âmbar · lavanda */
+  const style = isSTV ? {background:'#CDEBF1', color:'#1E6070', border:'1px solid #A8D8E4'}
+              : isRTP ? {background:'#DEF1D0', color:'#2A5E38', border:'1px solid #BEE0AC'}
+              : isSIC ? {background:'#F5E8D4', color:'#7A4A20', border:'1px solid #E8D0AC'}
+              : isTVI ? {background:'#EAE2F0', color:'#5A3878', border:'1px solid #D4C8E8'}
+              :          {background:'#EBEBEA', color:'#5D5D5A', border:'1px solid #D5D4D2'};
+  return (
+    <span style={style} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap">
+      {channel}
+    </span>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   CHANNEL MAP
+───────────────────────────────────────────── */
+const CH_MAP = {
+  'POR-COD': ['SIC', 'Sport TV 5'],
+  'POR-UZB': ['TVI', 'Sport TV 5'],
+  'COL-POR': ['RTP 1', 'Sport TV 5'],
+  '_':       ['Sport TV 5'],
+};
+function getChannels(hc, ac) {
+  return CH_MAP[hc+'-'+ac] || CH_MAP[ac+'-'+hc] || CH_MAP['_'];
+}
+
+/* ─────────────────────────────────────────────
+   GRUPOS DO MUNDIAL 2026
+───────────────────────────────────────────── */
+const GROUP = {
+  MEX:'A', RSA:'A', KOR:'A', CZE:'A',
+  CAN:'B', BIH:'B', QAT:'B', SUI:'B',
+  USA:'C', PAR:'C', AUS:'C', TUR:'C',
+  BRA:'D', MAR:'D', HAI:'D', SCO:'D',
+  GER:'E', CUW:'E', CIV:'E', ECU:'E',
+  NED:'F', JPN:'F', SWE:'F', TUN:'F',
+  ESP:'G', CPV:'G', KSA:'G', URU:'G',
+  BEL:'H', EGY:'H', IRN:'H', NZL:'H',
+  FRA:'I', SEN:'I', IRQ:'I', NOR:'I',
+  ARG:'J', ALG:'J', AUT:'J', JOR:'J',
+  POR:'K', COD:'K', UZB:'K', COL:'K',
+  ENG:'L', CRO:'L', GHA:'L', PAN:'L',
+};
+function getCompLabel(m) {
+  const [comp, r] = m.g.split(' · ');
+  const grp = GROUP[m.hc] || GROUP[m.ac];
+  const round = grp ? `Fase de Grupos - ${grp}` : (r || '');
+  return { comp, round };
+}
+
+/* ─────────────────────────────────────────────
+   MATCH DATA
+───────────────────────────────────────────── */
+const M = [
+  {d:'11',t:'19:00',h:'México',            hc:'MEX',a:'África do Sul',       ac:'RSA',hs:2,as:0, g:'Mundial 2026'},
+  {d:'11',t:'21:00',h:'Coreia do Sul',     hc:'KOR',a:'Chéquia',             ac:'CZE',hs:2,as:1, g:'Mundial 2026'},
+  {d:'12',t:'18:00',h:'Canadá',            hc:'CAN',a:'Bósnia-Herzegovina',  ac:'BIH',hs:1,as:1, g:'Mundial 2026'},
+  {d:'12',t:'22:00',h:'EUA',               hc:'USA',a:'Paraguai',             ac:'PAR',hs:4,as:1, g:'Mundial 2026'},
+  {d:'13',t:'20:00',h:'Qatar',             hc:'QAT',a:'Suíça',               ac:'SUI',hs:1,as:1, g:'Mundial 2026'},
+  {d:'13',t:'23:00',h:'Brasil',            hc:'BRA',a:'Marrocos',             ac:'MAR',hs:1,as:1, g:'Mundial 2026'},
+  {d:'14',t:'02:00',h:'Haiti',             hc:'HAI',a:'Escócia',              ac:'SCO',hs:0,as:1, g:'Mundial 2026', late:true},
+  {d:'14',t:'05:00',h:'Austrália',         hc:'AUS',a:'Turquia',              ac:'TUR',           g:'Mundial 2026', late:true},
+  {d:'14',t:'18:00',h:'Alemanha',          hc:'GER',a:'Curaçau',              ac:'CUW',           g:'Mundial 2026'},
+  {d:'14',t:'21:00',h:'Países Baixos',     hc:'NED',a:'Japão',                ac:'JPN',           g:'Mundial 2026'},
+  {d:'15',t:'00:00',h:'Costa do Marfim',   hc:'CIV',a:'Equador',              ac:'ECU',           g:'Mundial 2026', late:true},
+  {d:'15',t:'03:00',h:'Suécia',            hc:'SWE',a:'Tunísia',              ac:'TUN',           g:'Mundial 2026', late:true},
+  {d:'15',t:'17:00',h:'Espanha',           hc:'ESP',a:'Cabo Verde',            ac:'CPV',           g:'Mundial 2026'},
+  {d:'15',t:'20:00',h:'Bélgica',           hc:'BEL',a:'Egito',                ac:'EGY',           g:'Mundial 2026'},
+  {d:'15',t:'23:00',h:'Arábia Saudita',    hc:'KSA',a:'Uruguai',              ac:'URU',           g:'Mundial 2026'},
+  {d:'16',t:'02:00',h:'Irão',              hc:'IRN',a:'Nova Zelândia',         ac:'NZL',           g:'Mundial 2026', late:true},
+  {d:'16',t:'20:00',h:'França',            hc:'FRA',a:'Senegal',               ac:'SEN',           g:'Mundial 2026'},
+  {d:'16',t:'23:00',h:'Iraque',            hc:'IRQ',a:'Noruega',               ac:'NOR',           g:'Mundial 2026'},
+  {d:'17',t:'02:00',h:'Argentina',         hc:'ARG',a:'Argélia',               ac:'ALG',           g:'Mundial 2026', late:true},
+  {d:'17',t:'05:00',h:'Áustria',           hc:'AUT',a:'Jordânia',              ac:'JOR',           g:'Mundial 2026', late:true},
+  {d:'17',t:'18:00',h:'Portugal',          hc:'POR',a:'RD Congo',              ac:'COD',           g:'Mundial 2026'},
+  {d:'17',t:'21:00',h:'Inglaterra',        hc:'ENG',a:'Croácia',               ac:'CRO',           g:'Mundial 2026'},
+  {d:'18',t:'00:00',h:'Gana',              hc:'GHA',a:'Panamá',                ac:'PAN',           g:'Mundial 2026', late:true},
+  {d:'18',t:'03:00',h:'Uzbequistão',       hc:'UZB',a:'Colômbia',              ac:'COL',           g:'Mundial 2026', late:true},
+  {d:'18',t:'18:00',h:'Chéquia',           hc:'CZE',a:'África do Sul',         ac:'RSA',           g:'Mundial 2026'},
+  {d:'18',t:'20:00',h:'Suíça',             hc:'SUI',a:'Bósnia-Herzegovina',    ac:'BIH',           g:'Mundial 2026'},
+  {d:'18',t:'23:00',h:'Canadá',            hc:'CAN',a:'Qatar',                 ac:'QAT',           g:'Mundial 2026'},
+  {d:'19',t:'02:00',h:'México',            hc:'MEX',a:'Coreia do Sul',          ac:'KOR',           g:'Mundial 2026', late:true},
+  {d:'19',t:'20:00',h:'EUA',               hc:'USA',a:'Austrália',              ac:'AUS',           g:'Mundial 2026'},
+  {d:'19',t:'23:00',h:'Escócia',           hc:'SCO',a:'Marrocos',               ac:'MAR',           g:'Mundial 2026'},
+  {d:'20',t:'02:00',h:'Brasil',            hc:'BRA',a:'Haiti',                  ac:'HAI',           g:'Mundial 2026', late:true},
+  {d:'20',t:'05:00',h:'Turquia',           hc:'TUR',a:'Paraguai',               ac:'PAR',           g:'Mundial 2026', late:true},
+  {d:'20',t:'18:00',h:'Países Baixos',     hc:'NED',a:'Suécia',                 ac:'SWE',           g:'Mundial 2026'},
+  {d:'20',t:'21:00',h:'Alemanha',          hc:'GER',a:'Costa do Marfim',        ac:'CIV',           g:'Mundial 2026'},
+  {d:'21',t:'02:00',h:'Equador',           hc:'ECU',a:'Curaçau',               ac:'CUW',           g:'Mundial 2026', late:true},
+  {d:'21',t:'05:00',h:'Japão',             hc:'JPN',a:'Tunísia',               ac:'TUN',           g:'Mundial 2026', late:true},
+  {d:'21',t:'17:00',h:'Espanha',           hc:'ESP',a:'Arábia Saudita',         ac:'KSA',           g:'Mundial 2026'},
+  {d:'21',t:'20:00',h:'Bélgica',           hc:'BEL',a:'Irão',                  ac:'IRN',           g:'Mundial 2026'},
+  {d:'21',t:'23:00',h:'Uruguai',           hc:'URU',a:'Cabo Verde',             ac:'CPV',           g:'Mundial 2026'},
+  {d:'22',t:'02:00',h:'Nova Zelândia',     hc:'NZL',a:'Egito',                 ac:'EGY',           g:'Mundial 2026', late:true},
+  {d:'22',t:'18:00',h:'Argentina',         hc:'ARG',a:'Áustria',               ac:'AUT',           g:'Mundial 2026'},
+  {d:'22',t:'22:00',h:'França',            hc:'FRA',a:'Iraque',                 ac:'IRQ',           g:'Mundial 2026'},
+  {d:'23',t:'01:00',h:'Noruega',           hc:'NOR',a:'Senegal',                ac:'SEN',           g:'Mundial 2026', late:true},
+  {d:'23',t:'04:00',h:'Jordânia',          hc:'JOR',a:'Argélia',                ac:'ALG',           g:'Mundial 2026', late:true},
+  {d:'23',t:'18:00',h:'Portugal',          hc:'POR',a:'Uzbequistão',            ac:'UZB',           g:'Mundial 2026'},
+  {d:'23',t:'21:00',h:'Inglaterra',        hc:'ENG',a:'Gana',                   ac:'GHA',           g:'Mundial 2026'},
+  {d:'24',t:'00:00',h:'Panamá',            hc:'PAN',a:'Croácia',                ac:'CRO',           g:'Mundial 2026', late:true},
+  {d:'24',t:'03:00',h:'Colômbia',          hc:'COL',a:'RD Congo',               ac:'COD',           g:'Mundial 2026', late:true},
+  {d:'24',t:'20:00',h:'Suíça',             hc:'SUI',a:'Canadá',                 ac:'CAN',           g:'Mundial 2026'},
+  {d:'24',t:'20:00',h:'Bósnia-Herzegovina',hc:'BIH',a:'Qatar',                  ac:'QAT',           g:'Mundial 2026'},
+  {d:'24',t:'23:00',h:'Escócia',           hc:'SCO',a:'Brasil',                 ac:'BRA',           g:'Mundial 2026'},
+  {d:'24',t:'23:00',h:'Marrocos',          hc:'MAR',a:'Haiti',                  ac:'HAI',           g:'Mundial 2026'},
+  {d:'25',t:'02:00',h:'Chéquia',           hc:'CZE',a:'México',                 ac:'MEX',           g:'Mundial 2026', late:true},
+  {d:'25',t:'02:00',h:'África do Sul',     hc:'RSA',a:'Coreia do Sul',           ac:'KOR',           g:'Mundial 2026', late:true},
+  {d:'25',t:'21:00',h:'Equador',           hc:'ECU',a:'Alemanha',               ac:'GER',           g:'Mundial 2026'},
+  {d:'25',t:'21:00',h:'Curaçau',           hc:'CUW',a:'Costa do Marfim',        ac:'CIV',           g:'Mundial 2026'},
+  {d:'26',t:'00:00',h:'Japão',             hc:'JPN',a:'Suécia',                 ac:'SWE',           g:'Mundial 2026', late:true},
+  {d:'26',t:'00:00',h:'Tunísia',           hc:'TUN',a:'Países Baixos',           ac:'NED',           g:'Mundial 2026', late:true},
+  {d:'26',t:'20:00',h:'França',            hc:'FRA',a:'Noruega',                ac:'NOR',           g:'Mundial 2026'},
+  {d:'26',t:'20:00',h:'Senegal',           hc:'SEN',a:'Iraque',                  ac:'IRQ',           g:'Mundial 2026'},
+  {d:'27',t:'00:00',h:'Espanha',           hc:'ESP',a:'Uruguai',                ac:'URU',           g:'Mundial 2026', late:true},
+  {d:'27',t:'00:00',h:'Arábia Saudita',    hc:'KSA',a:'Cabo Verde',             ac:'CPV',           g:'Mundial 2026', late:true},
+  {d:'27',t:'22:00',h:'Argentina',         hc:'ARG',a:'Jordânia',               ac:'JOR',           g:'Mundial 2026'},
+  {d:'27',t:'22:00',h:'Argélia',           hc:'ALG',a:'Áustria',                ac:'AUT',           g:'Mundial 2026'},
+  {d:'28',t:'00:30',h:'Croácia',           hc:'CRO',a:'Gana',                   ac:'GHA',           g:'Mundial 2026', late:true},
+  {d:'28',t:'00:30',h:'Panamá',            hc:'PAN',a:'Inglaterra',              ac:'ENG',           g:'Mundial 2026', late:true},
+  {d:'28',t:'00:30',h:'Colômbia',          hc:'COL',a:'Portugal',               ac:'POR',           g:'Mundial 2026', late:true},
+  {d:'28',t:'00:30',h:'RD Congo',          hc:'COD',a:'Uzbequistão',            ac:'UZB',           g:'Mundial 2026', late:true},
+  {d:'29',t:'00:00',h:'Bélgica',           hc:'BEL',a:'Nova Zelândia',          ac:'NZL',           g:'Mundial 2026', late:true},
+  {d:'29',t:'00:00',h:'Egito',             hc:'EGY',a:'Irão',                   ac:'IRN',           g:'Mundial 2026', late:true},
+  {d:'29',t:'20:00',h:'EUA',               hc:'USA',a:'Turquia',                 ac:'TUR',           g:'Mundial 2026'},
+  {d:'29',t:'20:00',h:'Paraguai',          hc:'PAR',a:'Austrália',               ac:'AUS',           g:'Mundial 2026'},
+  {d:'30',t:'00:00',h:'Canadá',            hc:'CAN',a:'Suíça',                  ac:'SUI',           g:'Mundial 2026', late:true},
+  {d:'30',t:'00:00',h:'Qatar',             hc:'QAT',a:'Bósnia-Herzegovina',     ac:'BIH',           g:'Mundial 2026', late:true},
+];
+
+const API_NAME = {
+  'Mexico':'MEX','South Africa':'RSA','South Korea':'KOR','Czech Republic':'CZE',
+  'Canada':'CAN','Bosnia & Herzegovina':'BIH','Qatar':'QAT','Switzerland':'SUI',
+  'Brazil':'BRA','Morocco':'MAR','Haiti':'HAI','Scotland':'SCO','USA':'USA',
+  'Paraguay':'PAR','Australia':'AUS','Turkey':'TUR','Germany':'GER','Curaçao':'CUW',
+  'Netherlands':'NED','Japan':'JPN','Ivory Coast':'CIV','Ecuador':'ECU','Sweden':'SWE',
+  'Tunisia':'TUN','Spain':'ESP','Cape Verde':'CPV','Belgium':'BEL','Egypt':'EGY',
+  'Saudi Arabia':'KSA','Uruguay':'URU','Iran':'IRN','New Zealand':'NZL','France':'FRA',
+  'Senegal':'SEN','Iraq':'IRQ','Norway':'NOR','Argentina':'ARG','Algeria':'ALG',
+  'Austria':'AUT','Jordan':'JOR','Portugal':'POR','England':'ENG','Croatia':'CRO',
+  'Ghana':'GHA','Panama':'PAN','Uzbekistan':'UZB','Colombia':'COL','DR Congo':'COD',
+};
+
+/* ─────────────────────────────────────────────
+   HELPERS
+───────────────────────────────────────────── */
+const isPT = m => m.hc === 'POR' || m.ac === 'POR';
+const PT_DATES  = [...new Set(M.filter(isPT).map(x => x.d))];
+const ALL_DATES = [...new Set(M.map(x => x.d))].sort((a,b) => parseInt(a)-parseInt(b));
+
+const _now0    = new Date();
+const _isJun26 = _now0.getFullYear() === 2026 && _now0.getMonth() === 5;
+const TODAY    = _isJun26 ? String(_now0.getDate()) : '14';
+
+// Datas visíveis no Mundial: a partir de hoje, máximo 7 dias
+const _todayInt    = parseInt(TODAY);
+const VISIBLE_DATES = ALL_DATES.filter(d => {
+  const nd = parseInt(d);
+  return nd >= _todayInt && nd <= _todayInt + 7;
+});
+
+function getStatus(m) {
+  const now = new Date();
+  const md  = parseInt(m.d);
+  const td  = _isJun26 ? now.getDate() : 14;
+  if (md < td) return 'done';
+  if (md > td) return 'next';
+  const [mh, mm] = m.t.split(':').map(Number);
+  const start = mh * 60 + mm;
+  const cur   = now.getHours() * 60 + now.getMinutes();
+  if (cur < start)       return 'today';
+  if (cur < start + 115) return 'live';
+  return 'done';
+}
+
+const _DIAS = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+
+function dayLabel(d) {
+  const nd = parseInt(d), td = _todayInt;
+  if (nd === td)     return 'Hoje';
+  if (nd === td + 1) return 'Amanhã';
+  const diaSemana = _DIAS[new Date(2026, 5, nd).getDay()];
+  return `${diaSemana} · ${nd} Jun`;
+}
+
+function p2(n) { return String(n).padStart(2,'0'); }
+
+/* ─────────────────────────────────────────────
+   HELPERS DE SEMANA / MÊS
+───────────────────────────────────────────── */
+function getWeekMon(dayNum) {
+  const d = new Date(2026, 5, dayNum);
+  const dow = d.getDay(); // 0=Dom
+  return dayNum - (dow === 0 ? 6 : dow - 1);
+}
+function weekLabel(ws) {
+  const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago'];
+  const s = new Date(2026, 5, ws);
+  const e = new Date(2026, 5, ws + 6);
+  const sm = meses[s.getMonth()], em = meses[e.getMonth()];
+  return sm === em
+    ? `${s.getDate()}-${e.getDate()} ${sm}`
+    : `${s.getDate()} ${sm} - ${e.getDate()} ${em}`;
+}
+const WEEK_STARTS = [...new Set(ALL_DATES.map(d => getWeekMon(parseInt(d))))].sort((a,b) => a-b);
+const ALL_MONTHS  = [{ key:'junho', label:'JUNHO, 2026' }];
+
+/* ─────────────────────────────────────────────
+   NOMES DAS EQUIPAS + CLASSIFICAÇÃO
+───────────────────────────────────────────── */
+const TEAM_NAMES = {};
+M.forEach(m => { TEAM_NAMES[m.hc] = m.h; TEAM_NAMES[m.ac] = m.a; });
+
+function computeStandings(grp, matchData) {
+  const tcs  = Object.entries(GROUP).filter(([,g]) => g === grp).map(([tc]) => tc);
+  const done = matchData.filter(m => GROUP[m.hc] === grp && m.hs !== undefined);
+  return tcs.map(tc => {
+    const played = done.filter(m => m.hc === tc || m.ac === tc);
+    let pts=0,w=0,d=0,l=0,gf=0,ga=0;
+    played.forEach(m => {
+      const isH = m.hc === tc;
+      const tg = isH ? m.hs : m.as, og = isH ? m.as : m.hs;
+      gf+=tg; ga+=og;
+      if(tg>og){pts+=3;w++;}else if(tg===og){pts+=1;d++;}else l++;
+    });
+    return {tc, name:TEAM_NAMES[tc]||tc, p:played.length, w, d, l, gf, ga, gd:gf-ga, pts};
+  }).sort((a,b) => b.pts-a.pts || b.gd-a.gd || b.gf-a.gf);
+}
+
+/* ─────────────────────────────────────────────
+   APP
+───────────────────────────────────────────── */
+function App() {
+  const [tab,           setTab]           = useState('mundial');
+  const [activeDay,     setActiveDay]     = useState(TODAY);
+  const [teamSearch,    setTeamSearch]    = useState('');
+  const [compFilter,    setCompFilter]    = useState('ALL');
+  const [channelFilter, setChannelFilter] = useState('ALL');
+  const [sortBy,        setSortBy]        = useState('timeAsc');
+  const [showLiveOnly,  setShowLiveOnly]  = useState(false);
+  const [selected,      setSelected]      = useState(null);
+  const [favorites,     setFavorites]     = useState([]);
+  const [countdown,     setCountdown]     = useState(null);
+  const [clock,         setClock]         = useState('');
+  const [clockDate,     setClockDate]     = useState('');
+  const [matchData,     setMatchData]     = useState(M);
+  const [viewMode,      setViewMode]      = useState('day');
+  const [activePeriod,  setActivePeriod]  = useState(null);
+  const [teamView,      setTeamView]      = useState(null);
+  const [shareMsg,      setShareMsg]      = useState('');
+
+  /* Relógio */
+  useEffect(() => {
+    const tick = () => {
+      const n = new Date();
+      setClock(p2(n.getHours()) + ':' + p2(n.getMinutes()));
+      const dias  = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+      const meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+      setClockDate(`${dias[n.getDay()]}, ${n.getDate()} ${meses[n.getMonth()]}`);
+    };
+    tick();
+    const t = setInterval(tick, 15000);
+    return () => clearInterval(t);
+  }, []);
+
+  /* Contagem decrescente para o próximo jogo de Portugal */
+  useEffect(() => {
+    const next = matchData
+      .filter(m => isPT(m) && getStatus(m) !== 'done')
+      .sort((a,b) => parseInt(a.d) - parseInt(b.d))[0];
+    if (!next) { setCountdown(null); return; }
+    const [mh, mm] = next.t.split(':').map(Number);
+    const target   = new Date(2026, 5, parseInt(next.d), mh, mm, 0);
+    const update   = () => {
+      const diff = target - new Date();
+      if (diff <= 0) { setCountdown({ match: next, live: true }); return; }
+      setCountdown({
+        match: next,
+        days : Math.floor(diff / 86400000),
+        hours: Math.floor((diff % 86400000) / 3600000),
+        mins : Math.floor((diff % 3600000)  / 60000),
+        secs : Math.floor((diff % 60000)    / 1000),
+      });
+    };
+    update();
+    const t = setInterval(update, 1000);
+    return () => clearInterval(t);
+  }, [matchData]);
+
+  /* Resultados em tempo real (openfootball) */
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const r = await fetch('https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json', { cache: 'no-cache' });
+        if (!r.ok) return;
+        const data = await r.json();
+        setMatchData(prev => {
+          const next = [...prev]; let changed = false;
+          (data.matches || []).forEach(am => {
+            if (!am.score) return;
+            const hc = API_NAME[am.team1], ac = API_NAME[am.team2];
+            if (!hc || !ac) return;
+            const idx = next.findIndex(m => m.hc === hc && m.ac === ac);
+            if (idx < 0) return;
+            next[idx] = { ...next[idx], hs: am.score.ft[0], as: am.score.ft[1] };
+            changed = true;
+          });
+          return changed ? next : prev;
+        });
+      } catch (_) {}
+    };
+    load();
+    const t = setInterval(load, 300000);
+    return () => clearInterval(t);
+  }, []);
+
+  const [teamFilter,   setTeamFilter]   = useState('ALL');
+  const [showFilters,  setShowFilters]  = useState(false);
+
+  const toggleFav = team => setFavorites(p => p.includes(team) ? p.filter(t => t !== team) : [...p, team]);
+  const isFav     = m   => favorites.includes(m.h) || favorites.includes(m.a);
+
+  const isSearching   = teamSearch.trim().length > 0;
+  const isTeamFiltered = teamFilter !== 'ALL';
+  const showingAll    = isSearching || isTeamFiltered;
+  const multiDate     = tab === 'portugal' || showingAll || viewMode !== 'day';
+  const dates         = tab === 'portugal' ? PT_DATES : VISIBLE_DATES;
+
+  const allTeams = useMemo(() =>
+    [...new Set([...matchData.map(m => m.h), ...matchData.map(m => m.a)])].sort((a,b) => a.localeCompare(b, 'pt')),
+  [matchData]);
+
+  const matches = useMemo(() => {
+    if (tab === 'liga') return [];
+    let pool = tab === 'portugal' ? matchData.filter(isPT) : matchData;
+    if (isTeamFiltered) {
+      pool = matchData.filter(m => m.h === teamFilter || m.a === teamFilter);
+    } else if (isSearching) {
+      pool = matchData.filter(m =>
+        (m.h + ' ' + m.a).toLowerCase().includes(teamSearch.trim().toLowerCase())
+      );
+    } else if (tab !== 'portugal') {
+      if (viewMode === 'week') {
+        pool = pool.filter(m => getWeekMon(parseInt(m.d)) === activePeriod);
+      } else if (viewMode === 'month') {
+        // por agora todos os dados são de junho — sem filtro adicional
+      } else {
+        pool = pool.filter(m => m.d === activeDay);
+      }
+    }
+    return [...pool]
+      .filter(m => compFilter    === 'ALL' || m.g === compFilter)
+      .filter(m => channelFilter === 'ALL' || getChannels(m.hc, m.ac).some(c => c.toLowerCase().includes(channelFilter.toLowerCase())))
+      .filter(m => !showLiveOnly || getStatus(m) === 'live')
+      .sort((a, b) => {
+        // Ordena por data quando mostramos múltiplas datas
+        if (isTeamFiltered || tab === 'portugal' || viewMode !== 'day') {
+          const dd = parseInt(a.d) - parseInt(b.d);
+          if (dd !== 0) return dd;
+        }
+        if (isFav(a) && !isFav(b)) return -1;
+        if (!isFav(a) && isFav(b)) return  1;
+        return sortBy === 'timeDesc' ? b.t.localeCompare(a.t) : a.t.localeCompare(b.t);
+      });
+  }, [tab, activeDay, teamSearch, teamFilter, compFilter, channelFilter, sortBy, showLiveOnly, matchData, favorites, viewMode, activePeriod]);
+
+  const hasLive  = matches.some(m => getStatus(m) === 'live');
+  const allComps = useMemo(() => [...new Set(matchData.map(m => m.g))].sort(), [matchData]);
+
+  const panelTitle = isTeamFiltered
+    ? `TODOS OS JOGOS: ${teamFilter.toUpperCase()}`
+    : isSearching    ? `RESULTADOS PARA "${teamSearch.toUpperCase()}"`
+    : tab === 'portugal' ? 'JOGOS DE PORTUGAL'
+    : tab === 'liga'     ? 'LIGA PORTUGAL 2026/27'
+    : viewMode === 'week'  ? `SEMANA ${activePeriod != null ? weekLabel(activePeriod) : ''}`
+    : viewMode === 'month' ? (ALL_MONTHS.find(m => m.key === activePeriod) || ALL_MONTHS[0]).label
+    : activeDay === TODAY ? 'AGENDA DE HOJE'
+    : `AGENDA - ${parseInt(activeDay)}, Jun`;
+
+  const switchViewMode = mode => {
+    setViewMode(mode);
+    if (mode === 'week') {
+      const ws = getWeekMon(_todayInt);
+      setActivePeriod(WEEK_STARTS.includes(ws) ? ws : WEEK_STARTS[0]);
+    } else if (mode === 'month') {
+      setActivePeriod('junho');
+    } else {
+      setActivePeriod(null);
+    }
+  };
+
+  const switchTab = k => {
+    setTab(k); setTeamSearch(''); setTeamFilter('ALL'); setCompFilter('ALL'); setChannelFilter('ALL');
+    setViewMode('day'); setActivePeriod(null);
+    if (k === 'portugal') setActiveDay(PT_DATES.find(d => parseInt(d) >= _todayInt) || PT_DATES[0] || TODAY);
+    else setActiveDay(TODAY);
+  };
+
+  /* ── RENDER ── */
+  return (
+    <div className="min-h-screen bg-[#F8F6F5] text-[#0f172a] px-4 py-8">
+      <div className="max-w-[960px] mx-auto">
+
+        {/* HEADER */}
+        <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+          <div>
+            <div className="font-bc text-[30px] font-[900] leading-none tracking-tight">
+              90<span style={{color:'#00904A'}}>minutos</span>.live
+            </div>
+            <div className="text-[11px] font-semibold text-[#9AAABB] uppercase tracking-widest mt-1">
+              Guia de Canais · Mundial 2026
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-[22px] font-[800] leading-none tabular-nums">{clock}</div>
+            <div className="text-[11px] text-[#9AAABB] mt-1">{clockDate}</div>
+          </div>
+        </header>
+
+        {/* CONTAGEM PORTUGAL */}
+        {countdown && !countdown.live && (
+          <div className="mb-4 bg-white border border-[#e2e8f0] rounded-2xl shadow-sm p-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span style={{width:7,height:7,borderRadius:'50%',background:'#00904A',display:'inline-block'}} className="blink"></span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest" style={{color:'#00904A'}}>Próximo jogo de Portugal</span>
+                </div>
+                <div className="text-[16px] sm:text-[20px] font-[900] text-[#0f172a] leading-tight truncate">
+                  {countdown.match.h} - {countdown.match.a}
+                </div>
+                <div className="text-[11px] text-[#64748b] mt-1 truncate">
+                  {(() => { const {comp,round} = getCompLabel(countdown.match); return <span>{comp}{round && ` · ${round}`}</span>; })()}
+                  {' · '}{parseInt(countdown.match.d)} Jun · {countdown.match.t}
+                  {' · '}<span className="font-semibold">{getChannels(countdown.match.hc, countdown.match.ac).join(' + ')}</span>
+                </div>
+              </div>
+              <div className="shrink-0 text-right">
+                <div className="text-[9px] font-bold uppercase tracking-wider text-[#94a3b8] mb-0.5">Começa em</div>
+                <div className="text-[18px] sm:text-[22px] font-[900] leading-none tabular-nums" style={{color:'#2B7A8E'}}>
+                  {countdown.days > 0 && <span>{countdown.days}d </span>}
+                  {p2(countdown.hours)}:{p2(countdown.mins)}:{p2(countdown.secs)}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* PESQUISA */}
+        <div className="relative mb-4">
+          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none">
+            <Ico.Search />
+          </span>
+          <input
+            type="text"
+            value={teamSearch}
+            onChange={e => { setTeamSearch(e.target.value); setTeamFilter('ALL'); }}
+            placeholder="Procurar equipa..."
+            className="w-full pl-9 pr-9 py-2.5 text-[13px] bg-white border border-[#e2e8f0] rounded-full shadow-sm outline-none transition-colors"
+            style={{color:'#0f172a'}}
+          />
+          {teamSearch && (
+            <button onClick={() => setTeamSearch('')}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#94a3b8] hover:text-[#0f172a] transition-colors">
+              <Ico.X />
+            </button>
+          )}
+        </div>
+
+        {/* TABS */}
+        <div className="flex bg-white border border-[#e2e8f0] rounded-xl p-1 gap-1 mb-4 shadow-sm">
+          {[
+            { key:'mundial',  label:'Mundial 2026',    count: matchData.length },
+            { key:'portugal', label:'Portugal',         count: matchData.filter(isPT).length },
+            { key:'liga',     label:'Liga Portugal',    soon: true },
+          ].map(({ key, label, count, soon }) => (
+            <button key={key} onClick={() => switchTab(key)}
+              className="flex-1 py-2 px-2 rounded-lg text-[12px] font-semibold flex items-center justify-center gap-1.5 transition-all"
+              style={tab === key
+                ? {background:'#5B975B', color:'white'}
+                : {color:'#64748b'}}
+            >
+              <span className="hidden sm:inline">{label}</span>
+              <span className="sm:hidden">{key==='mundial'?'Mundial':key==='portugal'?'Portugal':'Liga'}</span>
+              {soon
+                ? <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200 font-bold">breve</span>
+                : <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold"
+                    style={tab===key?{background:'rgba(255,255,255,.2)',color:'white'}:{background:'#f1f5f9',color:'#64748b'}}>
+                    {count}
+                  </span>
+              }
+            </button>
+          ))}
+        </div>
+
+        {/* TOOLBAR NAVEGAÇÃO + FILTROS */}
+        {tab !== 'liga' && (
+          <div className="mb-4">
+            {/* Linha principal: pills em cima (mobile), lado a lado (desktop) */}
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center min-w-0">
+
+              {/* Pills (scrolláveis) */}
+              {tab !== 'portugal' && !showingAll ? (
+                <div className="flex gap-1.5 overflow-x-auto scrollbar-none sm:flex-1 min-w-0 pb-0.5">
+                  {viewMode === 'day' && dates.map(d => {
+                    const hasPT = matchData.some(m => m.d === d && isPT(m));
+                    const on    = d === activeDay;
+                    return (
+                      <button key={d} onClick={() => setActiveDay(d)}
+                        className="relative shrink-0 text-[12px] font-medium px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap"
+                        style={on
+                          ? {background:'#5B975B', color:'white', borderColor:'#5B975B'}
+                          : {background:'white', color:'#536078', borderColor:'#e2e8f0'}}>
+                        {dayLabel(d)}
+                        {hasPT && !on && (
+                          <span style={{position:'absolute',top:3,right:4,width:6,height:6,borderRadius:'50%',background:'#00904A',display:'inline-block'}}></span>
+                        )}
+                      </button>
+                    );
+                  })}
+                  {viewMode === 'week' && WEEK_STARTS.map(ws => {
+                    const on = activePeriod === ws;
+                    return (
+                      <button key={ws} onClick={() => setActivePeriod(ws)}
+                        className="shrink-0 text-[12px] font-medium px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap"
+                        style={on
+                          ? {background:'#5B975B', color:'white', borderColor:'#5B975B'}
+                          : {background:'white', color:'#536078', borderColor:'#e2e8f0'}}>
+                        {weekLabel(ws)}
+                      </button>
+                    );
+                  })}
+                  {viewMode === 'month' && ALL_MONTHS.map(({key, label}) => {
+                    const on = activePeriod === key;
+                    return (
+                      <button key={key} onClick={() => setActivePeriod(key)}
+                        className="shrink-0 text-[12px] font-medium px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap"
+                        style={on
+                          ? {background:'#5B975B', color:'white', borderColor:'#5B975B'}
+                          : {background:'white', color:'#536078', borderColor:'#e2e8f0'}}>
+                        {label}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="hidden sm:block sm:flex-1"/>
+              )}
+
+              {/* Controlos fixos à direita */}
+              <div className="flex items-center gap-1.5 shrink-0">
+
+                {/* Segmented Dia / Semana / Mês */}
+                {tab !== 'portugal' && !showingAll && (
+                  <div className="flex bg-white border border-[#e2e8f0] rounded-lg p-0.5 shadow-sm gap-0.5">
+                    {[{k:'day',l:'Dia'},{k:'week',l:'Sem'},{k:'month',l:'Mês'}].map(({k,l}) => (
+                      <button key={k} onClick={() => switchViewMode(k)}
+                        className="text-[11px] font-bold px-2.5 py-1 rounded-md transition-all"
+                        style={viewMode === k
+                          ? {background:'#5B975B', color:'white'}
+                          : {color:'#94a3b8', background:'transparent'}}>
+                        {l}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* EM DIRETO */}
+                <button
+                  onClick={() => setShowLiveOnly(v => !v)}
+                  title="Mostrar só jogos em direto"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition-all text-[11px] font-bold whitespace-nowrap"
+                  style={showLiveOnly
+                    ? {background:'#ef4444', color:'white', borderColor:'#ef4444'}
+                    : {background:'white', color:'#64748b', borderColor:'#e2e8f0'}}>
+                  <span className="blink" style={{width:6,height:6,borderRadius:'50%',display:'inline-block',background: showLiveOnly ? 'white' : '#f87171', flexShrink:0}}></span>
+                  <span className="hidden sm:inline">Direto</span>
+                </button>
+
+                {/* Filtros */}
+                {(() => {
+                  const n = [teamFilter!=='ALL', channelFilter!=='ALL', compFilter!=='ALL', sortBy!=='timeAsc'].filter(Boolean).length;
+                  const active = n > 0 || showFilters;
+                  return (
+                    <button
+                      onClick={() => setShowFilters(v => !v)}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition-all text-[11px] font-bold whitespace-nowrap"
+                      style={active
+                        ? {background:'#5B975B', color:'white', borderColor:'#5B975B'}
+                        : {background:'white', color:'#64748b', borderColor:'#e2e8f0'}}>
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+                      <span className="hidden sm:inline">Filtros</span>
+                      {n > 0 && (
+                        <span className="inline-flex items-center justify-center w-4 h-4 rounded-full text-[9px] font-black"
+                          style={{background:'rgba(255,255,255,0.25)', color:'white'}}>
+                          {n}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })()}
+              </div>
+            </div>
+
+            {/* Painel de filtros (colapsável) */}
+            {showFilters && (
+              <div className="mt-2 bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Equipa */}
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </span>
+                  <select value={teamFilter} onChange={e => { setTeamFilter(e.target.value); setTeamSearch(''); }}
+                    className="w-full pl-8 pr-7 py-2 text-[12px] bg-[#f8fafc] border rounded-xl outline-none cursor-pointer font-medium appearance-none"
+                    style={{color: teamFilter !== 'ALL' ? '#2B7A8E' : '#0f172a', borderColor: teamFilter !== 'ALL' ? '#B5DCE8' : '#e2e8f0'}}>
+                    <option value="ALL">Todas as equipas</option>
+                    {allTeams.map(t => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                  <span className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" style={{color: teamFilter !== 'ALL' ? '#2B7A8E' : '#94a3b8'}}><Ico.ChevronDown /></span>
+                </div>
+                {/* Canal */}
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.Filter /></span>
+                  <select value={channelFilter} onChange={e => setChannelFilter(e.target.value)}
+                    className="w-full pl-8 pr-7 py-2 text-[12px] bg-[#f8fafc] border border-[#e2e8f0] rounded-xl outline-none cursor-pointer appearance-none"
+                    style={{color:'#0f172a'}}>
+                    <option value="ALL">Todos os canais</option>
+                    <option value="Sport TV">Sport TV</option>
+                    <option value="RTP">RTP</option>
+                    <option value="SIC">SIC</option>
+                    <option value="TVI">TVI</option>
+                  </select>
+                  <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.ChevronDown /></span>
+                </div>
+                {/* Competição */}
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.Filter /></span>
+                  <select value={compFilter} onChange={e => setCompFilter(e.target.value)}
+                    className="w-full pl-8 pr-7 py-2 text-[12px] bg-[#f8fafc] border border-[#e2e8f0] rounded-xl outline-none cursor-pointer appearance-none"
+                    style={{color:'#0f172a'}}>
+                    <option value="ALL">Todas as competições</option>
+                    {allComps.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                  <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.ChevronDown /></span>
+                </div>
+                {/* Ordem */}
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.Sort /></span>
+                  <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+                    className="w-full pl-8 pr-7 py-2 text-[12px] bg-[#f8fafc] border border-[#e2e8f0] rounded-xl outline-none cursor-pointer appearance-none"
+                    style={{color:'#0f172a'}}>
+                    <option value="timeAsc">Mais cedo primeiro</option>
+                    <option value="timeDesc">Mais tarde primeiro</option>
+                  </select>
+                  <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#94a3b8] pointer-events-none"><Ico.ChevronDown /></span>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* PAINEL */}
+        {tab === 'liga' ? (
+          <div className="bg-white border border-[#e2e8f0] rounded-2xl shadow-sm p-12 text-center anim">
+            <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-[11px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+              🏆 FC Porto · Campeão 2025/26 · 31.º título
+            </div>
+            <h2 className="text-[26px] font-[900] text-[#0f172a] mb-2 tracking-tight">Liga Portugal 2026/27</h2>
+            <p className="text-[14px] text-[#64748b] mb-8">
+              A nova época começa em agosto.<br/>
+              Os jogos e canais aparecem aqui assim que o calendário for publicado.
+            </p>
+            {(() => {
+              const dias = Math.max(0, Math.ceil((new Date(2026,7,10) - new Date()) / 86400000));
+              return (
+                <div className="inline-flex items-center gap-3 bg-[#f8fafc] border border-[#e2e8f0] rounded-xl px-6 py-3">
+                  <span className="text-[32px] font-[900] text-[#0f172a] leading-none tabular-nums">{dias}</span>
+                  <span className="text-[12px] text-[#64748b] leading-snug text-left">dias para a<br/><strong>primeira jornada</strong></span>
+                </div>
+              );
+            })()}
+          </div>
+        ) : (
+          <div key={`${tab}-${activeDay}-${isSearching}`}
+            className="bg-white border border-[#e2e8f0] rounded-2xl shadow-sm overflow-hidden anim">
+
+            {/* Cabeçalho */}
+            <div className="bg-[#f8fafc] px-5 py-4 border-b border-[#e2e8f0] flex items-center justify-between">
+              <h2 className="text-[12px] font-bold text-[#0f172a] uppercase tracking-widest">{panelTitle}</h2>
+              {hasLive && (
+                <span className="text-[10px] font-bold uppercase px-3 py-1 rounded-full blink"
+                  style={{background:'#ef4444',color:'white'}}>
+                  EM DIRETO
+                </span>
+              )}
+            </div>
+
+            {/* Cabeçalho da tabela (desktop) */}
+            <div className={`hidden sm:grid ${multiDate ? 'grid-cols-[90px_76px_160px_1fr_150px]' : 'grid-cols-[76px_160px_1fr_150px]'} px-5 py-2.5 border-b border-[#f1f5f9]`}>
+              {(multiDate ? ['Data','Hora','Competição','Jogo','Canal TV'] : ['Hora','Competição','Jogo','Canal TV']).map((h, i, arr) => (
+                <span key={h} className="text-[10px] font-bold uppercase tracking-wider text-[#9AAABB]"
+                  style={i===arr.length-1?{textAlign:'right'}:{}}>
+                  {h}
+                </span>
+              ))}
+            </div>
+
+            {/* Linhas */}
+            {matches.length === 0 ? (
+              <div className="py-16 text-center">
+                <div style={{fontSize:48,marginBottom:12}}>⚽</div>
+                <div className="font-semibold text-[#475569] mb-1">Sem jogos</div>
+                <div className="text-[13px] text-[#94a3b8]">Escolhe outro dia ou altera os filtros.</div>
+              </div>
+            ) : matches.map((m, i) => {
+              const s   = getStatus(m);
+              const pt  = isPT(m);
+              const chs = getChannels(m.hc, m.ac);
+              const fav = isFav(m);
+              const rowBg = s==='live' ? '#fff5f5' : pt ? '#f0fdf4' : 'transparent';
+              return (
+                <div key={i} onClick={() => { setSelected(m); setTeamView(null); }}
+                  className={`grid ${multiDate ? 'grid-cols-[64px_1fr_auto] sm:grid-cols-[90px_76px_160px_1fr_150px]' : 'grid-cols-[56px_1fr_auto] sm:grid-cols-[76px_160px_1fr_150px]'} items-center gap-x-3 sm:gap-x-5 px-3 sm:px-4 py-3 sm:py-3.5 border-b border-[#f8fafc] last:border-0 cursor-pointer transition-colors`}
+                  style={{background:rowBg}}
+                  onMouseEnter={e => e.currentTarget.style.filter='brightness(.97)'}
+                  onMouseLeave={e => e.currentTarget.style.filter=''}
+                >
+                  {/* Data + Hora (combinados em mobile, separados em desktop) */}
+                  {multiDate && (
+                    <div>
+                      <div className="text-[11px] font-[700] text-[#0f172a] leading-none tabular-nums">{parseInt(m.d)} Jun</div>
+                      <div className="text-[9px] text-[#9AAABB] mt-0.5">{_DIAS[new Date(2026, 5, parseInt(m.d)).getDay()]}</div>
+                      {/* Hora só em mobile */}
+                      <div className="sm:hidden text-[12px] font-[800] tabular-nums mt-1.5" style={{color: s==='done' ? '#b0bbcc' : '#2B7A8E'}}>{m.t}</div>
+                    </div>
+                  )}
+                  {/* Hora — sempre em desktop, só aparece em mobile quando não é multiDate */}
+                  <div className={`text-[15px] font-[800] leading-none tabular-nums${multiDate ? ' hidden sm:block' : ''}`}
+                    style={{color: s==='done' ? '#b0bbcc' : '#2B7A8E'}}>
+                    {m.t}
+                  </div>
+
+                  {/* Competição (desktop) */}
+                  {(() => {
+                    const { comp, round } = getCompLabel(m);
+                    return (
+                      <div className="hidden sm:block pr-2">
+                        <div className="text-[10px] font-bold text-[#64748b] uppercase tracking-wider leading-snug">{comp}</div>
+                        {round && <div className="text-[10px] font-semibold text-[#9AAABB] uppercase tracking-wider leading-snug mt-0.5">{round}</div>}
+                      </div>
+                    );
+                  })()}
+
+                  {/* Jogo */}
+                  <div className="min-w-0 pr-2">
+                    <div className="text-[13px] sm:text-[14px] font-bold leading-snug" style={{color: s==='done' ? '#475569' : '#0f172a'}}>
+                      <button
+                        onClick={e => { e.stopPropagation(); setSelected(m); setTeamView(m.hc); }}
+                        className="hover:underline hover:opacity-70 transition-opacity">{m.h}</button>
+                      <span style={{color:'#9AAABB',fontWeight:400}}> - </span>
+                      <button
+                        onClick={e => { e.stopPropagation(); setSelected(m); setTeamView(m.ac); }}
+                        className="hover:underline hover:opacity-70 transition-opacity">{m.a}</button>
+                    </div>
+                    <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                      {(() => {
+                        const { comp, round } = getCompLabel(m);
+                        const shortRound = round ? `Grupo ${round.split(' - ')[1] || ''}` : '';
+                        return <span className="sm:hidden text-[10px] text-[#94a3b8]">{shortRound || comp}</span>;
+                      })()}
+                      {pt && (
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-100 text-green-700 border border-green-200">
+                          Portugal
+                        </span>
+                      )}
+                      {s === 'live' && (
+                        <span className="flex items-center gap-1 text-[10px] font-bold" style={{color:'#dc2626'}}>
+                          <span className="blink" style={{width:6,height:6,borderRadius:'50%',background:'#dc2626',display:'inline-block'}}></span>
+                          Ao vivo
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Canal */}
+                  <div className="flex flex-col items-end gap-1 shrink-0">
+                    {chs.map(c => <ChannelBadge key={c} channel={c} />)}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* CARD HOJE + PARTILHA */}
+        {(() => {
+          const todayMs   = matchData.filter(m => m.d === TODAY);
+          const liveM     = todayMs.find(m => getStatus(m) === 'live');
+          const nextM     = !liveM && todayMs.filter(m => getStatus(m) === 'today').sort((a,b) => a.t.localeCompare(b.t))[0];
+          const doneAll   = todayMs.length > 0 && todayMs.every(m => getStatus(m) === 'done');
+          const noGames   = todayMs.length === 0;
+          const handleShare = () => {
+            const url  = 'https://90minutos.live';
+            const text = 'Descobre em que canal passam os jogos do Mundial 2026 e da Liga Portugal';
+            if (navigator.share) {
+              navigator.share({ title: '90minutos.live', text, url }).catch(() => {});
+            } else {
+              navigator.clipboard.writeText(url).then(() => {
+                setShareMsg('Link copiado!');
+                setTimeout(() => setShareMsg(''), 2000);
+              });
+            }
+          };
+          return (
+            <div className="mt-5 bg-white border border-[#e2e8f0] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
+              <div>
+                {noGames ? (
+                  <>
+                    <div className="font-semibold text-[14px] text-[#0f172a] mb-0.5">Sem jogos hoje</div>
+                    <div className="text-[13px] text-[#64748b]">Consulta os próximos dias no calendário acima.</div>
+                  </>
+                ) : doneAll ? (
+                  <>
+                    <div className="font-semibold text-[14px] text-[#0f172a] mb-0.5">Jogos de hoje terminados</div>
+                    <div className="text-[13px] text-[#64748b]">{todayMs.length} {todayMs.length === 1 ? 'jogo' : 'jogos'} disputados hoje.</div>
+                  </>
+                ) : liveM ? (
+                  <>
+                    <div className="font-semibold text-[14px] text-[#0f172a] mb-0.5 flex items-center gap-1.5">
+                      <span style={{width:7,height:7,borderRadius:'50%',background:'#dc2626',display:'inline-block',animation:'blink 1s step-start infinite'}}></span>
+                      Em direto agora
+                    </div>
+                    <div className="text-[13px] text-[#64748b]">
+                      {liveM.h} - {liveM.a} · {getChannels(liveM.hc, liveM.ac)[0]}
+                    </div>
+                  </>
+                ) : nextM ? (
+                  <>
+                    <div className="font-semibold text-[14px] text-[#0f172a] mb-0.5">
+                      Hoje há {todayMs.length} {todayMs.length === 1 ? 'jogo' : 'jogos'}
+                    </div>
+                    <div className="text-[13px] text-[#64748b]">
+                      Próximo às {nextM.t} · {nextM.h} - {nextM.a} · {getChannels(nextM.hc, nextM.ac)[0]}
+                    </div>
+                  </>
+                ) : null}
+              </div>
+              <button
+                onClick={handleShare}
+                className="shrink-0 flex items-center gap-2 text-[13px] font-semibold px-5 py-2.5 rounded-xl border border-[#e2e8f0] text-[#0f172a] bg-white hover:bg-[#f8fafc] transition-colors whitespace-nowrap"
+              >
+                {shareMsg ? (
+                  <>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {shareMsg}
+                  </>
+                ) : (
+                  <>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    Partilhar
+                  </>
+                )}
+              </button>
+            </div>
+          );
+        })()}
+
+        {/* FOOTER */}
+        <footer className="mt-8 pt-5 border-t border-[#e2e8f0] flex flex-col sm:flex-row justify-between items-center gap-2 text-[11px] text-[#9AAABB] uppercase tracking-wider">
+          <div className="flex items-center gap-2">
+            <Ico.Calendar />
+            WET · Lisboa · UTC+1
+          </div>
+          <div>90minutos.live · não afiliado com a FIFA nem com nenhum canal de televisão</div>
+        </footer>
+
+      </div>
+
+      {/* MODAL */}
+      {selected && (() => {
+        const m   = selected;
+        const s   = getStatus(m);
+        const pt  = isPT(m);
+        const chs = getChannels(m.hc, m.ac);
+        const { comp, round } = getCompLabel(m);
+
+        const closeModal = () => { setSelected(null); setTeamView(null); };
+
+        const TeamPanel = ({ tc }) => {
+          const grp      = GROUP[tc];
+          const tName    = TEAM_NAMES[tc] || tc;
+          const standings = grp ? computeStandings(grp, matchData) : [];
+          const allTM    = matchData
+            .filter(mm => mm.hc === tc || mm.ac === tc)
+            .sort((a,b) => parseInt(a.d)-parseInt(b.d));
+          const past     = allTM.filter(mm => getStatus(mm) === 'done');
+          const upcoming = allTM.filter(mm => getStatus(mm) !== 'done');
+          const lbl      = txt => (
+            <div className="text-[10px] font-bold uppercase tracking-wider text-[#64748b] mb-2 mt-4 first:mt-0">{txt}</div>
+          );
+          return (
+            <div>
+              {/* Cabeçalho do painel */}
+              <div className="flex items-center gap-3 px-5 pt-4 pb-3 border-b border-[#f1f5f9]">
+                <button onClick={() => setTeamView(null)}
+                  className="text-[11px] font-bold text-[#94a3b8] hover:text-[#0f172a] transition-colors shrink-0">
+                  ← Voltar
+                </button>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[18px] font-[900] text-[#0f172a] leading-tight truncate">{tName}</div>
+                  {grp && <div className="text-[10px] font-bold text-[#9AAABB] uppercase tracking-wider">Grupo {grp}</div>}
+                </div>
+                <button onClick={closeModal}
+                  className="p-1.5 rounded-full text-[#94a3b8] hover:bg-black/5 transition-colors shrink-0">
+                  <Ico.X size={16} />
+                </button>
+              </div>
+
+              {/* Corpo com scroll */}
+              <div className="px-5 py-4 max-h-[65vh] overflow-y-auto space-y-1">
+
+                {/* Classificação */}
+                {standings.length > 0 && (
+                  <div>
+                    {lbl(`Classificação · Grupo ${grp}`)}
+                    <div className="rounded-xl border border-[#f1f5f9] overflow-hidden">
+                      <div className="grid grid-cols-[16px_1fr_22px_22px_22px_22px_32px] px-3 py-1.5 bg-[#f8fafc] text-[9px] font-bold uppercase tracking-wider text-[#94a3b8]">
+                        <span>#</span><span>Equipa</span>
+                        <span className="text-center">J</span><span className="text-center">V</span>
+                        <span className="text-center">E</span><span className="text-center">D</span>
+                        <span className="text-center">Pts</span>
+                      </div>
+                      {standings.map((t, i) => (
+                        <div key={t.tc}
+                          className="grid grid-cols-[16px_1fr_22px_22px_22px_22px_32px] items-center px-3 py-2 text-[12px] border-t border-[#f8fafc]"
+                          style={{background: t.tc === tc ? '#E8F4F7' : 'white'}}>
+                          <span className="text-[#94a3b8] font-semibold">{i+1}</span>
+                          <span className="font-semibold truncate" style={{color: t.tc === tc ? '#2B7A8E' : '#0f172a'}}>{t.name}</span>
+                          <span className="text-center text-[#64748b]">{t.p}</span>
+                          <span className="text-center text-[#64748b]">{t.w}</span>
+                          <span className="text-center text-[#64748b]">{t.d}</span>
+                          <span className="text-center text-[#64748b]">{t.l}</span>
+                          <span className="text-center font-bold" style={{color: t.tc === tc ? '#2B7A8E' : '#0f172a'}}>{t.pts}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Resultados */}
+                {past.length > 0 && (
+                  <div>
+                    {lbl('Resultados')}
+                    <div className="rounded-xl border border-[#f1f5f9] overflow-hidden">
+                      {past.map((mm, i) => {
+                        const isH = mm.hc === tc;
+                        return (
+                          <div key={i} className="flex items-center justify-between px-3 py-2.5 text-[12px] border-t border-[#f8fafc] first:border-0" style={{background:'white'}}>
+                            <span className="text-[#94a3b8] shrink-0 w-12">{parseInt(mm.d)} Jun</span>
+                            <span className="flex-1 text-center font-semibold text-[#0f172a]">{mm.h}</span>
+                            <span className="font-[900] px-2 tabular-nums text-[#0f172a]">{mm.hs} – {mm.as}</span>
+                            <span className="flex-1 text-center font-semibold text-[#0f172a]">{mm.a}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Próximos jogos */}
+                {upcoming.length > 0 && (
+                  <div>
+                    {lbl('Próximos Jogos')}
+                    <div className="rounded-xl border border-[#f1f5f9] overflow-hidden">
+                      {upcoming.map((mm, i) => (
+                        <div key={i} className="flex items-center justify-between px-3 py-2.5 border-t border-[#f8fafc] first:border-0" style={{background:'white'}}>
+                          <div className="min-w-0">
+                            <div className="text-[12px] font-semibold text-[#0f172a]">{mm.h} - {mm.a}</div>
+                            <div className="text-[10px] text-[#94a3b8]">{parseInt(mm.d)} Jun · {mm.t}</div>
+                          </div>
+                          <div className="flex flex-col items-end gap-1 ml-2 shrink-0">
+                            {getChannels(mm.hc, mm.ac).map(c => <ChannelBadge key={c} channel={c} />)}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {past.length === 0 && upcoming.length === 0 && (
+                  <div className="py-6 text-center text-[13px] text-[#94a3b8]">Sem jogos registados.</div>
+                )}
+              </div>
+            </div>
+          );
+        };
+
+        return (
+          <>
+            <div className="fixed inset-0 z-40"
+              style={{background:'rgba(0,0,0,.4)',backdropFilter:'blur(4px)'}}
+              onClick={closeModal}
+            />
+            <div className="fixed z-50 w-full modal-anim"
+              style={{top:'50%',left:'50%',transform:'translate(-50%,-50%)',maxWidth:480,width:'calc(100% - 32px)'}}>
+              <div className="bg-white border border-[#e2e8f0] rounded-2xl shadow-2xl overflow-hidden">
+
+                {teamView ? <TeamPanel tc={teamView} /> : (
+                  <>
+                    {/* Cabeçalho do match */}
+                    <div className="px-6 pt-5 pb-4"
+                      style={{background: pt ? '#f0fdf4' : s==='live' ? '#fff5f5' : '#f8fafc'}}>
+                      <div className="flex justify-between items-start mb-2">
+                        <div className="text-[10px] font-bold uppercase tracking-widest" style={{color:'#2B7A8E'}}>
+                          {comp}{round && ` · ${round}`} · {parseInt(m.d)} de junho · {m.t}
+                        </div>
+                        <button onClick={closeModal}
+                          className="p-1.5 -mt-1 -mr-1 rounded-full text-[#94a3b8] hover:bg-black/5 transition-colors">
+                          <Ico.X size={16} />
+                        </button>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <button onClick={() => setTeamView(m.hc)}
+                          className="text-[20px] font-[900] tracking-tight hover:opacity-60 transition-opacity text-[#0f172a]">
+                          {m.h}
+                        </button>
+                        <span className="text-[16px] font-bold" style={{color:'#9AAABB'}}>-</span>
+                        <button onClick={() => setTeamView(m.ac)}
+                          className="text-[20px] font-[900] tracking-tight hover:opacity-60 transition-opacity text-[#0f172a]">
+                          {m.a}
+                        </button>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {pt && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-200">Jogo de Portugal</span>}
+                        {s === 'live' && <span className="flex items-center gap-1 text-[10px] font-bold" style={{color:'#dc2626'}}>
+                          <span className="blink" style={{width:6,height:6,borderRadius:'50%',background:'#dc2626',display:'inline-block'}}></span>
+                          A decorrer
+                        </span>}
+                        {m.late && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">🌙 Madrugada</span>}
+                      </div>
+                    </div>
+
+                    {/* Corpo do match */}
+                    <div className="px-6 py-5 space-y-4">
+                      {s === 'done' && m.hs !== undefined && (
+                        <div className="flex justify-between items-center bg-[#f8fafc] rounded-xl px-4 py-3">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Resultado Final</span>
+                          <span className="text-[22px] font-[900] text-[#0f172a] tabular-nums">{m.hs} – {m.as}</span>
+                        </div>
+                      )}
+                      <div className="flex justify-between items-center">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-[#94a3b8]">Data &amp; Hora</span>
+                        <span className="text-[13px] font-semibold text-[#0f172a]">{parseInt(m.d)} de junho, {m.t}</span>
+                      </div>
+                      <div className="flex justify-between items-start">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-[#94a3b8] mt-0.5">Canal TV</span>
+                        <div className="flex flex-col items-end gap-1.5">
+                          {chs.map(c => <ChannelBadge key={c} channel={c} />)}
+                        </div>
+                      </div>
+                      <div className="border-t border-[#f1f5f9] pt-3 text-[11px] text-[#94a3b8] text-center">
+                        Clica no nome de uma equipa para ver a classificação e os jogos ↑
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          </>
+        );
+      })()}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
