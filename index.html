@@ -455,41 +455,34 @@ function App() {
     return () => clearInterval(t);
   }, [matchData]);
 
-  /* Resultados e classificações via results.json / standings.json (gerados pelo scraper) */
+  /* Resultados e classificações via Netlify Function (polling cada 60s) */
   const [standingsData, setStandingsData] = useState(null);
 
   useEffect(() => {
     const load = async () => {
       try {
-        const [rRes, rStd] = await Promise.all([
-          fetch('./results.json?_=' + Date.now()),
-          fetch('./standings.json?_=' + Date.now()),
-        ]);
-        if (rRes.ok) {
-          const data = await rRes.json();
-          const results = data.results || {};
-          setMatchData(prev => {
-            const next = [...prev]; let changed = false;
-            Object.entries(results).forEach(([key, score]) => {
-              const [hc, ac] = key.split('-');
-              const idx = next.findIndex(m => m.hc === hc && m.ac === ac);
-              if (idx < 0) return;
-              if (next[idx].hs !== score.home || next[idx].as !== score.away) {
-                next[idx] = { ...next[idx], hs: score.home, as: score.away };
-                changed = true;
-              }
-            });
-            return changed ? next : prev;
+        const r = await fetch('/api/results?_=' + Date.now());
+        if (!r.ok) return;
+        const data = await r.json();
+        const results = data.results || {};
+        setMatchData(prev => {
+          const next = [...prev]; let changed = false;
+          Object.entries(results).forEach(([key, score]) => {
+            const [hc, ac] = key.split('-');
+            const idx = next.findIndex(m => m.hc === hc && m.ac === ac);
+            if (idx < 0) return;
+            if (next[idx].hs !== score.home || next[idx].as !== score.away) {
+              next[idx] = { ...next[idx], hs: score.home, as: score.away };
+              changed = true;
+            }
           });
-        }
-        if (rStd.ok) {
-          const data = await rStd.json();
-          setStandingsData(data.standings || null);
-        }
+          return changed ? next : prev;
+        });
+        if (data.standings) setStandingsData(data.standings);
       } catch (_) {}
     };
     load();
-    const t = setInterval(load, 120000); // actualiza de 2 em 2 minutos
+    const t = setInterval(load, 60000); // polling cada 60 segundos
     return () => clearInterval(t);
   }, []);
 
