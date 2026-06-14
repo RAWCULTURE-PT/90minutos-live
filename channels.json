@@ -1,266 +1,73 @@
 {
-  "generated": "2026-06-14 18:11",
+  "generated": "2026-06-14 19:00",
   "channels": {
-    "HAI-SCO": [
-      "Sport TV 5"
-    ],
-    "AUS-TUR": [
-      "Sport TV 5"
-    ],
-    "GER-CUW": [
-      "Sport TV 5"
-    ],
-    "NED-JPN": [
-      "Sport TV 5"
-    ],
-    "CIV-ECU": [
-      "Sport TV 5"
-    ],
-    "SWE-TUN": [
-      "Sport TV 5"
-    ],
-    "ESP-CPV": [
-      "Sport TV 1"
-    ],
-    "BEL-EGY": [
-      "Sport TV 5"
-    ],
-    "KSA-URU": [
-      "Sport TV 5"
-    ],
-    "IRN-NZL": [
-      "Sport TV 5"
-    ],
-    "FRA-SEN": [
-      "Sport TV 5"
-    ],
-    "IRQ-NOR": [
-      "Sport TV 5"
-    ],
-    "ARG-ALG": [
-      "Sport TV 5"
-    ],
-    "AUT-JOR": [
-      "Sport TV 5"
-    ],
-    "POR-COD": [
-      "SIC",
-      "Sport TV 5"
-    ],
-    "ENG-CRO": [
-      "Sport TV 5"
-    ],
-    "GHA-PAN": [
-      "Sport TV 5"
-    ],
-    "UZB-COL": [
-      "Sport TV 5"
-    ],
-    "CZE-RSA": [
-      "Sport TV 5"
-    ],
-    "SUI-BIH": [
-      "Sport TV 5"
-    ],
-    "CAN-QAT": [
-      "Sport TV 5"
-    ],
-    "SWE-NOR": [
-      "Sport TV 5"
-    ],
-    "MEX-KOR": [
-      "Sport TV 5"
-    ],
-    "USA-AUS": [
-      "Sport TV 5"
-    ],
-    "SCO-MAR": [
-      "Sport TV 5"
-    ],
-    "BRA-HAI": [
-      "Sport TV 5"
-    ],
-    "TUR-PAR": [
-      "Sport TV 5"
-    ],
-    "NED-SWE": [
-      "Sport TV 5"
-    ],
-    "GER-CIV": [
-      "Sport TV 5"
-    ],
-    "ECU-CUW": [
-      "Sport TV 5"
-    ],
-    "TUN-JPN": [
-      "Sport TV 5"
-    ],
-    "ESP-KSA": [
-      "Sport TV 5"
-    ],
-    "BEL-IRN": [
-      "Sport TV 5"
-    ],
-    "URU-CPV": [
-      "Sport TV 5"
-    ],
-    "NZL-EGY": [
-      "Sport TV 5"
-    ],
-    "ARG-AUT": [
-      "Sport TV 5"
-    ],
-    "FRA-IRQ": [
-      "Sport TV 5"
-    ],
-    "NOR-SEN": [
-      "Sport TV 5"
-    ],
-    "JOR-ALG": [
-      "Sport TV 5"
-    ],
-    "POR-UZB": [
-      "TVI",
-      "Sport TV 5"
-    ],
-    "ENG-GHA": [
-      "Sport TV 5"
-    ],
-    "PAN-CRO": [
-      "Sport TV 5"
-    ],
-    "COL-COD": [
-      "Sport TV 5"
-    ],
-    "BIH-QAT": [
-      "Sport TV 5"
-    ],
-    "SUI-CAN": [
-      "Sport TV 5"
-    ],
-    "MAR-HAI": [
-      "Sport TV 5"
-    ],
-    "SCO-BRA": [
-      "Sport TV 5"
-    ],
-    "CZE-MEX": [
-      "Sport TV 5"
-    ],
-    "RSA-KOR": [
-      "Sport TV 5"
-    ],
-    "ECU-GER": [
-      "Sport TV 5"
-    ],
-    "CUW-CIV": [
-      "Sport TV 5"
-    ],
-    "JPN-SWE": [
-      "Sport TV 5"
-    ],
-    "TUN-NED": [
-      "Sport TV 5"
-    ],
-    "TUR-USA": [
-      "Sport TV 5"
-    ],
-    "PAR-AUS": [
-      "Sport TV 5"
-    ],
-    "SEN-IRQ": [
-      "Sport TV 5"
-    ],
-    "NOR-FRA": [
-      "Sport TV 5"
-    ],
-    "URU-ESP": [
-      "Sport TV 5"
-    ],
-    "CPV-KSA": [
-      "Sport TV 5"
-    ],
-    "EGY-IRN": [
-      "Sport TV 5"
-    ],
-    "NZL-BEL": [
-      "Sport TV 5"
-    ],
-    "CRO-GHA": [
-      "Sport TV 5"
-    ],
-    "PAN-ENG": [
-      "Sport TV 5"
-    ],
-    "COL-POR": [
-      "RTP 1",
-      "Sport TV 5"
-    ],
-    "COD-UZB": [
-      "Sport TV 5"
-    ],
-    "JOR-ARG": [
-      "Sport TV 5"
-    ],
-    "ALG-AUT": [
-      "Sport TV 5"
-    ],
-    "-": [
-      "Sport TV 5"
-    ],
-    "NOR-SWE": [
-      "Sport TV 5"
-    ],
-    "AUT-SUI": [
-      "Sport TV 5"
-    ],
-    "GER-AUT": [
-      "Sport TV 5"
-    ],
-    "NED-SCO": [
-      "Sport TV 5"
-    ],
-    "AUT-CZE": [
-      "Sport TV 5"
-    ],
-    "CZE-SUI": [
-      "Sport TV 5"
-    ],
-    "USA-ENG": [
-      "Sport TV 5"
-    ],
-    "GER-SUI": [
-      "Sport TV 5"
-    ],
-    "AUT-ENG": [
-      "Sport TV 5"
-    ],
-    "CZE-GER": [
-      "Sport TV 5"
-    ],
-    "USA-CAN": [
-      "Sport TV 5"
-    ],
-    "SUI-GER": [
-      "Sport TV 5"
-    ],
-    "NED-GER": [
-      "Sport TV 5"
-    ],
-    "AUT-GER": [
-      "Sport TV 5"
-    ],
-    "URU-ARG": [
-      "Sport TV 5"
-    ],
-    "COL-BRA": [
-      "Sport TV 5"
-    ],
-    "ENG-FRA": [
-      "Sport TV 5"
-    ],
-    "_": [
-      "Sport TV 5"
-    ]
+    "HAI-SCO": ["Sport TV 5"],
+    "AUS-TUR": ["Sport TV 5"],
+    "GER-CUW": ["Sport TV 1"],
+    "NED-JPN": ["Sport TV 5"],
+    "CIV-ECU": ["Sport TV 5"],
+    "SWE-TUN": ["Sport TV 5"],
+    "ESP-CPV": ["Sport TV 1"],
+    "BEL-EGY": ["Sport TV 5"],
+    "KSA-URU": ["Sport TV 5"],
+    "IRN-NZL": ["Sport TV 5"],
+    "FRA-SEN": ["RTP 1", "Sport TV 1"],
+    "IRQ-NOR": ["Sport TV 5"],
+    "ARG-ALG": ["Sport TV 5"],
+    "AUT-JOR": ["Sport TV 5"],
+    "POR-COD": ["SIC", "Sport TV 1"],
+    "ENG-CRO": ["Sport TV 5"],
+    "GHA-PAN": ["Sport TV 5"],
+    "UZB-COL": ["Sport TV 5"],
+    "CZE-RSA": ["Sport TV 1"],
+    "SUI-BIH": ["RTP 1", "Sport TV 1"],
+    "CAN-QAT": ["Sport TV 5"],
+    "SWE-NOR": ["Sport TV 5"],
+    "MEX-KOR": ["Sport TV 5"],
+    "USA-AUS": ["Sport TV 5"],
+    "SCO-MAR": ["Sport TV 5"],
+    "BRA-HAI": ["Sport TV 1"],
+    "TUR-PAR": ["Sport TV 5"],
+    "NED-SWE": ["Sport TV 5"],
+    "GER-CIV": ["TVI", "Sport TV 1"],
+    "ECU-CUW": ["Sport TV 5"],
+    "TUN-JPN": ["Sport TV 5"],
+    "ESP-KSA": ["Sport TV 1"],
+    "BEL-IRN": ["Sport TV 5"],
+    "URU-CPV": ["Sport TV 5"],
+    "NZL-EGY": ["Sport TV 5"],
+    "ARG-AUT": ["Sport TV 1"],
+    "FRA-IRQ": ["Sport TV 1"],
+    "NOR-SEN": ["Sport TV 1"],
+    "JOR-ALG": ["Sport TV 1"],
+    "POR-UZB": ["TVI", "Sport TV 1"],
+    "ENG-GHA": ["Sport TV 1"],
+    "PAN-CRO": ["Sport TV 5"],
+    "COL-COD": ["Sport TV 5"],
+    "BIH-QAT": ["Sport TV 5"],
+    "SUI-CAN": ["Sport TV 5"],
+    "MAR-HAI": ["Sport TV 5"],
+    "SCO-BRA": ["Sport TV 1"],
+    "CZE-MEX": ["Sport TV 5"],
+    "RSA-KOR": ["Sport TV 5"],
+    "ECU-GER": ["SIC", "Sport TV 1"],
+    "CUW-CIV": ["Sport TV 5"],
+    "JPN-SWE": ["Sport TV 5"],
+    "TUN-NED": ["Sport TV 5"],
+    "TUR-USA": ["Sport TV 5"],
+    "PAR-AUS": ["Sport TV 5"],
+    "SEN-IRQ": ["Sport TV 5"],
+    "NOR-FRA": ["TVI", "Sport TV 1"],
+    "URU-ESP": ["Sport TV 5"],
+    "CPV-KSA": ["Sport TV 5"],
+    "EGY-IRN": ["Sport TV 5"],
+    "NZL-BEL": ["Sport TV 5"],
+    "CRO-GHA": ["Sport TV 5"],
+    "PAN-ENG": ["Sport TV 5"],
+    "COL-POR": ["RTP 1", "Sport TV 1"],
+    "COD-UZB": ["Sport TV 5"],
+    "JOR-ARG": ["Sport TV 5"],
+    "ALG-AUT": ["Sport TV 5"],
+    "_": ["Sport TV 5"]
   }
 }

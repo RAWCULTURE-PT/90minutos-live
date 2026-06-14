@@ -112,9 +112,9 @@ function ChannelBadge({ channel }) {
    CHANNEL MAP
 ───────────────────────────────────────────── */
 const CH_MAP = {
-  'POR-COD': ['SIC', 'Sport TV 5'],
-  'POR-UZB': ['TVI', 'Sport TV 5'],
-  'COL-POR': ['RTP 1', 'Sport TV 5'],
+  'POR-COD': ['SIC', 'Sport TV 1'],
+  'POR-UZB': ['TVI', 'Sport TV 1'],
+  'COL-POR': ['RTP 1', 'Sport TV 1'],
   '_':       ['Sport TV 5'],
 };
 let _channelsData = null; // preenchido ao carregar channels.json
@@ -232,6 +232,60 @@ const M = [
   {d:'30',t:'00:00',h:'Qatar',             hc:'QAT',a:'Bósnia-Herzegovina',     ac:'BIH',           g:'Mundial 2026', late:true},
 ];
 
+/* ─────────────────────────────────────────────
+   ELIMINATÓRIAS DO MUNDIAL 2026
+   Fonte: Record.pt · todos Sport TV, exceto Final (RTP 1 + Sport TV)
+───────────────────────────────────────────── */
+const KNOCKOUT = [
+  // 16 Avos de Final
+  {f:'16avos',  j:'J73',    d:'28 Jun', t:'20:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J74',    d:'29 Jun', t:'18:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J75',    d:'29 Jun', t:'21:30', chs:['Sport TV']},
+  {f:'16avos',  j:'J76',    d:'30 Jun', t:'02:00', chs:['Sport TV'], late:true},
+  {f:'16avos',  j:'J77',    d:'30 Jun', t:'18:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J78',    d:'30 Jun', t:'22:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J79',    d:'1 Jul',  t:'02:00', chs:['Sport TV'], late:true},
+  {f:'16avos',  j:'J80',    d:'1 Jul',  t:'17:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J81',    d:'1 Jul',  t:'21:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J82',    d:'2 Jul',  t:'01:00', chs:['Sport TV'], late:true},
+  {f:'16avos',  j:'J83',    d:'2 Jul',  t:'20:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J84',    d:'3 Jul',  t:'00:00', chs:['Sport TV'], late:true},
+  {f:'16avos',  j:'J85',    d:'3 Jul',  t:'04:00', chs:['Sport TV'], late:true},
+  {f:'16avos',  j:'J86',    d:'3 Jul',  t:'19:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J87',    d:'3 Jul',  t:'23:00', chs:['Sport TV']},
+  {f:'16avos',  j:'J88',    d:'4 Jul',  t:'02:30', chs:['Sport TV'], late:true},
+  // Oitavos de Final
+  {f:'oitavos', j:'J89',    d:'4 Jul',  t:'18:00', chs:['Sport TV']},
+  {f:'oitavos', j:'J90',    d:'4 Jul',  t:'22:00', chs:['Sport TV']},
+  {f:'oitavos', j:'J91',    d:'5 Jul',  t:'21:00', chs:['Sport TV']},
+  {f:'oitavos', j:'J92',    d:'6 Jul',  t:'01:00', chs:['Sport TV'], late:true},
+  {f:'oitavos', j:'J93',    d:'6 Jul',  t:'20:00', chs:['Sport TV']},
+  {f:'oitavos', j:'J94',    d:'7 Jul',  t:'01:00', chs:['Sport TV'], late:true},
+  {f:'oitavos', j:'J95',    d:'7 Jul',  t:'17:00', chs:['Sport TV']},
+  {f:'oitavos', j:'J96',    d:'7 Jul',  t:'21:00', chs:['Sport TV']},
+  // Quartos de Final
+  {f:'quartos', j:'QF1',    d:'9 Jul',  t:'21:00', chs:['Sport TV']},
+  {f:'quartos', j:'QF2',    d:'10 Jul', t:'20:00', chs:['Sport TV']},
+  {f:'quartos', j:'QF3',    d:'11 Jul', t:'22:00', chs:['Sport TV']},
+  {f:'quartos', j:'QF4',    d:'12 Jul', t:'02:00', chs:['Sport TV'], late:true},
+  // Meias-Finais
+  {f:'meias',   j:'SF1',    d:'14 Jul', t:'20:00', chs:['Sport TV']},
+  {f:'meias',   j:'SF2',    d:'15 Jul', t:'20:00', chs:['Sport TV']},
+  // 3.º e 4.º Lugar
+  {f:'3lugar',  j:'3.º Lugar', d:'18 Jul', t:'22:00', chs:['Sport TV']},
+  // Final
+  {f:'final',   j:'Final',  d:'19 Jul', t:'20:00', chs:['RTP 1', 'Sport TV']},
+];
+
+const KO_FASE_LABELS = {
+  '16avos': '16 Avos',
+  'oitavos': 'Oitavos',
+  'quartos': 'Quartos',
+  'meias': 'Meias',
+  '3lugar': '3.º Lugar',
+  'final': 'Final',
+};
+
 const API_NAME = {
   'Mexico':'MEX','South Africa':'RSA','South Korea':'KOR','Czech Republic':'CZE',
   'Canada':'CAN','Bosnia & Herzegovina':'BIH','Qatar':'QAT','Switzerland':'SUI',
@@ -336,6 +390,7 @@ function computeStandings(grp, matchData) {
 ───────────────────────────────────────────── */
 function App() {
   const [tab,           setTab]           = useState('mundial');
+  const [koFase,        setKoFase]        = useState('todos');
   const [activeDay,     setActiveDay]     = useState(TODAY);
   const [teamSearch,    setTeamSearch]    = useState('');
   const [compFilter,    setCompFilter]    = useState('ALL');
@@ -583,10 +638,11 @@ function App() {
         {/* TABS */}
         <div className="flex bg-white border border-[#e2e8f0] rounded-xl p-1 gap-1 mb-4 shadow-sm">
           {[
-            { key:'mundial',  label:'Mundial 2026',    count: matchData.length },
-            { key:'portugal', label:'Portugal',         count: matchData.filter(isPT).length },
-            { key:'liga',     label:'Liga Portugal',    soon: true },
-          ].map(({ key, label, count, soon }) => (
+            { key:'mundial',       label:'Mundial 2026',  short:'Mundial',      count: matchData.length },
+            { key:'portugal',      label:'Portugal',       short:'Portugal',     count: matchData.filter(isPT).length },
+            { key:'eliminatorias', label:'Eliminatórias',  short:'Elim.',        count: KNOCKOUT.length },
+            { key:'liga',          label:'Liga Portugal',  short:'Liga',         soon: true },
+          ].map(({ key, label, short, count, soon }) => (
             <button key={key} onClick={() => switchTab(key)}
               className="flex-1 py-2 px-2 rounded-lg text-[12px] font-semibold flex items-center justify-center gap-1.5 transition-all"
               style={tab === key
@@ -594,7 +650,7 @@ function App() {
                 : {color:'#64748b'}}
             >
               <span className="hidden sm:inline">{label}</span>
-              <span className="sm:hidden">{key==='mundial'?'Mundial':key==='portugal'?'Portugal':'Liga'}</span>
+              <span className="sm:hidden">{short}</span>
               {soon
                 ? <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200 font-bold">breve</span>
                 : <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold"
@@ -607,7 +663,7 @@ function App() {
         </div>
 
         {/* TOOLBAR NAVEGAÇÃO + FILTROS */}
-        {tab !== 'liga' && (
+        {tab !== 'liga' && tab !== 'eliminatorias' && (
           <div className="mb-4">
             {/* Linha principal: pills em cima (mobile), lado a lado (desktop) */}
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center min-w-0">
@@ -773,7 +829,104 @@ function App() {
         )}
 
         {/* PAINEL */}
-        {tab === 'liga' ? (
+        {tab === 'eliminatorias' ? (
+          <div className="anim">
+            {/* Pills de fase */}
+            <div className="flex gap-1.5 overflow-x-auto scrollbar-none mb-4 pb-0.5">
+              {[
+                {k:'todos',   l:'Todos'},
+                {k:'16avos',  l:'16 Avos'},
+                {k:'oitavos', l:'Oitavos'},
+                {k:'quartos', l:'Quartos'},
+                {k:'meias',   l:'Meias'},
+                {k:'3lugar',  l:'3.º Lugar'},
+                {k:'final',   l:'Final'},
+              ].map(({k, l}) => (
+                <button key={k} onClick={() => setKoFase(k)}
+                  className="shrink-0 text-[12px] font-medium px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap"
+                  style={koFase === k
+                    ? {background:'#5B975B', color:'white', borderColor:'#5B975B'}
+                    : {background:'white', color:'#536078', borderColor:'#e2e8f0'}}>
+                  {l}
+                </button>
+              ))}
+            </div>
+
+            {/* Aviso equipas TBD */}
+            <div className="mb-4 flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
+              <span className="text-amber-500 mt-0.5 shrink-0">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <p className="text-[12px] text-amber-700 leading-snug">
+                As equipas são apuradas após a fase de grupos, que termina a <strong>28 de junho</strong>.
+                Os canais são baseados em Sport TV — a Final passa também na <strong>RTP 1</strong>.
+              </p>
+            </div>
+
+            {/* Tabela de jogos */}
+            <div className="bg-white border border-[#e2e8f0] rounded-2xl shadow-sm overflow-hidden">
+
+              {/* Cabeçalho tabela (desktop) */}
+              <div className="hidden sm:grid grid-cols-[80px_72px_140px_1fr_150px] px-5 py-2.5 bg-[#f8fafc] border-b border-[#e2e8f0]">
+                {['Data','Hora','Fase','Jogo','Canal TV'].map((h, i, arr) => (
+                  <span key={h} className="text-[10px] font-bold uppercase tracking-wider text-[#9AAABB]"
+                    style={i===arr.length-1?{textAlign:'right'}:{}}>
+                    {h}
+                  </span>
+                ))}
+              </div>
+
+              {KNOCKOUT.filter(m => koFase === 'todos' || m.f === koFase).map((m, i) => (
+                <div key={i}
+                  className="grid grid-cols-[64px_1fr_auto] sm:grid-cols-[80px_72px_140px_1fr_150px] items-center gap-x-3 sm:gap-x-4 px-3 sm:px-5 py-3 sm:py-3.5 border-b border-[#f8fafc] last:border-0"
+                  style={{background: m.f === 'final' ? '#f0fdf4' : 'transparent'}}
+                >
+                  {/* Data */}
+                  <div>
+                    <div className="text-[11px] font-[700] text-[#0f172a] leading-none">{m.d}</div>
+                    {/* Hora só em mobile */}
+                    <div className="sm:hidden text-[12px] font-[800] tabular-nums mt-1.5" style={{color:'#2B7A8E'}}>{m.t}</div>
+                  </div>
+
+                  {/* Hora — desktop */}
+                  <div className="hidden sm:block text-[15px] font-[800] leading-none tabular-nums" style={{color:'#2B7A8E'}}>
+                    {m.t}
+                  </div>
+
+                  {/* Fase */}
+                  <div className="hidden sm:block pr-2">
+                    <div className="text-[10px] font-bold text-[#64748b] uppercase tracking-wider leading-snug">
+                      {KO_FASE_LABELS[m.f] || m.f}
+                    </div>
+                    <div className="text-[10px] font-semibold text-[#9AAABB] uppercase tracking-wider leading-snug mt-0.5">
+                      {m.j}
+                    </div>
+                  </div>
+
+                  {/* Jogo */}
+                  <div className="min-w-0 pr-2">
+                    <div className="text-[13px] sm:text-[14px] font-bold leading-snug text-[#64748b] italic">
+                      A definir · A definir
+                    </div>
+                    <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                      <span className="sm:hidden text-[10px] text-[#94a3b8]">{KO_FASE_LABELS[m.f]} · {m.j}</span>
+                      {m.late && (
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">
+                          madrugada
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Canal */}
+                  <div className="flex flex-col items-end gap-1 shrink-0">
+                    {m.chs.map(c => <ChannelBadge key={c} channel={c} />)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : tab === 'liga' ? (
           <div className="bg-white border border-[#e2e8f0] rounded-2xl shadow-sm p-12 text-center anim">
             <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-[11px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
               🏆 FC Porto · Campeão 2025/26 · 31.º título

@@ -50,7 +50,31 @@ WC_STAGE_IDS = {
     "mg:stage:j47c80l4ni32",   # eliminatórias (terceiro lugar / outro sub-quadro)
 }
 
-# Canais generalistas para jogos de Portugal (a API Sport TV nao os inclui).
+# Canais corretos para jogos em destaque (fonte: Record.pt / guia TV).
+# A API Sport TV devolve 5422 (Sport TV 5) para quase tudo, mas estes jogos
+# passam em Sport TV 1 (e alguns em canais generalistas).
+CHANNEL_OVERRIDE = {
+    "GER-CUW": ["Sport TV 1"],
+    "FRA-SEN": ["RTP 1", "Sport TV 1"],
+    "POR-COD": ["SIC", "Sport TV 1"],
+    "CZE-RSA": ["Sport TV 1"],
+    "SUI-BIH": ["RTP 1", "Sport TV 1"],
+    "BRA-HAI": ["Sport TV 1"],
+    "GER-CIV": ["TVI", "Sport TV 1"],
+    "ESP-KSA": ["Sport TV 1"],
+    "ARG-AUT": ["Sport TV 1"],
+    "FRA-IRQ": ["Sport TV 1"],
+    "NOR-SEN": ["Sport TV 1"],
+    "JOR-ALG": ["Sport TV 1"],
+    "POR-UZB": ["TVI", "Sport TV 1"],
+    "ENG-GHA": ["Sport TV 1"],
+    "COL-POR": ["RTP 1", "Sport TV 1"],
+    "ECU-GER": ["SIC", "Sport TV 1"],
+    "NOR-FRA": ["TVI", "Sport TV 1"],
+    "SCO-BRA": ["Sport TV 1"],
+}
+
+# Canais generalistas para jogos de Portugal (fallback se não estiver em CHANNEL_OVERRIDE).
 FREE_TO_AIR = {
     "POR-COD": ["SIC"],
     "POR-UZB": ["TVI"],
@@ -113,8 +137,11 @@ def main():
 
             ch  = get_channel_name(channel_id)
             key = f"{lc}-{vc}"
-            fta = FREE_TO_AIR.get(key) or FREE_TO_AIR.get(f"{vc}-{lc}") or []
-            channels[key] = fta + [ch]
+            if key in CHANNEL_OVERRIDE:
+                channels[key] = CHANNEL_OVERRIDE[key]
+            else:
+                fta = FREE_TO_AIR.get(key) or FREE_TO_AIR.get(f"{vc}-{lc}") or []
+                channels[key] = fta + [ch]
             day_matches += 1
             sys.stderr.write(f"  {d} {key}: {channels[key]}  raw={local_iso}-{visitor_iso} ch={channel_id!r}\n")
 
