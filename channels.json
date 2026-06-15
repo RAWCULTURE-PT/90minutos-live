@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15 02:14",
+  "generated": "2026-06-15 09:48",
   "channels": {
     "CIV-ECU": [
       "Sport TV 5"
@@ -264,6 +264,9 @@
     "CZE-SUI": [
       "Sport TV 5"
     ],
+    "ENG-WAL": [
+      "Sport TV 5"
+    ],
     "USA-ENG": [
       "Sport TV 5"
     ],
@@ -313,9 +316,6 @@
       "Sport TV 5"
     ],
     "AUT-GER": [
-      "Sport TV 5"
-    ],
-    "ENG-WAL": [
       "Sport TV 5"
     ],
     "POL-ESP": [

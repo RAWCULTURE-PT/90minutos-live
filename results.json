@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15 02:14",
+  "generated": "2026-06-15 09:48",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -10,8 +10,8 @@
       "away": 1
     },
     "CAN-BIH": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
     },
     "USA-PAR": {
       "home": 4,
@@ -44,6 +44,10 @@
     "CIV-ECU": {
       "home": 1,
       "away": 0
+    },
+    "SWE-TUN": {
+      "home": 5,
+      "away": 1
     }
   }
 }
