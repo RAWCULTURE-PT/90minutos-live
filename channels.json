@@ -1,18 +1,6 @@
 {
-  "generated": "2026-06-14 22:57",
+  "generated": "2026-06-15 02:14",
   "channels": {
-    "HAI-SCO": [
-      "Sport TV 5"
-    ],
-    "AUS-TUR": [
-      "Sport TV 5"
-    ],
-    "GER-CUW": [
-      "Sport TV 1"
-    ],
-    "NED-JPN": [
-      "Sport TV 5"
-    ],
     "CIV-ECU": [
       "Sport TV 5"
     ],
@@ -352,6 +340,18 @@
       "Sport TV 5"
     ],
     "BOL-BRA": [
+      "Sport TV 5"
+    ],
+    "COL-VEN": [
+      "Sport TV 5"
+    ],
+    "ARG-CHL": [
+      "Sport TV 5"
+    ],
+    "ENG-GER": [
+      "Sport TV 5"
+    ],
+    "NOR-ENG": [
       "Sport TV 5"
     ],
     "_": [

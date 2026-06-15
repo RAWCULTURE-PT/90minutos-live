@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-14 22:57",
+  "generated": "2026-06-15 02:14",
   "standings": {
     "A": [
       {
@@ -233,28 +233,28 @@
       },
       {
         "pos": 2,
-        "tla": "ECU",
-        "nome": "Ecuador",
-        "pj": 0,
-        "v": 0,
-        "e": 0,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 2,
         "tla": "CIV",
         "nome": "Ivory Coast",
-        "pj": 0,
-        "v": 0,
+        "pj": 1,
+        "v": 1,
         "e": 0,
         "d": 0,
-        "gf": 0,
+        "gf": 1,
         "gc": 0,
-        "dg": 0,
+        "dg": 1,
+        "pts": 3
+      },
+      {
+        "pos": 3,
+        "tla": "ECU",
+        "nome": "Ecuador",
+        "pj": 1,
+        "v": 0,
+        "e": 0,
+        "d": 1,
+        "gf": 0,
+        "gc": 1,
+        "dg": -1,
         "pts": 0
       },
       {
@@ -302,27 +302,27 @@
         "pos": 3,
         "tla": "SWE",
         "nome": "Sweden",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       },
       {
         "pos": 3,
         "tla": "TUN",
         "nome": "Tunisia",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       }
     ],
     "G": [
