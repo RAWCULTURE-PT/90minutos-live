@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16 14:50",
+  "generated": "2026-06-16 19:25",
   "standings": {
     "A": [
       {
@@ -438,17 +438,30 @@
         "pos": 1,
         "tla": "FRA",
         "nome": "France",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       },
       {
         "pos": 1,
+        "tla": "SEN",
+        "nome": "Senegal",
+        "pj": 1,
+        "v": 0,
+        "e": 1,
+        "d": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 3,
         "tla": "IRQ",
         "nome": "Iraq",
         "pj": 0,
@@ -461,22 +474,9 @@
         "pts": 0
       },
       {
-        "pos": 1,
+        "pos": 3,
         "tla": "NOR",
         "nome": "Norway",
-        "pj": 0,
-        "v": 0,
-        "e": 0,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 1,
-        "tla": "SEN",
-        "nome": "Senegal",
         "pj": 0,
         "v": 0,
         "e": 0,
