@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15 22:07",
+  "generated": "2026-06-16 02:28",
   "standings": {
     "A": [
       {
@@ -328,6 +328,32 @@
     "G": [
       {
         "pos": 1,
+        "tla": "IRN",
+        "nome": "Iran",
+        "pj": 1,
+        "v": 0,
+        "e": 1,
+        "d": 0,
+        "gf": 1,
+        "gc": 1,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 1,
+        "tla": "NZL",
+        "nome": "New Zealand",
+        "pj": 1,
+        "v": 0,
+        "e": 1,
+        "d": 0,
+        "gf": 1,
+        "gc": 1,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 3,
         "tla": "BEL",
         "nome": "Belgium",
         "pj": 1,
@@ -340,7 +366,7 @@
         "pts": 1
       },
       {
-        "pos": 2,
+        "pos": 4,
         "tla": "EGY",
         "nome": "Egypt",
         "pj": 1,
@@ -351,32 +377,6 @@
         "gc": 1,
         "dg": 0,
         "pts": 1
-      },
-      {
-        "pos": 3,
-        "tla": "IRN",
-        "nome": "Iran",
-        "pj": 0,
-        "v": 0,
-        "e": 0,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "tla": "NZL",
-        "nome": "New Zealand",
-        "pj": 0,
-        "v": 0,
-        "e": 0,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
       }
     ],
     "H": [
@@ -388,21 +388,21 @@
         "v": 0,
         "e": 1,
         "d": 0,
-        "gf": 0,
-        "gc": 0,
+        "gf": 1,
+        "gc": 1,
         "dg": 0,
         "pts": 1
       },
       {
         "pos": 1,
-        "tla": "URY",
+        "tla": "URU",
         "nome": "Uruguay",
         "pj": 1,
         "v": 0,
         "e": 1,
         "d": 0,
-        "gf": 0,
-        "gc": 0,
+        "gf": 1,
+        "gc": 1,
         "dg": 0,
         "pts": 1
       },
