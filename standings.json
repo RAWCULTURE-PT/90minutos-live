@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16 02:28",
+  "generated": "2026-06-16 09:13",
   "standings": {
     "A": [
       {
@@ -328,27 +328,27 @@
     "G": [
       {
         "pos": 1,
-        "tla": "IRN",
-        "nome": "Iran",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 1,
-        "gc": 1,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 1,
         "tla": "NZL",
         "nome": "New Zealand",
         "pj": 1,
         "v": 0,
         "e": 1,
         "d": 0,
-        "gf": 1,
-        "gc": 1,
+        "gf": 2,
+        "gc": 2,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 2,
+        "tla": "IRN",
+        "nome": "Iran",
+        "pj": 1,
+        "v": 0,
+        "e": 1,
+        "d": 0,
+        "gf": 2,
+        "gc": 2,
         "dg": 0,
         "pts": 1
       },
@@ -382,8 +382,8 @@
     "H": [
       {
         "pos": 1,
-        "tla": "KSA",
-        "nome": "Saudi Arabia",
+        "tla": "URU",
+        "nome": "Uruguay",
         "pj": 1,
         "v": 0,
         "e": 1,
@@ -394,9 +394,9 @@
         "pts": 1
       },
       {
-        "pos": 1,
-        "tla": "URU",
-        "nome": "Uruguay",
+        "pos": 2,
+        "tla": "KSA",
+        "nome": "Saudi Arabia",
         "pj": 1,
         "v": 0,
         "e": 1,
