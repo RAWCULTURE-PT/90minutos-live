@@ -1,16 +1,6 @@
 {
-  "generated": "2026-06-16 22:03",
+  "generated": "2026-06-17 02:13",
   "channels": {
-    "IRN-NZL": [
-      "Sport TV 5"
-    ],
-    "FRA-SEN": [
-      "RTP 1",
-      "Sport TV 1"
-    ],
-    "IRQ-NOR": [
-      "Sport TV 5"
-    ],
     "ARG-ALG": [
       "Sport TV 5"
     ],
@@ -349,6 +339,18 @@
       "Sport TV 5"
     ],
     "FRA-BEL": [
+      "Sport TV 5"
+    ],
+    "CAN-USA": [
+      "Sport TV 5"
+    ],
+    "AUS-ENG": [
+      "Sport TV 5"
+    ],
+    "GER-ITA": [
+      "Sport TV 5"
+    ],
+    "ITA-FRA": [
       "Sport TV 5"
     ],
     "_": [

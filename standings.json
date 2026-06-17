@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16 22:03",
+  "generated": "2026-06-17 02:13",
   "standings": {
     "A": [
       {
@@ -436,6 +436,19 @@
     "I": [
       {
         "pos": 1,
+        "tla": "NOR",
+        "nome": "Norway",
+        "pj": 1,
+        "v": 1,
+        "e": 0,
+        "d": 0,
+        "gf": 4,
+        "gc": 1,
+        "dg": 3,
+        "pts": 3
+      },
+      {
+        "pos": 2,
         "tla": "FRA",
         "nome": "France",
         "pj": 1,
@@ -448,33 +461,7 @@
         "pts": 3
       },
       {
-        "pos": 2,
-        "tla": "IRQ",
-        "nome": "Iraq",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 2,
-        "tla": "NOR",
-        "nome": "Norway",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 4,
+        "pos": 3,
         "tla": "SEN",
         "nome": "Senegal",
         "pj": 1,
@@ -485,37 +472,37 @@
         "gc": 3,
         "dg": -2,
         "pts": 0
+      },
+      {
+        "pos": 4,
+        "tla": "IRQ",
+        "nome": "Iraq",
+        "pj": 1,
+        "v": 0,
+        "e": 0,
+        "d": 1,
+        "gf": 1,
+        "gc": 4,
+        "dg": -3,
+        "pts": 0
       }
     ],
     "J": [
       {
         "pos": 1,
-        "tla": "ALG",
-        "nome": "Algeria",
-        "pj": 0,
-        "v": 0,
-        "e": 0,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 1,
         "tla": "ARG",
         "nome": "Argentina",
-        "pj": 0,
-        "v": 0,
+        "pj": 1,
+        "v": 1,
         "e": 0,
         "d": 0,
-        "gf": 0,
+        "gf": 1,
         "gc": 0,
-        "dg": 0,
-        "pts": 0
+        "dg": 1,
+        "pts": 3
       },
       {
-        "pos": 1,
+        "pos": 2,
         "tla": "JOR",
         "nome": "Jordan",
         "pj": 0,
@@ -528,7 +515,7 @@
         "pts": 0
       },
       {
-        "pos": 1,
+        "pos": 2,
         "tla": "AUT",
         "nome": "Austria",
         "pj": 0,
@@ -538,6 +525,19 @@
         "gf": 0,
         "gc": 0,
         "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "tla": "ALG",
+        "nome": "Algeria",
+        "pj": 1,
+        "v": 0,
+        "e": 0,
+        "d": 1,
+        "gf": 0,
+        "gc": 1,
+        "dg": -1,
         "pts": 0
       }
     ],
