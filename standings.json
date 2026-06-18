@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-18 12:44",
+  "generated": "2026-06-18 16:49",
   "standings": {
     "A": [
       {
@@ -32,26 +32,26 @@
         "pos": 3,
         "tla": "CZE",
         "nome": "Czechia",
-        "pj": 1,
-        "v": 0,
+        "pj": 2,
+        "v": 1,
         "e": 0,
         "d": 1,
-        "gf": 1,
+        "gf": 2,
         "gc": 2,
-        "dg": -1,
-        "pts": 0
+        "dg": 0,
+        "pts": 3
       },
       {
         "pos": 4,
         "tla": "RSA",
         "nome": "South Africa",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
         "e": 0,
-        "d": 1,
+        "d": 2,
         "gf": 0,
-        "gc": 2,
-        "dg": -2,
+        "gc": 3,
+        "dg": -3,
         "pts": 0
       }
     ],
