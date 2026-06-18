@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-18 16:49",
+  "generated": "2026-06-18 20:04",
   "standings": {
     "A": [
       {
@@ -33,13 +33,13 @@
         "tla": "CZE",
         "nome": "Czechia",
         "pj": 2,
-        "v": 1,
-        "e": 0,
+        "v": 0,
+        "e": 1,
         "d": 1,
         "gf": 2,
-        "gc": 2,
-        "dg": 0,
-        "pts": 3
+        "gc": 3,
+        "dg": -1,
+        "pts": 1
       },
       {
         "pos": 4,
@@ -47,12 +47,12 @@
         "nome": "South Africa",
         "pj": 2,
         "v": 0,
-        "e": 0,
-        "d": 2,
-        "gf": 0,
+        "e": 1,
+        "d": 1,
+        "gf": 1,
         "gc": 3,
-        "dg": -3,
-        "pts": 0
+        "dg": -2,
+        "pts": 1
       }
     ],
     "B": [
@@ -60,17 +60,30 @@
         "pos": 1,
         "tla": "SUI",
         "nome": "Switzerland",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
-        "e": 1,
+        "e": 2,
         "d": 0,
         "gf": 1,
         "gc": 1,
         "dg": 0,
-        "pts": 1
+        "pts": 2
       },
       {
         "pos": 2,
+        "tla": "BIH",
+        "nome": "Bosnia-H.",
+        "pj": 2,
+        "v": 0,
+        "e": 2,
+        "d": 0,
+        "gf": 1,
+        "gc": 1,
+        "dg": 0,
+        "pts": 2
+      },
+      {
+        "pos": 3,
         "tla": "CAN",
         "nome": "Canada",
         "pj": 1,
@@ -83,22 +96,9 @@
         "pts": 1
       },
       {
-        "pos": 3,
+        "pos": 4,
         "tla": "QAT",
         "nome": "Qatar",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 1,
-        "gc": 1,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 4,
-        "tla": "BIH",
-        "nome": "Bosnia-H.",
         "pj": 1,
         "v": 0,
         "e": 1,
