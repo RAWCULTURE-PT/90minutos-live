@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17 23:13",
+  "generated": "2026-06-18 02:11",
   "standings": {
     "A": [
       {
@@ -572,27 +572,27 @@
         "pos": 3,
         "tla": "COL",
         "nome": "Colombia",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       },
       {
         "pos": 3,
         "tla": "UZB",
         "nome": "Uzbekistan",
-        "pj": 0,
+        "pj": 1,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 0,
         "gc": 0,
         "dg": 0,
-        "pts": 0
+        "pts": 1
       }
     ],
     "L": [
@@ -614,26 +614,26 @@
         "tla": "GHA",
         "nome": "Ghana",
         "pj": 1,
-        "v": 0,
-        "e": 1,
+        "v": 1,
+        "e": 0,
         "d": 0,
-        "gf": 0,
+        "gf": 1,
         "gc": 0,
-        "dg": 0,
-        "pts": 1
+        "dg": 1,
+        "pts": 3
       },
       {
-        "pos": 2,
+        "pos": 3,
         "tla": "PAN",
         "nome": "Panama",
         "pj": 1,
         "v": 0,
-        "e": 1,
-        "d": 0,
+        "e": 0,
+        "d": 1,
         "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 1
+        "gc": 1,
+        "dg": -1,
+        "pts": 0
       },
       {
         "pos": 4,
