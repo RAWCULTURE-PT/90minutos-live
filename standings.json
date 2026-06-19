@@ -1,31 +1,31 @@
 {
-  "generated": "2026-06-18 23:26",
+  "generated": "2026-06-19 02:39",
   "standings": {
     "A": [
       {
         "pos": 1,
         "tla": "MEX",
         "nome": "Mexico",
-        "pj": 1,
-        "v": 1,
+        "pj": 2,
+        "v": 2,
         "e": 0,
         "d": 0,
-        "gf": 2,
+        "gf": 3,
         "gc": 0,
-        "dg": 2,
-        "pts": 3
+        "dg": 3,
+        "pts": 6
       },
       {
         "pos": 2,
         "tla": "KOR",
         "nome": "Korea Republic",
-        "pj": 1,
+        "pj": 2,
         "v": 1,
         "e": 0,
-        "d": 0,
+        "d": 1,
         "gf": 2,
-        "gc": 1,
-        "dg": 1,
+        "gc": 2,
+        "dg": 0,
         "pts": 3
       },
       {
@@ -58,6 +58,19 @@
     "B": [
       {
         "pos": 1,
+        "tla": "CAN",
+        "nome": "Canada",
+        "pj": 2,
+        "v": 1,
+        "e": 1,
+        "d": 0,
+        "gf": 7,
+        "gc": 1,
+        "dg": 6,
+        "pts": 4
+      },
+      {
+        "pos": 2,
         "tla": "SUI",
         "nome": "Switzerland",
         "pj": 2,
@@ -66,19 +79,6 @@
         "d": 0,
         "gf": 5,
         "gc": 2,
-        "dg": 3,
-        "pts": 4
-      },
-      {
-        "pos": 2,
-        "tla": "CAN",
-        "nome": "Canada",
-        "pj": 2,
-        "v": 1,
-        "e": 1,
-        "d": 0,
-        "gf": 4,
-        "gc": 1,
         "dg": 3,
         "pts": 4
       },
@@ -104,8 +104,8 @@
         "e": 1,
         "d": 1,
         "gf": 1,
-        "gc": 4,
-        "dg": -3,
+        "gc": 7,
+        "dg": -6,
         "pts": 1
       }
     ],
