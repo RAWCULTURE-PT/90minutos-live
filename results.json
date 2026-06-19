@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19 20:58",
+  "generated": "2026-06-19 22:41",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -111,6 +111,10 @@
     },
     "MEX-KOR": {
       "home": 1,
+      "away": 0
+    },
+    "USA-AUS": {
+      "home": 2,
       "away": 0
     }
   }
