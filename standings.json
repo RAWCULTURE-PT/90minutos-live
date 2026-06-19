@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19 16:25",
+  "generated": "2026-06-19 19:20",
   "standings": {
     "A": [
       {
@@ -168,27 +168,27 @@
         "pos": 1,
         "tla": "USA",
         "nome": "USA",
-        "pj": 1,
+        "pj": 2,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 4,
         "gc": 1,
         "dg": 3,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 2,
         "tla": "AUS",
         "nome": "Australia",
-        "pj": 1,
+        "pj": 2,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 2,
         "gc": 0,
         "dg": 2,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 3,
