@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20 17:11",
+  "generated": "2026-06-20 19:04",
   "standings": {
     "A": [
       {
@@ -274,29 +274,29 @@
     "F": [
       {
         "pos": 1,
-        "tla": "SWE",
-        "nome": "Sweden",
+        "tla": "NED",
+        "nome": "Netherlands",
         "pj": 2,
         "v": 1,
         "e": 1,
         "d": 0,
-        "gf": 5,
-        "gc": 1,
+        "gf": 7,
+        "gc": 3,
         "dg": 4,
         "pts": 4
       },
       {
         "pos": 2,
-        "tla": "NED",
-        "nome": "Netherlands",
+        "tla": "SWE",
+        "nome": "Sweden",
         "pj": 2,
-        "v": 0,
-        "e": 2,
-        "d": 0,
-        "gf": 2,
-        "gc": 2,
+        "v": 1,
+        "e": 0,
+        "d": 1,
+        "gf": 6,
+        "gc": 6,
         "dg": 0,
-        "pts": 2
+        "pts": 3
       },
       {
         "pos": 3,
