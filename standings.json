@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20 02:00",
+  "generated": "2026-06-20 07:39",
   "standings": {
     "A": [
       {
@@ -112,19 +112,6 @@
     "C": [
       {
         "pos": 1,
-        "tla": "MAR",
-        "nome": "Morocco",
-        "pj": 2,
-        "v": 1,
-        "e": 1,
-        "d": 0,
-        "gf": 2,
-        "gc": 1,
-        "dg": 1,
-        "pts": 4
-      },
-      {
-        "pos": 2,
         "tla": "BRA",
         "nome": "Brazil",
         "pj": 2,
@@ -134,6 +121,19 @@
         "gf": 4,
         "gc": 1,
         "dg": 3,
+        "pts": 4
+      },
+      {
+        "pos": 2,
+        "tla": "MAR",
+        "nome": "Morocco",
+        "pj": 2,
+        "v": 1,
+        "e": 1,
+        "d": 0,
+        "gf": 2,
+        "gc": 1,
+        "dg": 1,
         "pts": 4
       },
       {
@@ -192,27 +192,27 @@
       },
       {
         "pos": 3,
-        "tla": "TUR",
-        "nome": "Turkey",
-        "pj": 1,
-        "v": 0,
+        "tla": "PAR",
+        "nome": "Paraguay",
+        "pj": 2,
+        "v": 1,
         "e": 0,
         "d": 1,
-        "gf": 0,
-        "gc": 2,
+        "gf": 2,
+        "gc": 4,
         "dg": -2,
-        "pts": 0
+        "pts": 3
       },
       {
         "pos": 4,
-        "tla": "PAR",
-        "nome": "Paraguay",
-        "pj": 1,
+        "tla": "TUR",
+        "nome": "Turkey",
+        "pj": 2,
         "v": 0,
         "e": 0,
-        "d": 1,
-        "gf": 1,
-        "gc": 4,
+        "d": 2,
+        "gf": 0,
+        "gc": 3,
         "dg": -3,
         "pts": 0
       }
