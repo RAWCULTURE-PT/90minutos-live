@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 02:12",
+  "generated": "2026-06-21 08:18",
   "channels": {
     "ECU-CUW": [
       "Sport TV 5"
@@ -142,6 +142,9 @@
     "SCO-WAL": [
       "Sport TV 5"
     ],
+    "AUT-AZE": [
+      "Sport TV 5"
+    ],
     "COL-POR": [
       "RTP 1",
       "Sport TV 1"
@@ -153,7 +156,7 @@
       "Sport TV 5"
     ],
     "ALG-AUT": [
-      "Sport TV 5"
+      "Sport TV"
     ],
     "NOR-SWE": [
       "Sport TV 5"
@@ -234,6 +237,9 @@
       "Sport TV 5"
     ],
     "IRL-ENG": [
+      "Sport TV 5"
+    ],
+    "FRA-SUI": [
       "Sport TV 5"
     ],
     "NIR-ENG": [
