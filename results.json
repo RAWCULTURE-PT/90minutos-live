@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 17:14",
+  "generated": "2026-06-21 19:08",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -33,7 +33,7 @@
       "home": 2,
       "away": 0
     },
-    "GER-CUW": {
+    "GER-CUR": {
       "home": 7,
       "away": 1
     },
@@ -57,7 +57,7 @@
       "home": 1,
       "away": 1
     },
-    "KSA-URU": {
+    "KSA-URY": {
       "home": 1,
       "away": 1
     },
@@ -137,13 +137,17 @@
       "home": 2,
       "away": 1
     },
-    "ECU-CUW": {
+    "ECU-CUR": {
       "home": 0,
       "away": 0
     },
     "TUN-JPN": {
       "home": 0,
       "away": 4
+    },
+    "ESP-KSA": {
+      "home": 5,
+      "away": 0
     }
   }
 }
