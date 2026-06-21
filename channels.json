@@ -1,40 +1,6 @@
 {
-  "generated": "2026-06-20 22:55",
+  "generated": "2026-06-21 02:12",
   "channels": {
-    "BRA-HAI": [
-      "Sport TV 1"
-    ],
-    "TUR-PAR": [
-      "Sport TV 5"
-    ],
-    "NED-SWE": [
-      "Sport TV 5"
-    ],
-    "GER-CIV": [
-      "TVI",
-      "Sport TV 1"
-    ],
-    "CZE-SVK": [
-      "Sport TV 5"
-    ],
-    "SVK-CZE": [
-      "Sport TV 5"
-    ],
-    "DNK-NOR": [
-      "Sport TV 5"
-    ],
-    "SCO-NIR": [
-      "Sport TV 5"
-    ],
-    "UKR-CZE": [
-      "Sport TV 5"
-    ],
-    "POL-ROU": [
-      "Sport TV 5"
-    ],
-    "NIR-WAL": [
-      "Sport TV 5"
-    ],
     "ECU-CUW": [
       "Sport TV 5"
     ],
@@ -102,6 +68,9 @@
     "AUT-SVK": [
       "Sport TV 5"
     ],
+    "NIR-WAL": [
+      "Sport TV 5"
+    ],
     "CZE-MEX": [
       "Sport TV 5"
     ],
@@ -159,6 +128,9 @@
       "Sport TV 5"
     ],
     "HUN-SVK": [
+      "Sport TV 5"
+    ],
+    "SCO-NIR": [
       "Sport TV 5"
     ],
     "SWE-NOR": [
@@ -394,6 +366,27 @@
       "Sport TV 5"
     ],
     "JPN-GER": [
+      "Sport TV 5"
+    ],
+    "CZE-CRO": [
+      "Sport TV 5"
+    ],
+    "BEL-SWE": [
+      "Sport TV 5"
+    ],
+    "POR-SUI": [
+      "Sport TV 5"
+    ],
+    "CZE-NOR": [
+      "Sport TV 5"
+    ],
+    "PER-ARG": [
+      "Sport TV 5"
+    ],
+    "BRA-PER": [
+      "Sport TV 5"
+    ],
+    "BRA-BOL": [
       "Sport TV 5"
     ],
     "_": [

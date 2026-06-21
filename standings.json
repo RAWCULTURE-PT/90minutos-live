@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20 22:55",
+  "generated": "2026-06-21 02:12",
   "standings": {
     "A": [
       {
@@ -248,27 +248,27 @@
         "pos": 3,
         "tla": "ECU",
         "nome": "Ecuador",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 0,
         "gc": 1,
         "dg": -1,
-        "pts": 0
+        "pts": 1
       },
       {
         "pos": 4,
         "tla": "CUW",
         "nome": "Curaçao",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 1,
         "gc": 7,
         "dg": -6,
-        "pts": 0
+        "pts": 1
       }
     ],
     "F": [
