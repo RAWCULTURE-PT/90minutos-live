@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 21:01",
+  "generated": "2026-06-21 22:56",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -147,6 +147,10 @@
     },
     "ESP-KSA": {
       "home": 4,
+      "away": 0
+    },
+    "BEL-IRN": {
+      "home": 0,
       "away": 0
     }
   }

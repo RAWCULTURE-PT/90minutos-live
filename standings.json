@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 21:01",
+  "generated": "2026-06-21 22:56",
   "standings": {
     "A": [
       {
@@ -395,19 +395,32 @@
       },
       {
         "pos": 2,
-        "tla": "URU",
-        "nome": "Uruguay",
-        "pj": 1,
-        "v": 0,
+        "tla": "CPV",
+        "nome": "Cape Verde",
+        "pj": 2,
+        "v": 1,
         "e": 1,
         "d": 0,
         "gf": 1,
-        "gc": 1,
-        "dg": 0,
-        "pts": 1
+        "gc": 0,
+        "dg": 1,
+        "pts": 4
       },
       {
         "pos": 3,
+        "tla": "URU",
+        "nome": "Uruguay",
+        "pj": 2,
+        "v": 0,
+        "e": 1,
+        "d": 1,
+        "gf": 1,
+        "gc": 2,
+        "dg": -1,
+        "pts": 1
+      },
+      {
+        "pos": 4,
         "tla": "KSA",
         "nome": "Saudi Arabia",
         "pj": 2,
@@ -417,19 +430,6 @@
         "gf": 1,
         "gc": 5,
         "dg": -4,
-        "pts": 1
-      },
-      {
-        "pos": 4,
-        "tla": "CPV",
-        "nome": "Cape Verde",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
         "pts": 1
       }
     ],
