@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22 02:16",
+  "generated": "2026-06-22 09:35",
   "channels": {
     "NZL-EGY": [
       "Sport TV 5"
@@ -44,10 +44,16 @@
     "USA-MEX": [
       "Sport TV 5"
     ],
+    "AUT-SVK": [
+      "Sport TV 5"
+    ],
     "SVK-AUT": [
       "Sport TV 5"
     ],
-    "AUT-SVK": [
+    "UKR-SVK": [
+      "Sport TV 5"
+    ],
+    "BGR-UKR": [
       "Sport TV 5"
     ],
     "NIR-WAL": [
@@ -290,10 +296,10 @@
     "BOL-BRA": [
       "Sport TV 5"
     ],
-    "COL-VEN": [
+    "ARG-CHL": [
       "Sport TV 5"
     ],
-    "ARG-CHL": [
+    "COL-VEN": [
       "Sport TV 5"
     ],
     "ENG-GER": [
@@ -359,13 +365,13 @@
     "CZE-CRO": [
       "Sport TV 5"
     ],
-    "BEL-SWE": [
-      "Sport TV 5"
-    ],
     "POR-SUI": [
       "Sport TV 5"
     ],
     "CZE-NOR": [
+      "Sport TV 5"
+    ],
+    "BEL-SWE": [
       "Sport TV 5"
     ],
     "PER-ARG": [
