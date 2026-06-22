@@ -1,24 +1,6 @@
 {
-  "generated": "2026-06-21 22:56",
+  "generated": "2026-06-22 02:16",
   "channels": {
-    "ECU-CUW": [
-      "Sport TV 5"
-    ],
-    "TUN-JPN": [
-      "Sport TV 5"
-    ],
-    "ESP-KSA": [
-      "Sport TV 1"
-    ],
-    "BEL-IRN": [
-      "Sport TV 5"
-    ],
-    "URU-CPV": [
-      "Sport TV 1"
-    ],
-    "BGR-KOS": [
-      "Sport TV 5"
-    ],
     "NZL-EGY": [
       "Sport TV 5"
     ],
@@ -393,6 +375,15 @@
       "Sport TV 5"
     ],
     "BRA-BOL": [
+      "Sport TV 5"
+    ],
+    "CHL-ARG": [
+      "Sport TV 5"
+    ],
+    "VEN-COL": [
+      "Sport TV 5"
+    ],
+    "SEN-MAR": [
       "Sport TV 5"
     ],
     "_": [

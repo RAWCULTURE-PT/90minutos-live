@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21 22:56",
+  "generated": "2026-06-22 02:16",
   "standings": {
     "A": [
       {
@@ -328,6 +328,19 @@
     "G": [
       {
         "pos": 1,
+        "tla": "NZL",
+        "nome": "New Zealand",
+        "pj": 2,
+        "v": 1,
+        "e": 1,
+        "d": 0,
+        "gf": 3,
+        "gc": 2,
+        "dg": 1,
+        "pts": 4
+      },
+      {
+        "pos": 2,
         "tla": "IRN",
         "nome": "Iran",
         "pj": 2,
@@ -340,7 +353,7 @@
         "pts": 2
       },
       {
-        "pos": 2,
+        "pos": 3,
         "tla": "BEL",
         "nome": "Belgium",
         "pj": 2,
@@ -353,29 +366,16 @@
         "pts": 2
       },
       {
-        "pos": 3,
-        "tla": "NZL",
-        "nome": "New Zealand",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 2,
-        "gc": 2,
-        "dg": 0,
-        "pts": 1
-      },
-      {
         "pos": 4,
         "tla": "EGY",
         "nome": "Egypt",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
         "e": 1,
-        "d": 0,
+        "d": 1,
         "gf": 1,
-        "gc": 1,
-        "dg": 0,
+        "gc": 2,
+        "dg": -1,
         "pts": 1
       }
     ],
@@ -395,29 +395,29 @@
       },
       {
         "pos": 2,
-        "tla": "CPV",
-        "nome": "Cape Verde",
-        "pj": 2,
-        "v": 1,
-        "e": 1,
-        "d": 0,
-        "gf": 1,
-        "gc": 0,
-        "dg": 1,
-        "pts": 4
-      },
-      {
-        "pos": 3,
         "tla": "URU",
         "nome": "Uruguay",
         "pj": 2,
         "v": 0,
-        "e": 1,
-        "d": 1,
-        "gf": 1,
+        "e": 2,
+        "d": 0,
+        "gf": 3,
+        "gc": 3,
+        "dg": 0,
+        "pts": 2
+      },
+      {
+        "pos": 3,
+        "tla": "CPV",
+        "nome": "Cape Verde",
+        "pj": 2,
+        "v": 0,
+        "e": 2,
+        "d": 0,
+        "gf": 2,
         "gc": 2,
-        "dg": -1,
-        "pts": 1
+        "dg": 0,
+        "pts": 2
       },
       {
         "pos": 4,
