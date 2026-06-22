@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22 19:01",
+  "generated": "2026-06-22 21:53",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -160,6 +160,10 @@
     "NZL-EGY": {
       "home": 1,
       "away": 3
+    },
+    "ARG-AUT": {
+      "home": 2,
+      "away": 0
     }
   }
 }
