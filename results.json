@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 01:54",
+  "generated": "2026-06-23 05:56",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -57,7 +57,7 @@
       "home": 1,
       "away": 1
     },
-    "KSA-URY": {
+    "KSA-URU": {
       "home": 1,
       "away": 1
     },
@@ -153,7 +153,7 @@
       "home": 0,
       "away": 0
     },
-    "URY-CPV": {
+    "URU-CPV": {
       "home": 2,
       "away": 2
     },
@@ -168,6 +168,14 @@
     "FRA-IRQ": {
       "home": 3,
       "away": 0
+    },
+    "NOR-SEN": {
+      "home": 3,
+      "away": 2
+    },
+    "JOR-ALG": {
+      "home": 1,
+      "away": 2
     }
   }
 }

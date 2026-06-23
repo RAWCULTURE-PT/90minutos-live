@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 01:54",
+  "generated": "2026-06-23 05:56",
   "standings": {
     "A": [
       {
@@ -436,19 +436,6 @@
     "I": [
       {
         "pos": 1,
-        "tla": "NOR",
-        "nome": "Norway",
-        "pj": 2,
-        "v": 2,
-        "e": 0,
-        "d": 0,
-        "gf": 7,
-        "gc": 2,
-        "dg": 5,
-        "pts": 6
-      },
-      {
-        "pos": 2,
         "tla": "FRA",
         "nome": "France",
         "pj": 2,
@@ -461,6 +448,19 @@
         "pts": 6
       },
       {
+        "pos": 2,
+        "tla": "NOR",
+        "nome": "Norway",
+        "pj": 2,
+        "v": 2,
+        "e": 0,
+        "d": 0,
+        "gf": 7,
+        "gc": 3,
+        "dg": 4,
+        "pts": 6
+      },
+      {
         "pos": 3,
         "tla": "SEN",
         "nome": "Senegal",
@@ -468,9 +468,9 @@
         "v": 0,
         "e": 0,
         "d": 2,
-        "gf": 2,
+        "gf": 3,
         "gc": 6,
-        "dg": -4,
+        "dg": -3,
         "pts": 0
       },
       {
@@ -516,27 +516,27 @@
       },
       {
         "pos": 3,
-        "tla": "JOR",
-        "nome": "Jordan",
-        "pj": 1,
-        "v": 0,
+        "tla": "ALG",
+        "nome": "Algeria",
+        "pj": 2,
+        "v": 1,
         "e": 0,
         "d": 1,
-        "gf": 1,
-        "gc": 3,
+        "gf": 2,
+        "gc": 4,
         "dg": -2,
-        "pts": 0
+        "pts": 3
       },
       {
         "pos": 4,
-        "tla": "ALG",
-        "nome": "Algeria",
-        "pj": 1,
+        "tla": "JOR",
+        "nome": "Jordan",
+        "pj": 2,
         "v": 0,
         "e": 0,
-        "d": 1,
-        "gf": 0,
-        "gc": 3,
+        "d": 2,
+        "gf": 2,
+        "gc": 5,
         "dg": -3,
         "pts": 0
       }
