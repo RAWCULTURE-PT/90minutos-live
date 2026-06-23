@@ -1,15 +1,6 @@
 {
-  "generated": "2026-06-22 23:09",
+  "generated": "2026-06-23 01:54",
   "channels": {
-    "NZL-EGY": [
-      "Sport TV 5"
-    ],
-    "ARG-AUT": [
-      "Sport TV 1"
-    ],
-    "FRA-IRQ": [
-      "Sport TV 1"
-    ],
     "NOR-SEN": [
       "Sport TV 1"
     ],
@@ -390,6 +381,24 @@
       "Sport TV 5"
     ],
     "SEN-MAR": [
+      "Sport TV 5"
+    ],
+    "ENG-ITA": [
+      "Sport TV 5"
+    ],
+    "FRA-GER": [
+      "Sport TV 5"
+    ],
+    "NED-ENG": [
+      "Sport TV 5"
+    ],
+    "ENG-NED": [
+      "Sport TV 5"
+    ],
+    "GER-ENG": [
+      "Sport TV 5"
+    ],
+    "ENG-BEL": [
       "Sport TV 5"
     ],
     "_": [

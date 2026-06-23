@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22 23:09",
+  "generated": "2026-06-23 01:54",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -163,6 +163,10 @@
     },
     "ARG-AUT": {
       "home": 2,
+      "away": 0
+    },
+    "FRA-IRQ": {
+      "home": 3,
       "away": 0
     }
   }
