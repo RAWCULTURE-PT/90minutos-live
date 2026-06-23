@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 16:17",
+  "generated": "2026-06-23 19:46",
   "standings": {
     "A": [
       {
@@ -544,6 +544,19 @@
     "K": [
       {
         "pos": 1,
+        "tla": "POR",
+        "nome": "Portugal",
+        "pj": 2,
+        "v": 1,
+        "e": 1,
+        "d": 0,
+        "gf": 6,
+        "gc": 1,
+        "dg": 5,
+        "pts": 4
+      },
+      {
+        "pos": 2,
         "tla": "COL",
         "nome": "Colombia",
         "pj": 1,
@@ -556,22 +569,9 @@
         "pts": 3
       },
       {
-        "pos": 2,
+        "pos": 3,
         "tla": "COD",
         "nome": "Congo DR",
-        "pj": 1,
-        "v": 0,
-        "e": 1,
-        "d": 0,
-        "gf": 1,
-        "gc": 1,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 2,
-        "tla": "POR",
-        "nome": "Portugal",
         "pj": 1,
         "v": 0,
         "e": 1,
@@ -585,13 +585,13 @@
         "pos": 4,
         "tla": "UZB",
         "nome": "Uzbekistan",
-        "pj": 1,
+        "pj": 2,
         "v": 0,
         "e": 0,
-        "d": 1,
+        "d": 2,
         "gf": 1,
-        "gc": 3,
-        "dg": -2,
+        "gc": 8,
+        "dg": -7,
         "pts": 0
       }
     ],

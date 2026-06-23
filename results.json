@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 16:17",
+  "generated": "2026-06-23 19:46",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -10,8 +10,8 @@
       "away": 1
     },
     "CAN-BIH": {
-      "home": 1,
-      "away": 1
+      "home": null,
+      "away": null
     },
     "USA-PAR": {
       "home": 4,
@@ -176,6 +176,10 @@
     "JOR-ALG": {
       "home": 1,
       "away": 2
+    },
+    "POR-UZB": {
+      "home": 5,
+      "away": 0
     }
   }
 }
