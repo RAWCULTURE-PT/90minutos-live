@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 21:21",
+  "generated": "2026-06-23 22:56",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -179,6 +179,10 @@
     },
     "POR-UZB": {
       "home": 5,
+      "away": 0
+    },
+    "ENG-GHA": {
+      "home": 0,
       "away": 0
     }
   }
