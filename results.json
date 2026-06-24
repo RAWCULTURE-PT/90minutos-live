@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23 22:56",
+  "generated": "2026-06-24 01:53",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -57,7 +57,7 @@
       "home": 1,
       "away": 1
     },
-    "KSA-URU": {
+    "KSA-URY": {
       "home": 1,
       "away": 1
     },
@@ -153,7 +153,7 @@
       "home": 0,
       "away": 0
     },
-    "URU-CPV": {
+    "URY-CPV": {
       "home": 2,
       "away": 2
     },
@@ -184,6 +184,10 @@
     "ENG-GHA": {
       "home": 0,
       "away": 0
+    },
+    "PAN-CRO": {
+      "home": 0,
+      "away": 1
     }
   }
 }
