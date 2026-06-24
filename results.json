@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-24 19:22",
+  "generated": "2026-06-24 21:14",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -57,7 +57,7 @@
       "home": 1,
       "away": 1
     },
-    "KSA-URU": {
+    "KSA-URY": {
       "home": 1,
       "away": 1
     },
@@ -153,7 +153,7 @@
       "home": 0,
       "away": 0
     },
-    "URU-CPV": {
+    "URY-CPV": {
       "home": 2,
       "away": 2
     },
@@ -192,6 +192,14 @@
     "COL-COD": {
       "home": 1,
       "away": 0
+    },
+    "SUI-CAN": {
+      "home": 2,
+      "away": 1
+    },
+    "BIH-QAT": {
+      "home": 3,
+      "away": 1
     }
   }
 }
