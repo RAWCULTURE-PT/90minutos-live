@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25 21:19",
+  "generated": "2026-06-25 23:04",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -216,6 +216,14 @@
     "RSA-KOR": {
       "home": 1,
       "away": 0
+    },
+    "ECU-GER": {
+      "home": 2,
+      "away": 1
+    },
+    "CUW-CIV": {
+      "home": 0,
+      "away": 2
     }
   }
 }
