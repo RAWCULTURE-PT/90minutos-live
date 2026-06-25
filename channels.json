@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25 01:57",
+  "generated": "2026-06-25 05:59",
   "channels": {
     "CZE-MEX": [
       "Sport TV 5"
@@ -14,7 +14,13 @@
     "CUW-CIV": [
       "Sport TV 5"
     ],
+    "NOR-SWE": [
+      "Sport TV 5"
+    ],
     "SRB-AUT": [
+      "Sport TV 5"
+    ],
+    "SRB-ROU": [
       "Sport TV 5"
     ],
     "JPN-SWE": [
@@ -39,13 +45,13 @@
     "AUT-SUI": [
       "Sport TV 5"
     ],
-    "NOR-SWE": [
-      "Sport TV 5"
-    ],
     "SWE-DNK": [
       "Sport TV 5"
     ],
     "AUT-SVN": [
+      "Sport TV 5"
+    ],
+    "NIR-WAL": [
       "Sport TV 5"
     ],
     "URU-ESP": [
@@ -69,31 +75,40 @@
     "CZE-POL": [
       "Sport TV 5"
     ],
-    "SVK-CZE": [
+    "CZE-SVK": [
       "Sport TV 5"
     ],
     "SVK-POL": [
       "Sport TV 5"
     ],
-    "CZE-SVK": [
+    "HUN-SVK": [
       "Sport TV 5"
     ],
-    "HUN-SVK": [
+    "SVK-CZE": [
       "Sport TV 5"
     ],
     "SCO-NIR": [
       "Sport TV 5"
     ],
-    "SWE-NOR": [
+    "DNK-SWE": [
       "Sport TV 5"
     ],
-    "SUI-AUT": [
+    "SWE-NOR": [
       "Sport TV 5"
     ],
     "SCO-WAL": [
       "Sport TV 5"
     ],
+    "SUI-AUT": [
+      "Sport TV 5"
+    ],
+    "SRB-ARM": [
+      "Sport TV 5"
+    ],
     "AUT-AZE": [
+      "Sport TV 5"
+    ],
+    "AUT-HUN": [
       "Sport TV 5"
     ],
     "HUN-ROU": [
@@ -115,19 +130,34 @@
     "GER-POL": [
       "Sport TV 5"
     ],
+    "ROU-UKR": [
+      "Sport TV 5"
+    ],
+    "CZE-AUT": [
+      "Sport TV 5"
+    ],
+    "BGR-SRB": [
+      "Sport TV 5"
+    ],
     "IRL-SCO": [
       "Sport TV 5"
     ],
     "NIR-SCO": [
       "Sport TV 5"
     ],
+    "GRC-BEL": [
+      "Sport TV 5"
+    ],
+    "CZE-HUN": [
+      "Sport TV 5"
+    ],
+    "NED-GRC": [
+      "Sport TV 5"
+    ],
     "HUN-AZE": [
       "Sport TV 5"
     ],
     "SVN-CRO": [
-      "Sport TV 5"
-    ],
-    "SRB-ROU": [
       "Sport TV 5"
     ],
     "POL-CZE": [
@@ -151,6 +181,12 @@
     "AUT-GER": [
       "Sport TV 5"
     ],
+    "GRC-NED": [
+      "Sport TV 5"
+    ],
+    "CRO-HUN": [
+      "Sport TV 5"
+    ],
     "AUT-CZE": [
       "Sport TV 5"
     ],
@@ -163,10 +199,16 @@
     "AUT-SVK": [
       "Sport TV 5"
     ],
+    "GRC-POL": [
+      "Sport TV 5"
+    ],
     "WAL-ENG": [
       "Sport TV 5"
     ],
     "CZE-SUI": [
+      "Sport TV 5"
+    ],
+    "NED-CYP": [
       "Sport TV 5"
     ],
     "ENG-WAL": [
@@ -178,6 +220,9 @@
     "GER-SUI": [
       "Sport TV 5"
     ],
+    "GRC-SUI": [
+      "Sport TV 5"
+    ],
     "DNK-ENG": [
       "Sport TV 5"
     ],
@@ -185,6 +230,9 @@
       "Sport TV 5"
     ],
     "GER-DNK": [
+      "Sport TV 5"
+    ],
+    "BEL-GRC": [
       "Sport TV 5"
     ],
     "POL-WAL": [
@@ -202,10 +250,10 @@
     "CZE-GER": [
       "Sport TV 5"
     ],
-    "AUT-HUN": [
+    "IRL-ENG": [
       "Sport TV 5"
     ],
-    "IRL-ENG": [
+    "GER-NED": [
       "Sport TV 5"
     ],
     "FRA-SUI": [
@@ -265,13 +313,13 @@
     "CRO-CZE": [
       "Sport TV 5"
     ],
+    "SWE-BEL": [
+      "Sport TV 5"
+    ],
     "NOR-CZE": [
       "Sport TV 5"
     ],
     "SUI-POR": [
-      "Sport TV 5"
-    ],
-    "SWE-BEL": [
       "Sport TV 5"
     ],
     "PER-BRA": [
@@ -314,6 +362,9 @@
       "Sport TV 5"
     ],
     "AUS-ENG": [
+      "Sport TV 5"
+    ],
+    "NED-ENG": [
       "Sport TV 5"
     ],
     "GER-ITA": [
@@ -385,13 +436,10 @@
     "FRA-GER": [
       "Sport TV 5"
     ],
-    "NED-ENG": [
+    "ENG-NED": [
       "Sport TV 5"
     ],
     "GER-ENG": [
-      "Sport TV 5"
-    ],
-    "ENG-NED": [
       "Sport TV 5"
     ],
     "ENG-BEL": [

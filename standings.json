@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25 01:57",
+  "generated": "2026-06-25 05:59",
   "standings": {
     "A": [
       {
@@ -7,52 +7,52 @@
         "tla": "MEX",
         "nome": "Mexico",
         "pj": 3,
-        "v": 2,
-        "e": 1,
+        "v": 3,
+        "e": 0,
         "d": 0,
-        "gf": 3,
+        "gf": 6,
         "gc": 0,
-        "dg": 3,
-        "pts": 7
+        "dg": 6,
+        "pts": 9
       },
       {
         "pos": 2,
-        "tla": "KOR",
-        "nome": "Korea Republic",
+        "tla": "RSA",
+        "nome": "South Africa",
         "pj": 3,
         "v": 1,
         "e": 1,
         "d": 1,
         "gf": 2,
-        "gc": 2,
-        "dg": 0,
+        "gc": 3,
+        "dg": -1,
         "pts": 4
       },
       {
         "pos": 3,
+        "tla": "KOR",
+        "nome": "Korea Republic",
+        "pj": 3,
+        "v": 1,
+        "e": 0,
+        "d": 2,
+        "gf": 2,
+        "gc": 3,
+        "dg": -1,
+        "pts": 3
+      },
+      {
+        "pos": 4,
         "tla": "CZE",
         "nome": "Czechia",
         "pj": 3,
         "v": 0,
-        "e": 2,
-        "d": 1,
+        "e": 1,
+        "d": 2,
         "gf": 2,
-        "gc": 3,
-        "dg": -1,
-        "pts": 2
-      },
-      {
-        "pos": 4,
-        "tla": "RSA",
-        "nome": "South Africa",
-        "pj": 3,
-        "v": 0,
-        "e": 2,
-        "d": 1,
-        "gf": 1,
-        "gc": 3,
-        "dg": -2,
-        "pts": 2
+        "gc": 6,
+        "dg": -4,
+        "pts": 1
       }
     ],
     "B": [
