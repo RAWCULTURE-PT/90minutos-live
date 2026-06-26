@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26 19:25",
+  "generated": "2026-06-26 21:10",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -239,6 +239,14 @@
     },
     "PAR-AUS": {
       "home": 0,
+      "away": 0
+    },
+    "NOR-FRA": {
+      "home": 1,
+      "away": 4
+    },
+    "SEN-IRQ": {
+      "home": 5,
       "away": 0
     }
   }
