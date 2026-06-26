@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25 23:04",
+  "generated": "2026-06-26 01:58",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -224,6 +224,14 @@
     "CUW-CIV": {
       "home": 0,
       "away": 2
+    },
+    "TUN-NED": {
+      "home": 1,
+      "away": 3
+    },
+    "JPN-SWE": {
+      "home": 1,
+      "away": 1
     }
   }
 }
