@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26 01:58",
+  "generated": "2026-06-26 06:08",
   "standings": {
     "A": [
       {
@@ -168,53 +168,53 @@
         "pos": 1,
         "tla": "USA",
         "nome": "USA",
-        "pj": 2,
+        "pj": 3,
         "v": 2,
         "e": 0,
-        "d": 0,
-        "gf": 6,
-        "gc": 1,
-        "dg": 5,
+        "d": 1,
+        "gf": 8,
+        "gc": 4,
+        "dg": 4,
         "pts": 6
       },
       {
         "pos": 2,
         "tla": "AUS",
         "nome": "Australia",
-        "pj": 2,
+        "pj": 3,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 2,
         "gc": 2,
         "dg": 0,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 3,
         "tla": "PAR",
         "nome": "Paraguay",
-        "pj": 2,
+        "pj": 3,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 2,
         "gc": 4,
         "dg": -2,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 4,
         "tla": "TUR",
         "nome": "Turkey",
-        "pj": 2,
-        "v": 0,
+        "pj": 3,
+        "v": 1,
         "e": 0,
         "d": 2,
-        "gf": 0,
-        "gc": 3,
-        "dg": -3,
-        "pts": 0
+        "gf": 3,
+        "gc": 5,
+        "dg": -2,
+        "pts": 3
       }
     ],
     "E": [
