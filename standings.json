@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27 01:52",
+  "generated": "2026-06-27 05:42",
   "standings": {
     "A": [
       {
@@ -328,54 +328,54 @@
     "G": [
       {
         "pos": 1,
-        "tla": "EGY",
-        "nome": "Egypt",
-        "pj": 2,
+        "tla": "BEL",
+        "nome": "Belgium",
+        "pj": 3,
         "v": 1,
-        "e": 1,
+        "e": 2,
         "d": 0,
-        "gf": 4,
+        "gf": 6,
         "gc": 2,
-        "dg": 2,
-        "pts": 4
+        "dg": 4,
+        "pts": 5
       },
       {
         "pos": 2,
-        "tla": "IRN",
-        "nome": "Iran",
-        "pj": 2,
-        "v": 0,
+        "tla": "EGY",
+        "nome": "Egypt",
+        "pj": 3,
+        "v": 1,
         "e": 2,
         "d": 0,
-        "gf": 2,
-        "gc": 2,
-        "dg": 0,
-        "pts": 2
+        "gf": 5,
+        "gc": 3,
+        "dg": 2,
+        "pts": 5
       },
       {
         "pos": 3,
-        "tla": "BEL",
-        "nome": "Belgium",
-        "pj": 2,
+        "tla": "IRN",
+        "nome": "Iran",
+        "pj": 3,
         "v": 0,
-        "e": 2,
+        "e": 3,
         "d": 0,
-        "gf": 1,
-        "gc": 1,
+        "gf": 3,
+        "gc": 3,
         "dg": 0,
-        "pts": 2
+        "pts": 3
       },
       {
         "pos": 4,
         "tla": "NZL",
         "nome": "New Zealand",
-        "pj": 2,
+        "pj": 3,
         "v": 0,
         "e": 1,
-        "d": 1,
-        "gf": 3,
-        "gc": 5,
-        "dg": -2,
+        "d": 2,
+        "gf": 4,
+        "gc": 10,
+        "dg": -6,
         "pts": 1
       }
     ],
