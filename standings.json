@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26 22:57",
+  "generated": "2026-06-27 01:52",
   "standings": {
     "A": [
       {
@@ -384,53 +384,53 @@
         "pos": 1,
         "tla": "ESP",
         "nome": "Spain",
-        "pj": 2,
-        "v": 1,
+        "pj": 3,
+        "v": 2,
         "e": 1,
         "d": 0,
-        "gf": 4,
+        "gf": 5,
         "gc": 0,
-        "dg": 4,
-        "pts": 4
+        "dg": 5,
+        "pts": 7
       },
       {
         "pos": 2,
-        "tla": "URU",
-        "nome": "Uruguay",
-        "pj": 2,
-        "v": 0,
-        "e": 2,
-        "d": 0,
-        "gf": 3,
-        "gc": 3,
-        "dg": 0,
-        "pts": 2
-      },
-      {
-        "pos": 3,
         "tla": "CPV",
         "nome": "Cape Verde",
-        "pj": 2,
+        "pj": 3,
         "v": 0,
-        "e": 2,
+        "e": 3,
         "d": 0,
         "gf": 2,
         "gc": 2,
         "dg": 0,
+        "pts": 3
+      },
+      {
+        "pos": 3,
+        "tla": "URU",
+        "nome": "Uruguay",
+        "pj": 3,
+        "v": 0,
+        "e": 2,
+        "d": 1,
+        "gf": 3,
+        "gc": 4,
+        "dg": -1,
         "pts": 2
       },
       {
         "pos": 4,
         "tla": "KSA",
         "nome": "Saudi Arabia",
-        "pj": 2,
+        "pj": 3,
         "v": 0,
-        "e": 1,
+        "e": 2,
         "d": 1,
         "gf": 1,
         "gc": 5,
         "dg": -4,
-        "pts": 1
+        "pts": 2
       }
     ],
     "I": [

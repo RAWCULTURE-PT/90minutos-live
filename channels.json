@@ -1,40 +1,6 @@
 {
-  "generated": "2026-06-26 22:57",
+  "generated": "2026-06-27 01:52",
   "channels": {
-    "JPN-SWE": [
-      "Sport TV 5"
-    ],
-    "TUN-NED": [
-      "Sport TV 1"
-    ],
-    "TUR-USA": [
-      "Sport TV 5"
-    ],
-    "PAR-AUS": [
-      "Sport TV 1"
-    ],
-    "SEN-IRQ": [
-      "Sport TV 5"
-    ],
-    "NOR-FRA": [
-      "TVI",
-      "Sport TV 1"
-    ],
-    "AUT-SUI": [
-      "Sport TV 5"
-    ],
-    "NOR-SWE": [
-      "Sport TV 5"
-    ],
-    "SWE-DNK": [
-      "Sport TV 5"
-    ],
-    "AUT-SVN": [
-      "Sport TV 5"
-    ],
-    "NIR-WAL": [
-      "Sport TV 5"
-    ],
     "CPV-KSA": [
       "Sport TV 1"
     ],
@@ -65,13 +31,16 @@
     "SVK-CZE": [
       "Sport TV 5"
     ],
+    "AUT-SUI": [
+      "Sport TV 5"
+    ],
     "SCO-NIR": [
       "Sport TV 5"
     ],
-    "DNK-SWE": [
+    "NOR-SWE": [
       "Sport TV 5"
     ],
-    "SVN-MKD": [
+    "DNK-SWE": [
       "Sport TV 5"
     ],
     "SWE-NOR": [
@@ -99,6 +68,9 @@
       "Sport TV 5"
     ],
     "HUN-ROU": [
+      "Sport TV 5"
+    ],
+    "SVN-MKD": [
       "Sport TV 5"
     ],
     "COD-UZB": [
@@ -213,6 +185,9 @@
     "WAL-ENG": [
       "Sport TV 5"
     ],
+    "SWE-DNK": [
+      "Sport TV 5"
+    ],
     "CZE-SUI": [
       "Sport TV 5"
     ],
@@ -244,6 +219,9 @@
       "Sport TV 5"
     ],
     "TUR-POL": [
+      "Sport TV 5"
+    ],
+    "AUT-SVN": [
       "Sport TV 5"
     ],
     "AUT-ENG": [
