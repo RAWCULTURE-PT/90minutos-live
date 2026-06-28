@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27 22:49",
+  "generated": "2026-06-28 02:02",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -263,6 +263,22 @@
     },
     "EGY-IRN": {
       "home": 1,
+      "away": 1
+    },
+    "PAN-ENG": {
+      "home": 0,
+      "away": 2
+    },
+    "CRO-GHA": {
+      "home": 2,
+      "away": 1
+    },
+    "COL-POR": {
+      "home": 0,
+      "away": 0
+    },
+    "COD-UZB": {
+      "home": 3,
       "away": 1
     }
   }

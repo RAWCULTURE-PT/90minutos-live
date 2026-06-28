@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27 22:49",
+  "generated": "2026-06-28 02:02",
   "standings": {
     "A": [
       {
@@ -492,53 +492,53 @@
         "pos": 1,
         "tla": "ARG",
         "nome": "Argentina",
-        "pj": 2,
+        "pj": 3,
         "v": 2,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 5,
         "gc": 0,
         "dg": 5,
-        "pts": 6
+        "pts": 7
       },
       {
         "pos": 2,
         "tla": "AUT",
         "nome": "Austria",
-        "pj": 2,
+        "pj": 3,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 3,
         "gc": 3,
         "dg": 0,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 3,
         "tla": "ALG",
         "nome": "Algeria",
-        "pj": 2,
+        "pj": 3,
         "v": 1,
-        "e": 0,
+        "e": 1,
         "d": 1,
         "gf": 2,
         "gc": 4,
         "dg": -2,
-        "pts": 3
+        "pts": 4
       },
       {
         "pos": 4,
         "tla": "JOR",
         "nome": "Jordan",
-        "pj": 2,
+        "pj": 3,
         "v": 0,
-        "e": 0,
+        "e": 1,
         "d": 2,
         "gf": 2,
         "gc": 5,
         "dg": -3,
-        "pts": 0
+        "pts": 1
       }
     ],
     "K": [
@@ -546,52 +546,52 @@
         "pos": 1,
         "tla": "COL",
         "nome": "Colombia",
-        "pj": 2,
+        "pj": 3,
         "v": 2,
-        "e": 0,
+        "e": 1,
         "d": 0,
         "gf": 4,
         "gc": 1,
         "dg": 3,
-        "pts": 6
+        "pts": 7
       },
       {
         "pos": 2,
         "tla": "POR",
         "nome": "Portugal",
-        "pj": 2,
+        "pj": 3,
         "v": 1,
-        "e": 1,
+        "e": 2,
         "d": 0,
         "gf": 6,
         "gc": 1,
         "dg": 5,
-        "pts": 4
+        "pts": 5
       },
       {
         "pos": 3,
         "tla": "COD",
         "nome": "Congo DR",
-        "pj": 2,
-        "v": 0,
+        "pj": 3,
+        "v": 1,
         "e": 1,
         "d": 1,
-        "gf": 1,
-        "gc": 2,
-        "dg": -1,
-        "pts": 1
+        "gf": 4,
+        "gc": 3,
+        "dg": 1,
+        "pts": 4
       },
       {
         "pos": 4,
         "tla": "UZB",
         "nome": "Uzbekistan",
-        "pj": 2,
+        "pj": 3,
         "v": 0,
         "e": 0,
-        "d": 2,
-        "gf": 1,
-        "gc": 8,
-        "dg": -7,
+        "d": 3,
+        "gf": 2,
+        "gc": 11,
+        "dg": -9,
         "pts": 0
       }
     ],
@@ -617,8 +617,8 @@
         "v": 2,
         "e": 0,
         "d": 1,
-        "gf": 4,
-        "gc": 4,
+        "gf": 5,
+        "gc": 5,
         "dg": 0,
         "pts": 6
       },
@@ -630,8 +630,8 @@
         "v": 1,
         "e": 1,
         "d": 1,
-        "gf": 1,
-        "gc": 1,
+        "gf": 2,
+        "gc": 2,
         "dg": 0,
         "pts": 4
       },
