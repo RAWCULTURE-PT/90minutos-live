@@ -1,27 +1,6 @@
 {
-  "generated": "2026-06-29 22:44",
+  "generated": "2026-06-30 01:58",
   "channels": {
-    "BRA-JPN": [
-      "Sport TV 1"
-    ],
-    "GER-PAR": [
-      "Sport TV 5"
-    ],
-    "ROU-UKR": [
-      "Sport TV 5"
-    ],
-    "ROU-ALB": [
-      "Sport TV 5"
-    ],
-    "SRB-SVK": [
-      "Sport TV 5"
-    ],
-    "BGR-SRB": [
-      "Sport TV 5"
-    ],
-    "BIH-RUS": [
-      "Sport TV 5"
-    ],
     "NED-MAR": [
       "Sport TV 5"
     ],
@@ -467,6 +446,9 @@
       "Sport TV 5"
     ],
     "GER-ESP": [
+      "Sport TV 5"
+    ],
+    "FRA-ENG": [
       "Sport TV 5"
     ],
     "_": [
