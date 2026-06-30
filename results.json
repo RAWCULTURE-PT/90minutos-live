@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30 16:13",
+  "generated": "2026-06-30 19:27",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -304,6 +304,10 @@
     "NED-MAR": {
       "home": 3,
       "away": 4
+    },
+    "CIV-NOR": {
+      "home": 1,
+      "away": 2
     }
   }
 }
