@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01 21:14",
+  "generated": "2026-07-01 22:59",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -320,6 +320,10 @@
     "ENG-COD": {
       "home": 2,
       "away": 1
+    },
+    "BEL-SEN": {
+      "home": 3,
+      "away": 2
     }
   }
 }
