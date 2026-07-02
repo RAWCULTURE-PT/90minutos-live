@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02 01:56",
+  "generated": "2026-07-02 05:51",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -324,6 +324,10 @@
     "BEL-SEN": {
       "home": 3,
       "away": 2
+    },
+    "USA-BIH": {
+      "home": 2,
+      "away": 0
     }
   }
 }
