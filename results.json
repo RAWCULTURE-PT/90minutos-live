@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03 20:49",
+  "generated": "2026-07-03 22:50",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -340,6 +340,10 @@
     "SUI-ALG": {
       "home": 2,
       "away": 0
+    },
+    "AUS-EGY": {
+      "home": 3,
+      "away": 5
     }
   }
 }
