@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-04 01:26",
+  "generated": "2026-07-04 05:32",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -348,6 +348,10 @@
     "ARG-CPV": {
       "home": 3,
       "away": 2
+    },
+    "COL-GHA": {
+      "home": 1,
+      "away": 0
     }
   }
 }
