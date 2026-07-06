@@ -1,24 +1,6 @@
 {
-  "generated": "2026-07-05 22:45",
+  "generated": "2026-07-06 01:46",
   "channels": {
-    "BRA-NOR": [
-      "Sport TV 5"
-    ],
-    "DNK-SCO": [
-      "Sport TV 5"
-    ],
-    "AUT-CZE": [
-      "Sport TV 5"
-    ],
-    "UKR-SUI": [
-      "Sport TV 5"
-    ],
-    "AUT-ROU": [
-      "Sport TV 5"
-    ],
-    "CYP-ISR": [
-      "Sport TV 5"
-    ],
     "MEX-ENG": [
       "Sport TV 5"
     ],
@@ -443,6 +425,9 @@
       "Sport TV 5"
     ],
     "BRA-ECU": [
+      "Sport TV 5"
+    ],
+    "ARG-BRA": [
       "Sport TV 5"
     ],
     "_": [
