@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07 01:44",
+  "generated": "2026-07-07 05:55",
   "results": {
     "MEX-RSA": {
       "home": 2,
@@ -372,6 +372,10 @@
     "POR-ESP": {
       "home": 0,
       "away": 1
+    },
+    "USA-BEL": {
+      "home": 1,
+      "away": 4
     }
   }
 }
