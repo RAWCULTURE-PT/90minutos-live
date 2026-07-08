@@ -1,49 +1,7 @@
 {
-  "generated": "2026-07-07 22:48",
+  "generated": "2026-07-08 01:18",
   "channels": {
-    "USA-BEL": [
-      "Sport TV 5"
-    ],
-    "ARG-EGY": [
-      "Sport TV 1"
-    ],
-    "SUI-COL": [
-      "Sport TV 5"
-    ],
-    "BGR-ISR": [
-      "Sport TV 5"
-    ],
-    "CZE-SVK": [
-      "Sport TV 5"
-    ],
     "POL-CZE": [
-      "Sport TV 5"
-    ],
-    "SRB-MNE": [
-      "Sport TV 5"
-    ],
-    "POL-SVK": [
-      "Sport TV 5"
-    ],
-    "SRB-CZE": [
-      "Sport TV 5"
-    ],
-    "BGR-SRB": [
-      "Sport TV 5"
-    ],
-    "UKR-BEL": [
-      "Sport TV 5"
-    ],
-    "GRC-CYP": [
-      "Sport TV 5"
-    ],
-    "CZE-DNK": [
-      "Sport TV 5"
-    ],
-    "IRL-SCO": [
-      "Sport TV 5"
-    ],
-    "ENG-POR": [
       "Sport TV 5"
     ],
     "BEL-POL": [
@@ -103,6 +61,9 @@
     "AUT-UKR": [
       "Sport TV 5"
     ],
+    "CZE-SVK": [
+      "Sport TV 5"
+    ],
     "SWE-DNK": [
       "Sport TV 5"
     ],
@@ -113,6 +74,12 @@
       "Sport TV 5"
     ],
     "CZE-SUI": [
+      "Sport TV 5"
+    ],
+    "POL-SVK": [
+      "Sport TV 5"
+    ],
+    "ENG-POR": [
       "Sport TV 5"
     ],
     "AUT-SUI": [
