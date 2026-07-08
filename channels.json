@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-08 11:39",
+  "generated": "2026-07-08 13:21",
   "channels": {
     "POL-CZE": [
       "Sport TV 5"
@@ -16,10 +16,10 @@
     "CZE-POL": [
       "Sport TV 5"
     ],
-    "SVK-ROU": [
+    "CRO-ROU": [
       "Sport TV 5"
     ],
-    "CRO-ROU": [
+    "SVK-ROU": [
       "Sport TV 5"
     ],
     "CYP-CZE": [
@@ -28,10 +28,10 @@
     "GRC-POL": [
       "Sport TV 5"
     ],
-    "RUS-UZB": [
+    "AUT-SVK": [
       "Sport TV 5"
     ],
-    "AUT-SVK": [
+    "RUS-UZB": [
       "Sport TV 5"
     ],
     "TUR-AUT": [
@@ -59,7 +59,7 @@
       "Sport TV 5"
     ],
     "ESP-BEL": [
-      "Sport TV 5"
+      "Sport TV 1"
     ],
     "USA-MEX": [
       "Sport TV 5"
