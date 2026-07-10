@@ -1,36 +1,6 @@
 {
-  "generated": "2026-07-09 22:59",
+  "generated": "2026-07-10 01:23",
   "channels": {
-    "FRA-MAR": [
-      "Sport TV 5"
-    ],
-    "ARG-BRA": [
-      "Sport TV 5"
-    ],
-    "AUT-GER": [
-      "Sport TV 5"
-    ],
-    "POL-CZE": [
-      "Sport TV 5"
-    ],
-    "SRB-MNE": [
-      "Sport TV 5"
-    ],
-    "ROU-UKR": [
-      "Sport TV 5"
-    ],
-    "SRB-HUN": [
-      "Sport TV 5"
-    ],
-    "ROU-CZE": [
-      "Sport TV 5"
-    ],
-    "UKR-POL": [
-      "Sport TV 5"
-    ],
-    "POL-CYP": [
-      "Sport TV 5"
-    ],
     "ESP-BEL": [
       "Sport TV 1"
     ],
@@ -79,10 +49,10 @@
     "BGR-ALB": [
       "Sport TV 5"
     ],
-    "NED-CYP": [
+    "SVN-ENG": [
       "Sport TV 5"
     ],
-    "SVN-ENG": [
+    "NED-CYP": [
       "Sport TV 5"
     ],
     "POL-TUR": [
@@ -209,6 +179,9 @@
       "Sport TV 5"
     ],
     "FRA-BEL": [
+      "Sport TV 5"
+    ],
+    "AUT-GER": [
       "Sport TV 5"
     ],
     "SVK-ENG": [
@@ -488,6 +461,9 @@
       "Sport TV 5"
     ],
     "BRA-ECU": [
+      "Sport TV 5"
+    ],
+    "ARG-BRA": [
       "Sport TV 5"
     ],
     "GER-FRA": [
