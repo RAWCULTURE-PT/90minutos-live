@@ -1,8 +1,11 @@
 {
-  "generated": "2026-07-10 01:23",
+  "generated": "2026-07-10 05:48",
   "channels": {
     "ESP-BEL": [
       "Sport TV 1"
+    ],
+    "MEX-COL": [
+      "Sport TV 5"
     ],
     "USA-MEX": [
       "Sport TV 5"
@@ -34,25 +37,31 @@
     "ENG-POR": [
       "Sport TV 5"
     ],
-    "AUT-SUI": [
+    "CRO-SRB": [
       "Sport TV 5"
     ],
     "DNK-POL": [
+      "Sport TV 5"
+    ],
+    "AUT-SUI": [
+      "Sport TV 5"
+    ],
+    "SVN-ENG": [
+      "Sport TV 5"
+    ],
+    "AZE-SRB": [
+      "Sport TV 5"
+    ],
+    "BGR-ALB": [
+      "Sport TV 5"
+    ],
+    "NED-CYP": [
       "Sport TV 5"
     ],
     "SUI-AUT": [
       "Sport TV 5"
     ],
     "SUI-GER": [
-      "Sport TV 5"
-    ],
-    "BGR-ALB": [
-      "Sport TV 5"
-    ],
-    "SVN-ENG": [
-      "Sport TV 5"
-    ],
-    "NED-CYP": [
       "Sport TV 5"
     ],
     "POL-TUR": [
@@ -65,6 +74,9 @@
       "Sport TV 5"
     ],
     "USA-ENG": [
+      "Sport TV 5"
+    ],
+    "BEL-NED": [
       "Sport TV 5"
     ],
     "NED-BEL": [
@@ -85,6 +97,9 @@
     "WAL-DNK": [
       "Sport TV 5"
     ],
+    "GER-CZE": [
+      "Sport TV 5"
+    ],
     "GER-DNK": [
       "Sport TV 5"
     ],
@@ -94,13 +109,7 @@
     "BEL-GER": [
       "Sport TV 5"
     ],
-    "BEL-NED": [
-      "Sport TV 5"
-    ],
     "POL-WAL": [
-      "Sport TV 5"
-    ],
-    "TUR-POL": [
       "Sport TV 5"
     ],
     "AUT-SVN": [
@@ -115,10 +124,16 @@
     "FRA-LUX": [
       "Sport TV 5"
     ],
+    "TUR-POL": [
+      "Sport TV 5"
+    ],
     "GRC-SUI": [
       "Sport TV 5"
     ],
     "POR-BRA": [
+      "Sport TV 5"
+    ],
+    "PER-COL": [
       "Sport TV 5"
     ],
     "ARG-SUI": [
@@ -130,13 +145,10 @@
     "RUS-SRB": [
       "Sport TV 5"
     ],
-    "MEX-COL": [
-      "Sport TV 5"
-    ],
-    "PER-COL": [
-      "Sport TV 5"
-    ],
     "CZE-AUT": [
+      "Sport TV 5"
+    ],
+    "DNK-SWE": [
       "Sport TV 5"
     ],
     "CZE-UKR": [
@@ -161,6 +173,9 @@
       "Sport TV 5"
     ],
     "AUT-POL": [
+      "Sport TV 5"
+    ],
+    "AUT-GRC": [
       "Sport TV 5"
     ],
     "FRA-SUI": [
