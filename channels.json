@@ -1,10 +1,16 @@
 {
-  "generated": "2026-07-14 01:09",
+  "generated": "2026-07-14 04:36",
   "channels": {
     "FRA-ESP": [
       "Sport TV 5"
     ],
+    "POL-CZE": [
+      "Sport TV 5"
+    ],
     "SVK-TUR": [
+      "Sport TV 5"
+    ],
+    "UKR-JPN": [
       "Sport TV 5"
     ],
     "DNK-SWE": [
@@ -13,13 +19,31 @@
     "CZE-UKR": [
       "Sport TV 5"
     ],
+    "GER-JPN": [
+      "Sport TV 5"
+    ],
+    "SVK-ISR": [
+      "Sport TV 5"
+    ],
+    "HUN-CZE": [
+      "Sport TV 5"
+    ],
+    "SVN-ROU": [
+      "Sport TV 5"
+    ],
     "AUT-HUN": [
       "Sport TV 5"
     ],
     "DNK-ENG": [
       "Sport TV 5"
     ],
+    "GER-SVK": [
+      "Sport TV 5"
+    ],
     "POR-SCO": [
+      "Sport TV 5"
+    ],
+    "HUN-AUT": [
       "Sport TV 5"
     ],
     "AUT-TUR": [
@@ -33,6 +57,9 @@
     ],
     "ENG-ARG": [
       "Sport TV 1"
+    ],
+    "FRA-BEL": [
+      "Sport TV 5"
     ],
     "AUT-POL": [
       "Sport TV 5"
@@ -49,13 +76,25 @@
     "NED-GRC": [
       "Sport TV 5"
     ],
+    "ESP-RSA": [
+      "Sport TV 5"
+    ],
     "USA-ENG": [
       "Sport TV 5"
     ],
     "HUN-TUR": [
       "Sport TV 5"
     ],
+    "CRO-HUN": [
+      "Sport TV 5"
+    ],
+    "UKR-CZE": [
+      "Sport TV 5"
+    ],
     "AUT-ENG": [
+      "Sport TV 5"
+    ],
+    "CYP-GRC": [
       "Sport TV 5"
     ],
     "NIR-ENG": [
@@ -73,31 +112,25 @@
     "CIV-FRA": [
       "Sport TV 5"
     ],
-    "FRA-BEL": [
-      "Sport TV 5"
-    ],
-    "GER-JPN": [
-      "Sport TV 5"
-    ],
     "GRC-NED": [
       "Sport TV 5"
     ],
     "AUT-GER": [
       "Sport TV 5"
     ],
-    "BEL-NED": [
+    "SUI-GER": [
       "Sport TV 5"
     ],
     "SVK-ENG": [
       "Sport TV 5"
     ],
-    "SUI-GER": [
-      "Sport TV 5"
-    ],
-    "SCO-BEL": [
+    "BEL-NED": [
       "Sport TV 5"
     ],
     "SUI-ENG": [
+      "Sport TV 5"
+    ],
+    "SCO-BEL": [
       "Sport TV 5"
     ],
     "SCO-ESP": [
@@ -419,6 +452,9 @@
       "Sport TV 5"
     ],
     "ARG-BRA": [
+      "Sport TV 5"
+    ],
+    "ITA-ENG": [
       "Sport TV 5"
     ],
     "ECU-COL": [
