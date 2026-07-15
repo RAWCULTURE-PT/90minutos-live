@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15 13:02",
+  "generated": "2026-07-15 15:14",
   "channels": {
     "ENG-ARG": [
       "Sport TV 1"
@@ -19,6 +19,9 @@
     "AUT-POL": [
       "Sport TV 5"
     ],
+    "CZE-UKR": [
+      "Sport TV 5"
+    ],
     "POL-CZE": [
       "Sport TV 5"
     ],
@@ -26,9 +29,6 @@
       "Sport TV 5"
     ],
     "NED-GER": [
-      "Sport TV 5"
-    ],
-    "CZE-UKR": [
       "Sport TV 5"
     ],
     "AUT-GRC": [
