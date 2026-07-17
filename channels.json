@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17 15:03",
+  "generated": "2026-07-17 16:55",
   "channels": {
     "DNK-CZE": [
       "Sport TV 5"
@@ -19,6 +19,9 @@
     "CZE-GER": [
       "Sport TV 5"
     ],
+    "GER-JPN": [
+      "Sport TV 5"
+    ],
     "CZE-SVK": [
       "Sport TV 5"
     ],
@@ -29,9 +32,6 @@
       "Sport TV 5"
     ],
     "CRO-UKR": [
-      "Sport TV 5"
-    ],
-    "GER-JPN": [
       "Sport TV 5"
     ],
     "UKR-HUN": [
