@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18 14:42",
+  "generated": "2026-07-18 16:40",
   "channels": {
     "FRA-ENG": [
       "Sport TV 5"
@@ -94,16 +94,16 @@
     "CZE-GER": [
       "Sport TV 5"
     ],
-    "WAL-GER": [
-      "Sport TV 5"
-    ],
     "AUT-SUI": [
       "Sport TV 5"
     ],
-    "FRA-BEL": [
+    "WAL-GER": [
       "Sport TV 5"
     ],
     "ITA-SUI": [
+      "Sport TV 5"
+    ],
+    "FRA-BEL": [
       "Sport TV 5"
     ],
     "UKR-BIH": [
@@ -112,10 +112,10 @@
     "KOS-MKD": [
       "Sport TV 5"
     ],
-    "CRO-AUT": [
+    "HUN-SVK": [
       "Sport TV 5"
     ],
-    "HUN-SVK": [
+    "CRO-AUT": [
       "Sport TV 5"
     ],
     "AGO-ESP": [
