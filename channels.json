@@ -1,9 +1,6 @@
 {
-  "generated": "2026-07-20 22:43",
+  "generated": "2026-07-21 01:16",
   "channels": {
-    "POR-FRA": [
-      "Sport TV 1"
-    ],
     "SUI-CRO": [
       "Sport TV 5"
     ],
@@ -171,6 +168,9 @@
     ],
     "POR-ENG": [
       "Sport TV 5"
+    ],
+    "POR-FRA": [
+      "Sport TV 1"
     ],
     "CAN-USA": [
       "Sport TV 5"
