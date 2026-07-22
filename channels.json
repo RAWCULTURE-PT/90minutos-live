@@ -1,30 +1,6 @@
 {
-  "generated": "2026-07-21 22:41",
+  "generated": "2026-07-22 01:15",
   "channels": {
-    "SUI-CRO": [
-      "Sport TV 5"
-    ],
-    "AUT-SCO": [
-      "Sport TV 5"
-    ],
-    "URU-ARG": [
-      "Sport TV 5"
-    ],
-    "ROU-KSA": [
-      "Sport TV 5"
-    ],
-    "GER-WAL": [
-      "Sport TV 5"
-    ],
-    "UKR-CRO": [
-      "Sport TV 5"
-    ],
-    "AGO-KSA": [
-      "Sport TV 5"
-    ],
-    "KSA-RSA": [
-      "Sport TV 5"
-    ],
     "VEN-BRA": [
       "Sport TV 1"
     ],
@@ -227,7 +203,7 @@
       "Sport TV 5"
     ],
     "BRA-VEN": [
-      "Sport TV 5"
+      "Sport TV 1"
     ],
     "BRA-COL": [
       "Sport TV 5"
