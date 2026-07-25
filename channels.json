@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25 12:53",
+  "generated": "2026-07-25 14:53",
   "channels": {
     "ESP-KSA": [
       "Sport TV 1"
@@ -16,6 +16,9 @@
     "FRA-BEL": [
       "Sport TV 5"
     ],
+    "FRA-ENG": [
+      "Sport TV 5"
+    ],
     "BEL-TUR": [
       "Sport TV 5"
     ],
@@ -23,9 +26,6 @@
       "Sport TV 5"
     ],
     "NED-GER": [
-      "Sport TV 5"
-    ],
-    "FRA-ENG": [
       "Sport TV 5"
     ],
     "NED-BEL": [
@@ -82,13 +82,13 @@
     "CRO-BIH": [
       "Sport TV 5"
     ],
-    "MNE-ALB": [
-      "Sport TV 5"
-    ],
     "NED-ESP": [
       "Sport TV 5"
     ],
     "ENG-ESP": [
+      "Sport TV 5"
+    ],
+    "MNE-ALB": [
       "Sport TV 5"
     ],
     "ESP-ENG": [
