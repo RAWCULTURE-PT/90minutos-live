@@ -1,41 +1,8 @@
 {
-  "generated": "2026-07-24 22:48",
+  "generated": "2026-07-25 01:19",
   "channels": {
-    "ARG-CHL": [
+    "ESP-KSA": [
       "Sport TV 1"
-    ],
-    "COL-VEN": [
-      "Sport TV 5"
-    ],
-    "WAL-ITA": [
-      "Sport TV 5"
-    ],
-    "BEL-NED": [
-      "Sport TV 5"
-    ],
-    "GER-FRA": [
-      "Sport TV 5"
-    ],
-    "ENG-GER": [
-      "Sport TV 5"
-    ],
-    "NOR-ENG": [
-      "Sport TV 5"
-    ],
-    "BEL-GRC": [
-      "Sport TV 5"
-    ],
-    "ESP-MYS": [
-      "Sport TV 5"
-    ],
-    "TUR-ITA": [
-      "Sport TV 5"
-    ],
-    "GER-ENG": [
-      "Sport TV 5"
-    ],
-    "ENG-WAL": [
-      "Sport TV 5"
     ],
     "ESP-AGO": [
       "Sport TV 5"
@@ -64,6 +31,12 @@
     "NED-BEL": [
       "Sport TV 5"
     ],
+    "BEL-NED": [
+      "Sport TV 5"
+    ],
+    "ENG-GER": [
+      "Sport TV 5"
+    ],
     "NED-GRC": [
       "Sport TV 5"
     ],
@@ -88,16 +61,19 @@
     "ENG-ITA": [
       "Sport TV 5"
     ],
+    "ENG-WAL": [
+      "Sport TV 5"
+    ],
     "ENG-SCO": [
+      "Sport TV 5"
+    ],
+    "ITA-GRC": [
       "Sport TV 5"
     ],
     "WAL-ENG": [
       "Sport TV 5"
     ],
     "FRA-QAT": [
-      "Sport TV 5"
-    ],
-    "ITA-GRC": [
       "Sport TV 5"
     ],
     "TUR-ENG": [
@@ -112,13 +88,7 @@
     "CRO-BIH": [
       "Sport TV 5"
     ],
-    "ESP-KSA": [
-      "Sport TV 1"
-    ],
     "ESP-ENG": [
-      "Sport TV 5"
-    ],
-    "POR-ENG": [
       "Sport TV 5"
     ],
     "BEL-ITA": [
@@ -126,6 +96,9 @@
     ],
     "POR-FRA": [
       "Sport TV 1"
+    ],
+    "POR-ENG": [
+      "Sport TV 5"
     ],
     "USA-CAN": [
       "Sport TV 5"
@@ -152,6 +125,9 @@
       "Sport TV 5"
     ],
     "FRA-ITA": [
+      "Sport TV 5"
+    ],
+    "TUR-ITA": [
       "Sport TV 5"
     ],
     "CRO-SUI": [
@@ -244,6 +220,12 @@
     "ITA-NED": [
       "Sport TV 5"
     ],
+    "GER-ENG": [
+      "Sport TV 5"
+    ],
+    "WAL-ITA": [
+      "Sport TV 5"
+    ],
     "ENG-NED": [
       "Sport TV 5"
     ],
@@ -293,6 +275,9 @@
       "Sport TV 5"
     ],
     "ESP-GER": [
+      "Sport TV 5"
+    ],
+    "GER-FRA": [
       "Sport TV 5"
     ],
     "ITA-ENG": [
