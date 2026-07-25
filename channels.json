@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25 14:53",
+  "generated": "2026-07-25 16:41",
   "channels": {
     "ESP-KSA": [
       "Sport TV 1"
@@ -79,9 +79,6 @@
     "TUR-ENG": [
       "Sport TV 5"
     ],
-    "CRO-BIH": [
-      "Sport TV 5"
-    ],
     "NED-ESP": [
       "Sport TV 5"
     ],
@@ -89,6 +86,9 @@
       "Sport TV 5"
     ],
     "MNE-ALB": [
+      "Sport TV 5"
+    ],
+    "CRO-BIH": [
       "Sport TV 5"
     ],
     "ESP-ENG": [
