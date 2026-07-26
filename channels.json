@@ -1,10 +1,10 @@
 {
-  "generated": "2026-07-26 01:22",
+  "generated": "2026-07-26 05:16",
   "channels": {
-    "CAN-USA": [
+    "USA-CAN": [
       "Sport TV 5"
     ],
-    "USA-CAN": [
+    "CAN-USA": [
       "Sport TV 5"
     ],
     "ALG-SEN": [
@@ -44,6 +44,12 @@
       "Sport TV 5"
     ],
     "FRA-ITA": [
+      "Sport TV 5"
+    ],
+    "TUR-UKR": [
+      "Sport TV 5"
+    ],
+    "MNE-CRO": [
       "Sport TV 5"
     ],
     "TUR-ITA": [
@@ -91,10 +97,10 @@
     "JPN-GER": [
       "Sport TV 5"
     ],
-    "ITA-GRC": [
+    "GRC-TUR": [
       "Sport TV 5"
     ],
-    "GRC-TUR": [
+    "ITA-GRC": [
       "Sport TV 5"
     ],
     "ESP-FRA": [
