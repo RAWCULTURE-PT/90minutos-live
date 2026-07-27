@@ -1,6 +1,12 @@
 {
-  "generated": "2026-07-27 01:26",
+  "generated": "2026-07-27 05:34",
   "channels": {
+    "QAT-ARE": [
+      "Sport TV 5"
+    ],
+    "KSA-QAT": [
+      "Sport TV 5"
+    ],
     "TUR-ITA": [
       "Sport TV 5"
     ],
@@ -20,6 +26,9 @@
       "Sport TV 5"
     ],
     "ITA-ARE": [
+      "Sport TV 5"
+    ],
+    "KSA-ENG": [
       "Sport TV 5"
     ],
     "TUR-ENG": [
@@ -119,6 +128,9 @@
       "Sport TV 5"
     ],
     "USA-CAN": [
+      "Sport TV 5"
+    ],
+    "GRC-BEL": [
       "Sport TV 5"
     ],
     "NED-GER": [
