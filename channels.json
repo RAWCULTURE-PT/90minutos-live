@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01 01:24",
+  "generated": "2026-08-01 05:12",
   "channels": {
     "USA-CAN": [
       "Sport TV 5"
@@ -16,7 +16,13 @@
     "NED-GRC": [
       "Sport TV 5"
     ],
+    "GER-ESP": [
+      "Sport TV 5"
+    ],
     "NED-GER": [
+      "Sport TV 5"
+    ],
+    "GER-BEL": [
       "Sport TV 5"
     ],
     "FRA-GER": [
@@ -67,10 +73,10 @@
     "FRA-ITA": [
       "Sport TV 5"
     ],
-    "BEL-TUR": [
+    "ESP-ITA": [
       "Sport TV 5"
     ],
-    "ESP-ITA": [
+    "BEL-TUR": [
       "Sport TV 5"
     ],
     "TUR-ENG": [
@@ -96,6 +102,9 @@
     ],
     "NED-ITA": [
       "Sport TV 1"
+    ],
+    "ITA-TUR": [
+      "Sport TV 5"
     ],
     "ITA-GRC": [
       "Sport TV 5"
@@ -139,10 +148,13 @@
     "ESP-FRA": [
       "Sport TV 5"
     ],
-    "POR-SCO": [
+    "SWE-BEL": [
       "Sport TV 5"
     ],
     "CZE-TUR": [
+      "Sport TV 5"
+    ],
+    "POR-SCO": [
       "Sport TV 5"
     ],
     "ESP-QAT": [
@@ -152,9 +164,6 @@
       "Sport TV 5"
     ],
     "ENG-GER": [
-      "Sport TV 5"
-    ],
-    "GER-ESP": [
       "Sport TV 5"
     ],
     "FRA-ENG": [
@@ -193,6 +202,9 @@
     "BRA-ARG": [
       "Sport TV 5"
     ],
+    "ARG-PAR": [
+      "Sport TV 5"
+    ],
     "KOR-JPN": [
       "Sport TV 5"
     ],
@@ -205,13 +217,13 @@
     "BRA-PAR": [
       "Sport TV 5"
     ],
+    "BOL-BRA": [
+      "Sport TV 5"
+    ],
     "ARG-URU": [
       "Sport TV 5"
     ],
-    "PER-BRA": [
-      "Sport TV 5"
-    ],
-    "BRA-ECU": [
+    "BEL-SWE": [
       "Sport TV 5"
     ],
     "TUR-CZE": [
@@ -220,7 +232,19 @@
     "SCO-POR": [
       "Sport TV 5"
     ],
+    "BRA-ECU": [
+      "Sport TV 5"
+    ],
+    "COL-ARG": [
+      "Sport TV 5"
+    ],
     "ARG-BRA": [
+      "Sport TV 5"
+    ],
+    "PER-BRA": [
+      "Sport TV 5"
+    ],
+    "PAR-ARG": [
       "Sport TV 5"
     ],
     "ECU-COL": [
@@ -229,7 +253,13 @@
     "PAR-BRA": [
       "Sport TV 5"
     ],
+    "BRA-BOL": [
+      "Sport TV 5"
+    ],
     "ECU-BRA": [
+      "Sport TV 5"
+    ],
+    "ARG-COL": [
       "Sport TV 5"
     ],
     "URU-ARG": [
