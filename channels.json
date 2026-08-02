@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02 01:21",
+  "generated": "2026-08-02 05:16",
   "channels": {
     "CAN-USA": [
       "Sport TV 5"
@@ -7,13 +7,13 @@
     "ENG-BEL": [
       "Sport TV 5"
     ],
-    "GER-ITA": [
+    "ENG-NED": [
       "Sport TV 5"
     ],
     "GRC-BEL": [
       "Sport TV 5"
     ],
-    "ENG-NED": [
+    "GER-ITA": [
       "Sport TV 5"
     ],
     "NED-ESP": [
@@ -55,7 +55,7 @@
     "KOR-GER": [
       "Sport TV 1"
     ],
-    "ENG-THA": [
+    "THA-ENG": [
       "Sport TV 5"
     ],
     "FRA-GER": [
