@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03 01:22",
+  "generated": "2026-08-03 05:24",
   "channels": {
     "SEN-MAR": [
       "Sport TV 5"
@@ -40,11 +40,11 @@
     "NED-BEL": [
       "Sport TV 5"
     ],
-    "ESP-FRA": [
-      "Sport TV 5"
-    ],
     "ENG-ESP": [
       "Sport TV"
+    ],
+    "ESP-FRA": [
+      "Sport TV 5"
     ],
     "SWE-BEL": [
       "Sport TV 5"
@@ -179,6 +179,9 @@
       "Sport TV 5"
     ],
     "BRA-BOL": [
+      "Sport TV 5"
+    ],
+    "ESP-EGY": [
       "Sport TV 5"
     ],
     "ECU-BRA": [
