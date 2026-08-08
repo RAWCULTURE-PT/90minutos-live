@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-08 14:20",
+  "generated": "2026-08-08 16:16",
   "channels": {
     "CIV-ALG": [
       "Sport TV 5"
@@ -40,6 +40,9 @@
     "HUN-ESP": [
       "Sport TV 5"
     ],
+    "ESP-ARE": [
+      "Sport TV 5"
+    ],
     "ESP-ENG": [
       "Sport TV 5"
     ],
@@ -47,9 +50,6 @@
       "Sport TV 5"
     ],
     "TUR-ESP": [
-      "Sport TV 5"
-    ],
-    "ESP-ARE": [
       "Sport TV 5"
     ],
     "ITA-FRA": [
