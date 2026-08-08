@@ -1,15 +1,6 @@
 {
-  "generated": "2026-08-07 22:21",
+  "generated": "2026-08-08 00:38",
   "channels": {
-    "AUS-ITA": [
-      "Sport TV 5"
-    ],
-    "ENG-GER": [
-      "Sport TV 5"
-    ],
-    "GER-ESP": [
-      "Sport TV 5"
-    ],
     "CIV-ALG": [
       "Sport TV 5"
     ],
@@ -28,6 +19,12 @@
     "GER-ENG": [
       "Sport TV 5"
     ],
+    "ENG-GER": [
+      "Sport TV 5"
+    ],
+    "GER-ESP": [
+      "Sport TV 5"
+    ],
     "GER-ITA": [
       "Sport TV 5"
     ],
@@ -43,6 +40,9 @@
     "HUN-ESP": [
       "Sport TV 5"
     ],
+    "ESP-ENG": [
+      "Sport TV 5"
+    ],
     "ITA-ENG": [
       "Sport TV"
     ],
@@ -50,9 +50,6 @@
       "Sport TV 5"
     ],
     "ESP-ARE": [
-      "Sport TV 5"
-    ],
-    "ESP-ENG": [
       "Sport TV 5"
     ],
     "ITA-FRA": [
