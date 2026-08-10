@@ -1,21 +1,6 @@
 {
-  "generated": "2026-08-09 22:15",
+  "generated": "2026-08-10 00:42",
   "channels": {
-    "ENG-ESP": [
-      "Sport TV"
-    ],
-    "THA-HKG": [
-      "Sport TV 5"
-    ],
-    "MYS-ENG": [
-      "Sport TV 5"
-    ],
-    "ENG-FRA": [
-      "Sport TV"
-    ],
-    "FRA-ESP": [
-      "Sport TV 5"
-    ],
     "NOR-BEL": [
       "Sport TV 1"
     ],
@@ -81,6 +66,9 @@
     ],
     "FRA-GRC": [
       "Sport TV 5"
+    ],
+    "ENG-FRA": [
+      "Sport TV"
     ],
     "ITA-ESP": [
       "Sport TV 5"
