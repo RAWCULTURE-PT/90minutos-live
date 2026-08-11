@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-11 00:42",
+  "generated": "2026-08-11 03:23",
   "channels": {
     "NOR-BEL": [
       "Sport TV 1"
@@ -37,10 +37,13 @@
     "ARG-URU": [
       "Sport TV 5"
     ],
+    "KHM-HKG": [
+      "Sport TV 5"
+    ],
     "KHM-SGP": [
       "Sport TV 5"
     ],
-    "ITA-SMR": [
+    "ESP-EGY": [
       "Sport TV 5"
     ],
     "ENG-ITA": [
@@ -119,9 +122,6 @@
       "Sport TV 5"
     ],
     "BRA-BOL": [
-      "Sport TV 5"
-    ],
-    "ESP-EGY": [
       "Sport TV 5"
     ],
     "ECU-BRA": [
