@@ -1,27 +1,6 @@
 {
-  "generated": "2026-08-11 22:28",
+  "generated": "2026-08-12 00:49",
   "channels": {
-    "NOR-BEL": [
-      "Sport TV 1"
-    ],
-    "AUT-TUR": [
-      "Sport TV"
-    ],
-    "FRA-CZE": [
-      "Sport TV 1"
-    ],
-    "BRA-ARG": [
-      "Sport TV 5"
-    ],
-    "ARG-PAR": [
-      "Sport TV"
-    ],
-    "KOR-JPN": [
-      "Sport TV 5"
-    ],
-    "UZB-JOR": [
-      "Sport TV 5"
-    ],
     "FRA-ENG": [
       "Sport TV 5"
     ],
@@ -131,6 +110,9 @@
       "Sport TV 5"
     ],
     "ARG-COL": [
+      "Sport TV 5"
+    ],
+    "BRA-ARG": [
       "Sport TV 5"
     ],
     "BRA-PER": [
