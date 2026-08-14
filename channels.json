@@ -1,24 +1,6 @@
 {
-  "generated": "2026-08-13 22:27",
+  "generated": "2026-08-14 00:50",
   "channels": {
-    "BEL-SWE": [
-      "Sport TV 5"
-    ],
-    "TUR-CZE": [
-      "Sport TV 5"
-    ],
-    "SCO-POR": [
-      "Sport TV 5"
-    ],
-    "BRA-ECU": [
-      "Sport TV 1"
-    ],
-    "BRA-PAR": [
-      "Sport TV"
-    ],
-    "CIV-GHA": [
-      "Sport TV 5"
-    ],
     "ARG-BRA": [
       "Sport TV 1"
     ],
@@ -110,10 +92,10 @@
       "Sport TV 5"
     ],
     "BRA-ARG": [
-      "Sport TV 5"
+      "Sport TV 1"
     ],
     "BRA-PER": [
-      "Sport TV 5"
+      "Sport TV"
     ],
     "NOR-NED": [
       "Sport TV 5"
