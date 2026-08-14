@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14 00:50",
+  "generated": "2026-08-14 03:52",
   "channels": {
     "ARG-BRA": [
       "Sport TV 1"
@@ -43,7 +43,13 @@
     "GER-ITA": [
       "Sport TV 5"
     ],
+    "QAT-ALG": [
+      "Sport TV 5"
+    ],
     "FRA-GER": [
+      "Sport TV 5"
+    ],
+    "ESP-GIB": [
       "Sport TV 5"
     ],
     "CAN-USA": [
@@ -61,9 +67,6 @@
     "CRO-NOR": [
       "Sport TV 5"
     ],
-    "COL-ECU": [
-      "Sport TV 5"
-    ],
     "PAR-ARG": [
       "Sport TV"
     ],
@@ -71,6 +74,9 @@
       "Sport TV 5"
     ],
     "NED-NOR": [
+      "Sport TV 5"
+    ],
+    "COL-ECU": [
       "Sport TV 5"
     ],
     "PAR-BRA": [
@@ -83,6 +89,27 @@
       "Sport TV 5"
     ],
     "ESP-EGY": [
+      "Sport TV 5"
+    ],
+    "SCO-CZE": [
+      "Sport TV 5"
+    ],
+    "SUI-NED": [
+      "Sport TV 5"
+    ],
+    "BEL-SCO": [
+      "Sport TV 5"
+    ],
+    "SCO-GER": [
+      "Sport TV 5"
+    ],
+    "NOR-ENG": [
+      "Sport TV 5"
+    ],
+    "POR-AUT": [
+      "Sport TV 5"
+    ],
+    "SWE-AUT": [
       "Sport TV 5"
     ],
     "ECU-BRA": [
@@ -110,6 +137,27 @@
       "Sport TV 5"
     ],
     "ECU-COL": [
+      "Sport TV 5"
+    ],
+    "GER-SCO": [
+      "Sport TV 5"
+    ],
+    "ENG-NOR": [
+      "Sport TV 5"
+    ],
+    "CZE-SCO": [
+      "Sport TV 5"
+    ],
+    "AUT-POR": [
+      "Sport TV 5"
+    ],
+    "SCO-BEL": [
+      "Sport TV 5"
+    ],
+    "NED-SUI": [
+      "Sport TV 5"
+    ],
+    "AUT-SWE": [
       "Sport TV 5"
     ],
     "ARG-COL": [
