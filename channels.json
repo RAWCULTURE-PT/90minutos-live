@@ -1,19 +1,7 @@
 {
-  "generated": "2026-08-15 22:07",
+  "generated": "2026-08-16 00:28",
   "channels": {
-    "MAR-ALG": [
-      "Sport TV 5"
-    ],
-    "IDN-MYS": [
-      "Sport TV 5"
-    ],
-    "GER-ENG": [
-      "Sport TV 5"
-    ],
-    "GER-FRA": [
-      "Sport TV 5"
-    ],
-    "ENG-ESP": [
+    "CAN-USA": [
       "Sport TV 5"
     ],
     "ENG-GER": [
@@ -22,34 +10,13 @@
     "ENG-FRA": [
       "Sport TV"
     ],
-    "ENG-ITA": [
-      "Sport TV 5"
-    ],
-    "ITA-ENG": [
-      "Sport TV 5"
-    ],
-    "GER-ITA": [
-      "Sport TV 5"
-    ],
-    "QAT-ALG": [
-      "Sport TV 5"
-    ],
-    "FRA-GER": [
-      "Sport TV 5"
-    ],
-    "ITA-ESP": [
-      "Sport TV 5"
-    ],
-    "ESP-GIB": [
-      "Sport TV 5"
-    ],
-    "CAN-USA": [
-      "Sport TV 5"
-    ],
     "SUI-ESP": [
       "Sport TV 5"
     ],
     "GER-ESP": [
+      "Sport TV 5"
+    ],
+    "ENG-ITA": [
       "Sport TV 5"
     ],
     "USA-CAN": [
@@ -158,6 +125,9 @@
       "Sport TV 5"
     ],
     "ARG-COL": [
+      "Sport TV 5"
+    ],
+    "NED-GER": [
       "Sport TV 5"
     ],
     "_": [
