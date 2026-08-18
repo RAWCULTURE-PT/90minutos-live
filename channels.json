@@ -1,9 +1,6 @@
 {
-  "generated": "2026-08-17 22:10",
+  "generated": "2026-08-18 00:26",
   "channels": {
-    "USA-CAN": [
-      "Sport TV 5"
-    ],
     "CRO-NOR": [
       "Sport TV 5"
     ],
@@ -70,6 +67,9 @@
     "CAN-USA": [
       "Sport TV 5"
     ],
+    "USA-CAN": [
+      "Sport TV 5"
+    ],
     "BRA-ARG": [
       "Sport TV 1"
     ],
@@ -119,6 +119,12 @@
       "Sport TV 5"
     ],
     "AUS-BRA": [
+      "Sport TV 5"
+    ],
+    "ENG-ESP": [
+      "Sport TV 5"
+    ],
+    "CZE-CRO": [
       "Sport TV 5"
     ],
     "_": [
