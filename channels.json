@@ -1,18 +1,6 @@
 {
-  "generated": "2026-08-18 22:08",
+  "generated": "2026-08-19 00:26",
   "channels": {
-    "CRO-NOR": [
-      "Sport TV 5"
-    ],
-    "TUR-FRA": [
-      "Sport TV 5"
-    ],
-    "ARG-BRA": [
-      "Sport TV 1"
-    ],
-    "PAR-ARG": [
-      "Sport TV"
-    ],
     "SCO-AUT": [
       "Sport TV 5"
     ],
@@ -118,6 +106,9 @@
     "NED-GER": [
       "Sport TV 5"
     ],
+    "TUR-FRA": [
+      "Sport TV 5"
+    ],
     "AUS-BRA": [
       "Sport TV 5"
     ],
@@ -125,6 +116,9 @@
       "Sport TV 5"
     ],
     "CZE-CRO": [
+      "Sport TV 5"
+    ],
+    "NOR-POR": [
       "Sport TV 5"
     ],
     "_": [
