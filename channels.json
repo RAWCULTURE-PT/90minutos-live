@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-20 00:27",
+  "generated": "2026-08-20 02:45",
   "channels": {
     "NOR-ENG": [
       "Sport TV 5"
@@ -44,7 +44,7 @@
       "Sport TV 5"
     ],
     "BRA-ARG": [
-      "Sport TV 1"
+      "Sport TV 5"
     ],
     "BRA-PER": [
       "Sport TV"
@@ -86,6 +86,9 @@
       "Sport TV 5"
     ],
     "ARG-COL": [
+      "Sport TV 1"
+    ],
+    "ARG-BRA": [
       "Sport TV 5"
     ],
     "UZB-IRQ": [
