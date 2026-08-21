@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21 00:29",
+  "generated": "2026-08-21 02:52",
   "channels": {
     "BRA-ARG": [
       "Sport TV 5"
@@ -52,6 +52,9 @@
     "ARG-COL": [
       "Sport TV 1"
     ],
+    "BRA-ECU": [
+      "Sport TV 5"
+    ],
     "ARG-BRA": [
       "Sport TV 5"
     ],
@@ -74,6 +77,9 @@
       "Sport TV 5"
     ],
     "KSA-QAT": [
+      "Sport TV 5"
+    ],
+    "ECU-BRA": [
       "Sport TV 5"
     ],
     "QAT-JOR": [
