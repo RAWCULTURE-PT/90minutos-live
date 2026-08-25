@@ -1,6 +1,141 @@
 {
-  "generated": "2026-08-25 02:48",
+  "generated": "2026-08-25 04:25",
   "channels": {
+    "AUT-SCO": [
+      "Sport TV 5"
+    ],
+    "NOR-NED": [
+      "Sport TV 5"
+    ],
+    "NOR-CRO": [
+      "Sport TV 5"
+    ],
+    "FRA-TUR": [
+      "Sport TV 5"
+    ],
+    "ECU-COL": [
+      "Sport TV 5"
+    ],
+    "CZE-SCO": [
+      "Sport TV 5"
+    ],
+    "GER-SCO": [
+      "Sport TV 5"
+    ],
+    "NED-SUI": [
+      "Sport TV"
+    ],
+    "AUT-POR": [
+      "Sport TV 1"
+    ],
+    "ENG-NOR": [
+      "Sport TV 5"
+    ],
+    "SCO-BEL": [
+      "Sport TV 5"
+    ],
+    "AUT-SWE": [
+      "Sport TV 5"
+    ],
+    "ARG-COL": [
+      "Sport TV 1"
+    ],
+    "USA-CAN": [
+      "Sport TV 5"
+    ],
+    "CAN-USA": [
+      "Sport TV 5"
+    ],
+    "BRA-ECU": [
+      "Sport TV 5"
+    ],
+    "ARG-BRA": [
+      "Sport TV 5"
+    ],
+    "BRA-ARG": [
+      "Sport TV 5"
+    ],
+    "PER-URU": [
+      "Sport TV 5"
+    ],
+    "UZB-IRQ": [
+      "Sport TV 5"
+    ],
+    "QAT-KSA": [
+      "Sport TV 5"
+    ],
+    "IRN-QAT": [
+      "Sport TV 5"
+    ],
+    "KSA-UZB": [
+      "Sport TV 5"
+    ],
+    "JPN-AUS": [
+      "Sport TV 5"
+    ],
+    "KOR-JPN": [
+      "Sport TV 5"
+    ],
+    "KSA-QAT": [
+      "Sport TV 5"
+    ],
+    "ECU-BRA": [
+      "Sport TV 5"
+    ],
+    "URU-PER": [
+      "Sport TV 5"
+    ],
+    "QAT-JOR": [
+      "Sport TV 5"
+    ],
+    "NED-GER": [
+      "Sport TV 5"
+    ],
+    "TUR-FRA": [
+      "Sport TV 5"
+    ],
+    "NED-NOR": [
+      "Sport TV 5"
+    ],
+    "AUS-BRA": [
+      "Sport TV 5"
+    ],
+    "ENG-ESP": [
+      "Sport TV 5"
+    ],
+    "CZE-CRO": [
+      "Sport TV 5"
+    ],
+    "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "BEL-FRA": [
+      "Sport TV 5"
+    ],
+    "SCO-SUI": [
+      "Sport TV 5"
+    ],
+    "CZE-ENG": [
+      "Sport TV 5"
+    ],
+    "ESP-CRO": [
+      "Sport TV 5"
+    ],
+    "NOR-BIH": [
+      "Sport TV 5"
+    ],
+    "BEL-TUR": [
+      "Sport TV 5"
+    ],
+    "BIH-SWE": [
+      "Sport TV 5"
+    ],
+    "CRO-ENG": [
+      "Sport TV 5"
+    ],
+    "ESP-CZE": [
+      "Sport TV 5"
+    ],
     "_": [
       "Sport TV 5"
     ]
