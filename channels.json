@@ -1,16 +1,13 @@
 {
-  "generated": "2026-08-25 22:12",
+  "generated": "2026-08-26 00:29",
   "channels": {
-    "AUT-SCO": [
-      "Sport TV 5"
-    ],
-    "NOR-NED": [
-      "Sport TV 5"
-    ],
     "NOR-CRO": [
       "Sport TV 5"
     ],
     "FRA-TUR": [
+      "Sport TV 5"
+    ],
+    "AUT-SCO": [
       "Sport TV 5"
     ],
     "ECU-COL": [
@@ -134,6 +131,12 @@
       "Sport TV 5"
     ],
     "ESP-CZE": [
+      "Sport TV 5"
+    ],
+    "POR-NOR": [
+      "Sport TV 5"
+    ],
+    "USA-MEX": [
       "Sport TV 5"
     ],
     "_": [
