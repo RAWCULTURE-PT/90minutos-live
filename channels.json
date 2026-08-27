@@ -1,18 +1,6 @@
 {
-  "generated": "2026-08-26 22:32",
+  "generated": "2026-08-27 05:14",
   "channels": {
-    "NOR-CRO": [
-      "Sport TV 5"
-    ],
-    "FRA-TUR": [
-      "Sport TV 5"
-    ],
-    "AUT-SCO": [
-      "Sport TV 5"
-    ],
-    "ECU-COL": [
-      "Sport TV 5"
-    ],
     "CZE-SCO": [
       "Sport TV 5"
     ],
@@ -52,6 +40,9 @@
     "BRA-ARG": [
       "Sport TV 5"
     ],
+    "ECU-BRA": [
+      "Sport TV 5"
+    ],
     "PER-URU": [
       "Sport TV 5"
     ],
@@ -74,9 +65,6 @@
       "Sport TV 5"
     ],
     "KSA-QAT": [
-      "Sport TV 5"
-    ],
-    "ECU-BRA": [
       "Sport TV 5"
     ],
     "URU-PER": [
@@ -137,6 +125,9 @@
       "Sport TV 5"
     ],
     "USA-MEX": [
+      "Sport TV 5"
+    ],
+    "FRA-BEL": [
       "Sport TV 5"
     ],
     "_": [
