@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01 02:11",
+  "generated": "2026-09-01 08:56",
   "channels": {
     "USA-CAN": [
       "Sport TV 5"
@@ -10,13 +10,13 @@
     "BEL-ENG": [
       "Sport TV 5"
     ],
-    "FRA-ESP": [
+    "GER-ESP": [
       "Sport TV 5"
     ],
     "POR-ENG": [
       "Sport TV 5"
     ],
-    "GER-ESP": [
+    "FRA-ESP": [
       "Sport TV 5"
     ],
     "BRA-ARG": [
@@ -25,16 +25,16 @@
     "COL-BRA": [
       "Sport TV 5"
     ],
-    "ESP-NED": [
-      "Sport TV 5"
-    ],
     "GER-NOR": [
       "Sport TV 5"
     ],
-    "POR-TUR": [
+    "ESP-NED": [
       "Sport TV 5"
     ],
     "ENG-ESP": [
+      "Sport TV 5"
+    ],
+    "POR-TUR": [
       "Sport TV 5"
     ],
     "BRA-ECU": [
@@ -52,13 +52,13 @@
     "PER-URU": [
       "Sport TV 5"
     ],
+    "IRN-QAT": [
+      "Sport TV 5"
+    ],
     "UZB-IRQ": [
       "Sport TV 5"
     ],
     "QAT-KSA": [
-      "Sport TV 5"
-    ],
-    "IRN-QAT": [
       "Sport TV 5"
     ],
     "KSA-UZB": [
@@ -67,10 +67,10 @@
     "BRA-COL": [
       "Sport TV 5"
     ],
-    "JPN-AUS": [
+    "KOR-JPN": [
       "Sport TV 5"
     ],
-    "KOR-JPN": [
+    "JPN-AUS": [
       "Sport TV 5"
     ],
     "KSA-QAT": [
@@ -79,10 +79,10 @@
     "ENG-NED": [
       "Sport TV 5"
     ],
-    "BEL-FRA": [
+    "AUT-FRA": [
       "Sport TV 5"
     ],
-    "AUT-FRA": [
+    "BEL-FRA": [
       "Sport TV 5"
     ],
     "QAT-JOR": [
