@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03 23:35",
+  "generated": "2026-09-04 01:31",
   "channels": {
     "USA-CAN": [
       "Sport TV 5"
@@ -50,7 +50,7 @@
       "Sport TV 5"
     ],
     "PER-URU": [
-      "Sport TV 5"
+      "Sport TV"
     ],
     "UZB-IRQ": [
       "Sport TV 5"
@@ -173,6 +173,24 @@
       "Sport TV 5"
     ],
     "QAT-IRN": [
+      "Sport TV 5"
+    ],
+    "FRA-POR": [
+      "Sport TV 5"
+    ],
+    "ENG-FRA": [
+      "Sport TV 5"
+    ],
+    "GER-NED": [
+      "Sport TV 5"
+    ],
+    "TUR-ESP": [
+      "Sport TV 5"
+    ],
+    "NOR-GER": [
+      "Sport TV 5"
+    ],
+    "AUS-JPN": [
       "Sport TV 5"
     ],
     "_": [
