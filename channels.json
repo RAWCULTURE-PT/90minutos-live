@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05 23:25",
+  "generated": "2026-09-06 01:27",
   "channels": {
     "USA-CAN": [
       "Sport TV 5"
@@ -206,6 +206,36 @@
       "Sport TV 5"
     ],
     "JPN-KOR": [
+      "Sport TV 5"
+    ],
+    "CRO-NED": [
+      "Sport TV 5"
+    ],
+    "NED-SUI": [
+      "Sport TV 5"
+    ],
+    "GER-CZE": [
+      "Sport TV 5"
+    ],
+    "CZE-NOR": [
+      "Sport TV 5"
+    ],
+    "BEL-ESP": [
+      "Sport TV 5"
+    ],
+    "FRA-ENG": [
+      "Sport TV 5"
+    ],
+    "CRO-BEL": [
+      "Sport TV 5"
+    ],
+    "GER-TUR": [
+      "Sport TV 5"
+    ],
+    "ENG-AUT": [
+      "Sport TV 5"
+    ],
+    "POR-SCO": [
       "Sport TV 5"
     ],
     "_": [
