@@ -1,26 +1,14 @@
 {
-  "generated": "2026-09-09 23:34",
+  "generated": "2026-09-10 01:38",
   "channels": {
     "GER-NOR": [
       "Sport TV 5"
     ],
-    "ESP-NED": [
-      "Sport TV 5"
-    ],
-    "POR-TUR": [
-      "Sport TV 5"
-    ],
-    "ENG-ESP": [
-      "Sport TV 5"
-    ],
-    "BRA-ECU": [
+    "CZE-FRA": [
       "Sport TV 5"
     ],
     "ARG-BRA": [
       "Sport TV 1"
-    ],
-    "CZE-FRA": [
-      "Sport TV 5"
     ],
     "CAN-USA": [
       "Sport TV 5"
@@ -68,7 +56,7 @@
       "Sport TV 5"
     ],
     "BRA-ARG": [
-      "Sport TV 5"
+      "Sport TV 1"
     ],
     "QAT-JOR": [
       "Sport TV 5"
@@ -83,6 +71,9 @@
       "Sport TV 5"
     ],
     "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "BRA-ECU": [
       "Sport TV 5"
     ],
     "URU-PER": [
@@ -101,6 +92,9 @@
       "Sport TV 5"
     ],
     "CZE-CRO": [
+      "Sport TV 5"
+    ],
+    "ENG-ESP": [
       "Sport TV 5"
     ],
     "MEX-COL": [
