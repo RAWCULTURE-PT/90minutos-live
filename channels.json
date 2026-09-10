@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10 01:38",
+  "generated": "2026-09-10 06:42",
   "channels": {
     "GER-NOR": [
       "Sport TV 5"
@@ -79,9 +79,6 @@
     "URU-PER": [
       "Sport TV 5"
     ],
-    "POR-BRA": [
-      "Sport TV 5"
-    ],
     "NED-GER": [
       "Sport TV 5"
     ],
@@ -98,6 +95,9 @@
       "Sport TV 5"
     ],
     "MEX-COL": [
+      "Sport TV 5"
+    ],
+    "KOR-URU": [
       "Sport TV 5"
     ],
     "SCO-SUI": [
@@ -142,10 +142,10 @@
     "NED-BIH": [
       "Sport TV 5"
     ],
-    "FRA-SUI": [
+    "POR-CZE": [
       "Sport TV 5"
     ],
-    "POR-CZE": [
+    "FRA-SUI": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
