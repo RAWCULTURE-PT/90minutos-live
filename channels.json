@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16 01:52",
+  "generated": "2026-09-16 06:53",
   "channels": {
     "AUT-FRA": [
       "Sport TV 5"
@@ -32,6 +32,9 @@
       "Sport TV 5"
     ],
     "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "USA-MEX": [
       "Sport TV 5"
     ],
     "BRA-ECU": [
@@ -92,9 +95,6 @@
       "Sport TV 5"
     ],
     "POR-NOR": [
-      "Sport TV 5"
-    ],
-    "USA-MEX": [
       "Sport TV 5"
     ],
     "FRA-BEL": [
