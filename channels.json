@@ -1,24 +1,6 @@
 {
-  "generated": "2026-09-17 22:29",
+  "generated": "2026-09-18 01:43",
   "channels": {
-    "CZE-BEL": [
-      "Sport TV 5"
-    ],
-    "ESP-ENG": [
-      "Sport TV 5"
-    ],
-    "TUR-FRA": [
-      "Sport TV 5"
-    ],
-    "NOR-POR": [
-      "Sport TV 5"
-    ],
-    "BRA-ARG": [
-      "Sport TV 5"
-    ],
-    "USA-MEX": [
-      "Sport TV 5"
-    ],
     "BRA-ECU": [
       "Sport TV 1"
     ],
@@ -40,6 +22,9 @@
     "KOR-ECU": [
       "Sport TV 5"
     ],
+    "TUR-FRA": [
+      "Sport TV 5"
+    ],
     "NED-NOR": [
       "Sport TV 5"
     ],
@@ -53,6 +38,9 @@
       "Sport TV 5"
     ],
     "MEX-COL": [
+      "Sport TV 5"
+    ],
+    "NOR-POR": [
       "Sport TV 5"
     ],
     "BEL-FRA": [
@@ -94,6 +82,9 @@
     "POR-NOR": [
       "Sport TV 5"
     ],
+    "USA-MEX": [
+      "Sport TV 5"
+    ],
     "FRA-BEL": [
       "Sport TV 5"
     ],
@@ -128,6 +119,9 @@
       "Sport TV 5"
     ],
     "FRA-POR": [
+      "Sport TV 5"
+    ],
+    "ESP-ENG": [
       "Sport TV 5"
     ],
     "NOR-GER": [
@@ -214,6 +208,9 @@
     "GER-ESP": [
       "Sport TV 5"
     ],
+    "BRA-ARG": [
+      "Sport TV 5"
+    ],
     "FRA-TUR": [
       "Sport TV 5"
     ],
@@ -263,6 +260,15 @@
       "Sport TV 5"
     ],
     "IRQ-UZB": [
+      "Sport TV 5"
+    ],
+    "IRQ-JOR": [
+      "Sport TV 5"
+    ],
+    "KOR-JPN": [
+      "Sport TV 5"
+    ],
+    "JPN-AUS": [
       "Sport TV 5"
     ],
     "_": [
