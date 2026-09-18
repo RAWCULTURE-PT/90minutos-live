@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18 01:43",
+  "generated": "2026-09-18 06:44",
   "channels": {
     "BRA-ECU": [
       "Sport TV 1"
@@ -265,10 +265,10 @@
     "IRQ-JOR": [
       "Sport TV 5"
     ],
-    "KOR-JPN": [
+    "JPN-AUS": [
       "Sport TV 5"
     ],
-    "JPN-AUS": [
+    "KOR-JPN": [
       "Sport TV 5"
     ],
     "_": [
