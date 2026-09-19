@@ -1,12 +1,6 @@
 {
-  "generated": "2026-09-18 23:40",
+  "generated": "2026-09-19 01:48",
   "channels": {
-    "BRA-ECU": [
-      "Sport TV 1"
-    ],
-    "URU-PER": [
-      "Sport TV"
-    ],
     "CAN-USA": [
       "Sport TV 5"
     ],
@@ -269,6 +263,9 @@
       "Sport TV 5"
     ],
     "KOR-JPN": [
+      "Sport TV 5"
+    ],
+    "JOR-KSA": [
       "Sport TV 5"
     ],
     "_": [
