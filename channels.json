@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19 01:48",
+  "generated": "2026-09-19 06:44",
   "channels": {
     "CAN-USA": [
       "Sport TV 5"
@@ -133,6 +133,9 @@
     "ARG-BRA": [
       "Sport TV 5"
     ],
+    "BRA-URU": [
+      "Sport TV 5"
+    ],
     "AUS-JPN": [
       "Sport TV 5"
     ],
@@ -205,6 +208,9 @@
     "BRA-ARG": [
       "Sport TV 5"
     ],
+    "URU-BRA": [
+      "Sport TV 5"
+    ],
     "FRA-TUR": [
       "Sport TV 5"
     ],
@@ -259,10 +265,10 @@
     "IRQ-JOR": [
       "Sport TV 5"
     ],
-    "JPN-AUS": [
+    "KOR-JPN": [
       "Sport TV 5"
     ],
-    "KOR-JPN": [
+    "JPN-AUS": [
       "Sport TV 5"
     ],
     "JOR-KSA": [
