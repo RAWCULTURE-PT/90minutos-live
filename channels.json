@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22 00:19",
+  "generated": "2026-09-22 06:54",
   "channels": {
     "NED-GER": [
       "Sport TV"
@@ -106,10 +106,10 @@
     "IRN-QAT": [
       "Sport TV 5"
     ],
-    "KSA-UZB": [
+    "QAT-IRN": [
       "Sport TV 5"
     ],
-    "QAT-IRN": [
+    "KSA-UZB": [
       "Sport TV 5"
     ],
     "FRA-POR": [
@@ -118,22 +118,16 @@
     "ESP-ENG": [
       "Sport TV 5"
     ],
-    "NOR-GER": [
-      "Sport TV 5"
-    ],
-    "TUR-ESP": [
+    "ENG-FRA": [
       "Sport TV 5"
     ],
     "GER-NED": [
       "Sport TV 5"
     ],
-    "ENG-FRA": [
+    "TUR-ESP": [
       "Sport TV 5"
     ],
-    "ARG-BRA": [
-      "Sport TV 5"
-    ],
-    "BRA-URU": [
+    "NOR-GER": [
       "Sport TV 5"
     ],
     "AUS-JPN": [
@@ -149,6 +143,12 @@
       "Sport TV 5"
     ],
     "ENG-TUR": [
+      "Sport TV 5"
+    ],
+    "ARG-BRA": [
+      "Sport TV 5"
+    ],
+    "BRA-URU": [
       "Sport TV 5"
     ],
     "AUS-KOR": [
@@ -181,6 +181,9 @@
     "FRA-ENG": [
       "Sport TV 5"
     ],
+    "POR-SCO": [
+      "Sport TV 5"
+    ],
     "CRO-BEL": [
       "Sport TV 5"
     ],
@@ -188,9 +191,6 @@
       "Sport TV 5"
     ],
     "ENG-AUT": [
-      "Sport TV 5"
-    ],
-    "POR-SCO": [
       "Sport TV 5"
     ],
     "TUR-CZE": [
@@ -203,12 +203,6 @@
       "Sport TV 5"
     ],
     "GER-ESP": [
-      "Sport TV 5"
-    ],
-    "BRA-ARG": [
-      "Sport TV 5"
-    ],
-    "URU-BRA": [
       "Sport TV 5"
     ],
     "FRA-TUR": [
@@ -229,6 +223,12 @@
     "POR-AUT": [
       "Sport TV 5"
     ],
+    "BRA-ARG": [
+      "Sport TV 5"
+    ],
+    "URU-BRA": [
+      "Sport TV 5"
+    ],
     "TUR-SCO": [
       "Sport TV 5"
     ],
@@ -247,6 +247,9 @@
     "AUT-FRA": [
       "Sport TV 5"
     ],
+    "TUR-ENG": [
+      "Sport TV 5"
+    ],
     "GER-FRA": [
       "Sport TV 5"
     ],
@@ -254,9 +257,6 @@
       "Sport TV 5"
     ],
     "NOR-ESP": [
-      "Sport TV 5"
-    ],
-    "TUR-ENG": [
       "Sport TV 5"
     ],
     "IRQ-UZB": [
