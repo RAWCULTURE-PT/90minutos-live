@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25 02:03",
+  "generated": "2026-09-25 09:07",
   "channels": {
     "TUR-FRA": [
       "Sport TV 1"
@@ -9,6 +9,9 @@
     ],
     "AUS-BRA": [
       "Sport TV 5"
+    ],
+    "POR-ESP": [
+      "Sport TV"
     ],
     "CZE-CRO": [
       "Sport TV"
@@ -130,10 +133,10 @@
     "AUT-ENG": [
       "Sport TV 5"
     ],
-    "ESP-POR": [
+    "ENG-TUR": [
       "Sport TV 5"
     ],
-    "ENG-TUR": [
+    "ESP-POR": [
       "Sport TV 5"
     ],
     "ARG-BRA": [
