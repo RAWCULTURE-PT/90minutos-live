@@ -1,18 +1,6 @@
 {
-  "generated": "2026-09-24 22:45",
+  "generated": "2026-09-25 02:03",
   "channels": {
-    "NED-GER": [
-      "Sport TV"
-    ],
-    "JPN-URU": [
-      "Sport TV 5"
-    ],
-    "KOR-ECU": [
-      "Sport TV 5"
-    ],
-    "UZB-IRN": [
-      "Sport TV 5"
-    ],
     "TUR-FRA": [
       "Sport TV 1"
     ],
@@ -278,6 +266,19 @@
       "Sport TV 5"
     ],
     "IRN-UZB": [
+      "Sport TV 5"
+    ],
+    "TUR-GER": [
+      "Sport TV 5"
+    ],
+    "ESP-FRA": [
+      "Sport TV 5"
+    ],
+    "NOR-FRA": [
+      "TVI",
+      "Sport TV 1"
+    ],
+    "JOR-IRQ": [
       "Sport TV 5"
     ],
     "_": [
