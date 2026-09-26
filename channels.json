@@ -1,10 +1,22 @@
 {
-  "generated": "2026-09-26 02:09",
+  "generated": "2026-09-26 08:51",
   "channels": {
+    "ENG-ESP": [
+      "Sport TV 5"
+    ],
     "CZE-CRO": [
       "Sport TV"
     ],
-    "ENG-ESP": [
+    "IRL-CZE": [
+      "Sport TV 5"
+    ],
+    "POL-ITA": [
+      "Sport TV 5"
+    ],
+    "CRO-GER": [
+      "Sport TV 5"
+    ],
+    "COL-BRA": [
       "Sport TV 5"
     ],
     "NOR-POR": [
