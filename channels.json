@@ -1,18 +1,6 @@
 {
-  "generated": "2026-09-27 22:36",
+  "generated": "2026-09-28 02:07",
   "channels": {
-    "NOR-POR": [
-      "Sport TV 1"
-    ],
-    "MEX-COL": [
-      "Sport TV 5"
-    ],
-    "CAN-USA": [
-      "Sport TV 5"
-    ],
-    "USA-CAN": [
-      "Sport TV 5"
-    ],
     "BEL-FRA": [
       "Sport TV 5"
     ],
@@ -80,6 +68,9 @@
       "Sport TV 5"
     ],
     "KOR-UZB": [
+      "Sport TV 5"
+    ],
+    "USA-CAN": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
@@ -170,6 +161,9 @@
       "Sport TV 5"
     ],
     "ENG-AUT": [
+      "Sport TV 5"
+    ],
+    "CAN-USA": [
       "Sport TV 5"
     ],
     "TUR-CZE": [
