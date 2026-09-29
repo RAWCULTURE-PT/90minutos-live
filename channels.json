@@ -1,12 +1,6 @@
 {
-  "generated": "2026-09-28 23:59",
+  "generated": "2026-09-29 04:23",
   "channels": {
-    "BEL-FRA": [
-      "Sport TV 5"
-    ],
-    "KOR-URU": [
-      "Sport TV 5"
-    ],
     "SCO-SUI": [
       "Sport TV"
     ],
@@ -20,6 +14,9 @@
       "Sport TV 5"
     ],
     "AUS-BRA": [
+      "Sport TV 5"
+    ],
+    "USA-GER": [
       "Sport TV 5"
     ],
     "PAN-NZL": [
@@ -199,6 +196,9 @@
     "POR-AUT": [
       "Sport TV 5"
     ],
+    "BEL-FRA": [
+      "Sport TV 5"
+    ],
     "BRA-ARG": [
       "Sport TV 5"
     ],
@@ -256,12 +256,12 @@
     "TUR-GER": [
       "Sport TV 5"
     ],
+    "ESP-FRA": [
+      "Sport TV 5"
+    ],
     "NOR-FRA": [
       "TVI",
       "Sport TV 1"
-    ],
-    "ESP-FRA": [
-      "Sport TV 5"
     ],
     "JOR-IRQ": [
       "Sport TV 5"
