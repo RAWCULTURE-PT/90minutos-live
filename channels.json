@@ -1,21 +1,6 @@
 {
-  "generated": "2026-09-29 21:33",
+  "generated": "2026-09-30 00:48",
   "channels": {
-    "SCO-SUI": [
-      "Sport TV"
-    ],
-    "CZE-ENG": [
-      "Sport TV 5"
-    ],
-    "ESP-CRO": [
-      "Sport TV 1"
-    ],
-    "NOR-BIH": [
-      "Sport TV 5"
-    ],
-    "AUS-BRA": [
-      "Sport TV 5"
-    ],
     "USA-GER": [
       "Sport TV 5"
     ],
@@ -206,6 +191,9 @@
       "Sport TV 5"
     ],
     "TUR-SCO": [
+      "Sport TV 5"
+    ],
+    "CZE-ENG": [
       "Sport TV 5"
     ],
     "ESP-SUI": [
