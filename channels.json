@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03 00:46",
+  "generated": "2026-10-03 07:09",
   "channels": {
     "CRO-ENG": [
       "Sport TV 1"
@@ -10,7 +10,25 @@
     "COL-PAR": [
       "Sport TV 5"
     ],
+    "FRA-ITA": [
+      "Sport TV 5"
+    ],
+    "GER-DNK": [
+      "Sport TV 5"
+    ],
     "AUT-GER": [
+      "Sport TV 5"
+    ],
+    "AUT-SVN": [
+      "Sport TV 5"
+    ],
+    "POL-CZE": [
+      "Sport TV 5"
+    ],
+    "AZE-TUR": [
+      "Sport TV 5"
+    ],
+    "LBY-TUN": [
       "Sport TV 5"
     ],
     "POR-NOR": [
@@ -49,10 +67,10 @@
     "IRN-QAT": [
       "Sport TV 5"
     ],
-    "KSA-UZB": [
+    "QAT-IRN": [
       "Sport TV 5"
     ],
-    "QAT-IRN": [
+    "KSA-UZB": [
       "Sport TV 5"
     ],
     "FRA-POR": [
