@@ -1,14 +1,20 @@
 {
-  "generated": "2026-10-05 00:15",
+  "generated": "2026-10-05 07:46",
   "channels": {
     "FRA-BEL": [
       "Sport TV 1"
     ],
-    "ENG-CZE": [
-      "Sport TV"
+    "ECU-PAN": [
+      "Sport TV 5"
+    ],
+    "JPN-NZL": [
+      "Sport TV 5"
     ],
     "CRO-ESP": [
       "Sport TV 1"
+    ],
+    "ENG-CZE": [
+      "Sport TV"
     ],
     "POR-CZE": [
       "Sport TV 5"
