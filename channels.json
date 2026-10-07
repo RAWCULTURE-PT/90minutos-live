@@ -1,24 +1,6 @@
 {
-  "generated": "2026-10-06 21:55",
+  "generated": "2026-10-07 01:05",
   "channels": {
-    "CRO-ESP": [
-      "Sport TV 1"
-    ],
-    "ENG-CZE": [
-      "Sport TV"
-    ],
-    "POR-CZE": [
-      "Sport TV 5"
-    ],
-    "NED-BIH": [
-      "Sport TV 5"
-    ],
-    "FRA-SUI": [
-      "Sport TV 5"
-    ],
-    "KOR-UZB": [
-      "Sport TV 5"
-    ],
     "USA-CAN": [
       "Sport TV 5"
     ],
@@ -261,6 +243,9 @@
       "Sport TV 5"
     ],
     "CZE-ESP": [
+      "Sport TV 5"
+    ],
+    "CRO-CZE": [
       "Sport TV 5"
     ],
     "_": [
