@@ -1,16 +1,10 @@
 {
-  "generated": "2026-10-15 12:54",
+  "generated": "2026-10-15 17:54",
   "channels": {
-    "CRO-NED": [
-      "Sport TV 5"
-    ],
-    "NED-SUI": [
-      "Sport TV 5"
-    ],
-    "GER-CZE": [
-      "Sport TV 5"
-    ],
     "CZE-NOR": [
+      "Sport TV 5"
+    ],
+    "FRA-ENG": [
       "Sport TV 5"
     ],
     "POR-ENG": [
@@ -19,19 +13,25 @@
     "BEL-ESP": [
       "Sport TV 5"
     ],
-    "FRA-ENG": [
-      "Sport TV 5"
-    ],
-    "CRO-BEL": [
-      "Sport TV 5"
-    ],
-    "GER-TUR": [
+    "POR-SCO": [
       "Sport TV 5"
     ],
     "ENG-AUT": [
       "Sport TV 5"
     ],
-    "POR-SCO": [
+    "GER-TUR": [
+      "Sport TV 5"
+    ],
+    "CRO-BEL": [
+      "Sport TV 5"
+    ],
+    "CRO-NED": [
+      "Sport TV 5"
+    ],
+    "GER-CZE": [
+      "Sport TV 5"
+    ],
+    "NED-SUI": [
       "Sport TV 5"
     ],
     "CAN-USA": [
@@ -85,16 +85,28 @@
     "URU-BRA": [
       "Sport TV 1"
     ],
-    "TUR-SCO": [
+    "AUT-FRA": [
+      "Sport TV 5"
+    ],
+    "NOR-ESP": [
+      "Sport TV 5"
+    ],
+    "SCO-ESP": [
+      "Sport TV 5"
+    ],
+    "GER-FRA": [
+      "Sport TV 5"
+    ],
+    "TUR-ENG": [
       "Sport TV 5"
     ],
     "CZE-ENG": [
       "Sport TV 5"
     ],
-    "ESP-SUI": [
+    "TUR-SCO": [
       "Sport TV 5"
     ],
-    "POR-BEL": [
+    "ESP-SUI": [
       "Sport TV 5"
     ],
     "FRA-GER": [
@@ -103,19 +115,7 @@
     "SUI-CRO": [
       "Sport TV 5"
     ],
-    "AUT-FRA": [
-      "Sport TV 5"
-    ],
-    "TUR-ENG": [
-      "Sport TV 5"
-    ],
-    "GER-FRA": [
-      "Sport TV 5"
-    ],
-    "SCO-ESP": [
-      "Sport TV 5"
-    ],
-    "NOR-ESP": [
+    "POR-BEL": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
@@ -173,19 +173,10 @@
     "KSA-JOR": [
       "Sport TV 5"
     ],
-    "SWE-BIH": [
-      "Sport TV 5"
-    ],
-    "SUI-SCO": [
-      "Sport TV 5"
-    ],
-    "BEL-NOR": [
+    "NOR-CZE": [
       "Sport TV 5"
     ],
     "BEL-AUT": [
-      "Sport TV 5"
-    ],
-    "NOR-CZE": [
       "Sport TV 5"
     ],
     "ENG-GER": [
@@ -194,10 +185,19 @@
     "ENG-CRO": [
       "Sport TV 5"
     ],
+    "ESP-BEL": [
+      "Sport TV 5"
+    ],
     "SCO-TUR": [
       "Sport TV 5"
     ],
-    "ESP-BEL": [
+    "SUI-SCO": [
+      "Sport TV 5"
+    ],
+    "SWE-BIH": [
+      "Sport TV 5"
+    ],
+    "BEL-NOR": [
       "Sport TV 5"
     ],
     "TUR-BEL": [
