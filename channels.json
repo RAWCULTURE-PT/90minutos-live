@@ -1,9 +1,6 @@
 {
-  "generated": "2026-10-16 22:15",
+  "generated": "2026-10-17 01:44",
   "channels": {
-    "ARG-BRA": [
-      "Sport TV 1"
-    ],
     "USA-CAN": [
       "Sport TV 5"
     ],
@@ -231,6 +228,30 @@
       "Sport TV 5"
     ],
     "AUS-JPN": [
+      "Sport TV 5"
+    ],
+    "POR-ENG": [
+      "Sport TV 5"
+    ],
+    "ESP-NOR": [
+      "Sport TV 5"
+    ],
+    "BEL-ENG": [
+      "Sport TV 5"
+    ],
+    "ECU-KOR": [
+      "Sport TV 5"
+    ],
+    "URU-FRA": [
+      "Sport TV 5"
+    ],
+    "HAI-KSA": [
+      "Sport TV 5"
+    ],
+    "PAN-EGY": [
+      "Sport TV 5"
+    ],
+    "JOR-QAT": [
       "Sport TV 5"
     ],
     "_": [
