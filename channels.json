@@ -1,9 +1,6 @@
 {
-  "generated": "2026-10-18 23:51",
+  "generated": "2026-10-19 01:58",
   "channels": {
-    "USA-CAN": [
-      "Sport TV 5"
-    ],
     "TUR-CZE": [
       "Sport TV 5"
     ],
@@ -83,6 +80,9 @@
       "Sport TV 5"
     ],
     "CAN-USA": [
+      "Sport TV 5"
+    ],
+    "USA-CAN": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
@@ -291,6 +291,9 @@
       "Sport TV 5"
     ],
     "MAR-ESP": [
+      "Sport TV 5"
+    ],
+    "ALG-USA": [
       "Sport TV 5"
     ],
     "_": [
