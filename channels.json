@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22 02:03",
+  "generated": "2026-10-22 08:57",
   "channels": {
     "AUT-FRA": [
       "Sport TV 5"
@@ -38,7 +38,7 @@
       "Sport TV 5"
     ],
     "BRA-ARG": [
-      "Sport TV"
+      "Sport TV 5"
     ],
     "CAN-USA": [
       "Sport TV 5"
@@ -137,13 +137,13 @@
     "BEL-NOR": [
       "Sport TV 5"
     ],
-    "TUR-CZE": [
-      "Sport TV 5"
-    ],
     "TUR-BEL": [
       "Sport TV 5"
     ],
     "CZE-ESP": [
+      "Sport TV 5"
+    ],
+    "TUR-CZE": [
       "Sport TV 5"
     ],
     "QAT-AUS": [
