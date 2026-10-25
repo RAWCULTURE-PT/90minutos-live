@@ -1,9 +1,6 @@
 {
-  "generated": "2026-10-24 22:01",
+  "generated": "2026-10-25 01:53",
   "channels": {
-    "CAN-USA": [
-      "Sport TV 5"
-    ],
     "USA-CAN": [
       "Sport TV 5"
     ],
@@ -32,6 +29,9 @@
       "Sport TV 5"
     ],
     "JPN-KOR": [
+      "Sport TV 5"
+    ],
+    "CAN-USA": [
       "Sport TV 5"
     ],
     "IRN-UZB": [
