@@ -1,15 +1,6 @@
 {
-  "generated": "2026-10-26 20:46",
+  "generated": "2026-10-27 00:57",
   "channels": {
-    "UZB-KSA": [
-      "Sport TV 5"
-    ],
-    "KSA-QAT": [
-      "Sport TV 5"
-    ],
-    "IRQ-UZB": [
-      "Sport TV 5"
-    ],
     "IRQ-JOR": [
       "Sport TV 5"
     ],
@@ -32,6 +23,9 @@
       "Sport TV 5"
     ],
     "USA-CAN": [
+      "Sport TV 5"
+    ],
+    "UZB-KSA": [
       "Sport TV 5"
     ],
     "IRN-UZB": [
@@ -180,6 +174,9 @@
       "Sport TV 5"
     ],
     "AUS-JPN": [
+      "Sport TV 5"
+    ],
+    "KSA-QAT": [
       "Sport TV 5"
     ],
     "FRA-GER": [
