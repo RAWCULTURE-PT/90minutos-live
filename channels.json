@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-31 22:52",
+  "generated": "2026-11-01 02:45",
   "channels": {
-    "USA-CAN": [
+    "CAN-USA": [
       "Sport TV 5"
     ],
-    "CAN-USA": [
+    "USA-CAN": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
@@ -137,10 +137,10 @@
     "CIV-UZB": [
       "Sport TV 5"
     ],
-    "JPN-COL": [
+    "BRA-ARG": [
       "Sport TV 5"
     ],
-    "BRA-ARG": [
+    "JPN-COL": [
       "Sport TV 5"
     ],
     "FRA-KSA": [
@@ -273,6 +273,45 @@
       "Sport TV 5"
     ],
     "AUT-TUR": [
+      "Sport TV 5"
+    ],
+    "NED-AUT": [
+      "Sport TV 5"
+    ],
+    "FRA-CRO": [
+      "Sport TV 5"
+    ],
+    "FRA-ESP": [
+      "Sport TV 5"
+    ],
+    "BEL-GER": [
+      "Sport TV 5"
+    ],
+    "ENG-CZE": [
+      "Sport TV 5"
+    ],
+    "ESP-POR": [
+      "Sport TV 5"
+    ],
+    "GER-TUR": [
+      "Sport TV 5"
+    ],
+    "FRA-BEL": [
+      "Sport TV 5"
+    ],
+    "AUT-CZE": [
+      "Sport TV 5"
+    ],
+    "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "BEL-NED": [
+      "Sport TV 5"
+    ],
+    "SCO-BIH": [
+      "Sport TV 5"
+    ],
+    "SUI-BEL": [
       "Sport TV 5"
     ],
     "_": [
