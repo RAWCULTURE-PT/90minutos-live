@@ -1,37 +1,10 @@
 {
-  "generated": "2026-11-05 08:37",
+  "generated": "2026-11-05 17:41",
   "channels": {
-    "ENG-GER": [
-      "Sport TV 5"
-    ],
-    "CZE-ENG": [
-      "Sport TV 5"
-    ],
-    "ESP-FRA": [
-      "Sport TV 5"
-    ],
-    "BEL-AUT": [
-      "Sport TV 5"
-    ],
-    "NOR-CZE": [
-      "Sport TV 5"
-    ],
-    "ESP-BEL": [
-      "Sport TV 5"
-    ],
-    "SCO-TUR": [
-      "Sport TV 5"
-    ],
-    "GER-FRA": [
-      "Sport TV 5"
-    ],
-    "ENG-CRO": [
+    "SUI-SCO": [
       "Sport TV 5"
     ],
     "TUR-GER": [
-      "Sport TV 5"
-    ],
-    "SUI-SCO": [
       "Sport TV 5"
     ],
     "SWE-BIH": [
@@ -43,11 +16,38 @@
     "ESP-ENG": [
       "Sport TV 5"
     ],
+    "NOR-CZE": [
+      "Sport TV 5"
+    ],
+    "ENG-GER": [
+      "Sport TV 5"
+    ],
+    "BEL-AUT": [
+      "Sport TV 5"
+    ],
+    "ESP-FRA": [
+      "Sport TV 5"
+    ],
+    "CZE-ENG": [
+      "Sport TV 5"
+    ],
+    "GER-FRA": [
+      "Sport TV 5"
+    ],
+    "ESP-BEL": [
+      "Sport TV 5"
+    ],
+    "ENG-CRO": [
+      "Sport TV 5"
+    ],
+    "SCO-TUR": [
+      "Sport TV 5"
+    ],
     "USA-CAN": [
       "Sport TV 5"
     ],
     "TUR-BEL": [
-      "Sport TV 5"
+      "Sport TV 1"
     ],
     "CZE-ESP": [
       "Sport TV 5"
@@ -166,6 +166,18 @@
     "JOR-QAT": [
       "Sport TV 5"
     ],
+    "SCO-FRA": [
+      "Sport TV 5"
+    ],
+    "NED-SUI": [
+      "Sport TV 5"
+    ],
+    "CZE-SUI": [
+      "Sport TV 5"
+    ],
+    "CRO-BEL": [
+      "Sport TV 5"
+    ],
     "CRO-GER": [
       "Sport TV 5"
     ],
@@ -175,31 +187,19 @@
     "FRA-NOR": [
       "Sport TV 5"
     ],
-    "NED-FRA": [
-      "Sport TV 5"
-    ],
     "POR-SCO": [
-      "Sport TV 5"
-    ],
-    "CZE-NED": [
       "Sport TV 5"
     ],
     "GER-AUT": [
       "Sport TV 5"
     ],
+    "NED-FRA": [
+      "Sport TV 5"
+    ],
     "ENG-ESP": [
       "Sport TV 5"
     ],
-    "CZE-SUI": [
-      "Sport TV 5"
-    ],
-    "NED-SUI": [
-      "Sport TV 5"
-    ],
-    "SCO-FRA": [
-      "Sport TV 5"
-    ],
-    "CRO-BEL": [
+    "CZE-NED": [
       "Sport TV 5"
     ],
     "NZL-BEL": [
@@ -247,34 +247,10 @@
     "AUT-TUR": [
       "Sport TV 5"
     ],
-    "NED-AUT": [
-      "Sport TV 5"
-    ],
-    "FRA-ESP": [
-      "Sport TV 5"
-    ],
-    "FRA-CRO": [
-      "Sport TV 5"
-    ],
-    "BEL-GER": [
-      "Sport TV 5"
-    ],
-    "ESP-POR": [
-      "Sport TV 5"
-    ],
-    "ENG-CZE": [
-      "Sport TV 5"
-    ],
-    "GER-TUR": [
-      "Sport TV 5"
-    ],
-    "AUT-CZE": [
-      "Sport TV 5"
-    ],
-    "FRA-BEL": [
-      "Sport TV 5"
-    ],
     "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "SUI-BEL": [
       "Sport TV 5"
     ],
     "BEL-NED": [
@@ -283,7 +259,31 @@
     "SCO-BIH": [
       "Sport TV 5"
     ],
-    "SUI-BEL": [
+    "NED-AUT": [
+      "Sport TV 5"
+    ],
+    "FRA-ESP": [
+      "Sport TV 5"
+    ],
+    "BEL-GER": [
+      "Sport TV 5"
+    ],
+    "FRA-CRO": [
+      "Sport TV 5"
+    ],
+    "ESP-POR": [
+      "Sport TV 5"
+    ],
+    "AUT-CZE": [
+      "Sport TV 5"
+    ],
+    "FRA-BEL": [
+      "Sport TV 5"
+    ],
+    "ENG-CZE": [
+      "Sport TV 5"
+    ],
+    "GER-TUR": [
       "Sport TV 5"
     ],
     "_": [
