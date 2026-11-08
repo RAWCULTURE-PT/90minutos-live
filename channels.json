@@ -1,9 +1,6 @@
 {
-  "generated": "2026-11-07 21:07",
+  "generated": "2026-11-08 00:56",
   "channels": {
-    "USA-CAN": [
-      "Sport TV 5"
-    ],
     "TUR-BEL": [
       "Sport TV 1"
     ],
@@ -272,6 +269,9 @@
       "Sport TV 5"
     ],
     "SUI-BEL": [
+      "Sport TV 5"
+    ],
+    "BEL-NOR": [
       "Sport TV 5"
     ],
     "_": [
