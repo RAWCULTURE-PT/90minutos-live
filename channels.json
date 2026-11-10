@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09 20:13",
+  "generated": "2026-11-10 03:51",
   "channels": {
     "TUR-BEL": [
       "Sport TV 1"
@@ -97,22 +97,22 @@
     "IRQ-QAT": [
       "Sport TV 5"
     ],
-    "TUR-ENG": [
-      "Sport TV 5"
-    ],
     "NOR-AUT": [
       "Sport TV 5"
     ],
-    "NED-POR": [
+    "TUR-ENG": [
       "Sport TV 5"
     ],
-    "ESP-NED": [
+    "ENG-GER": [
       "Sport TV 5"
     ],
     "GER-FRA": [
       "Sport TV 5"
     ],
-    "ENG-GER": [
+    "ESP-NED": [
+      "Sport TV 5"
+    ],
+    "NED-POR": [
       "Sport TV 5"
     ],
     "AUS-JPN": [
@@ -127,13 +127,13 @@
     "FRA-GER": [
       "Sport TV 5"
     ],
-    "POR-ENG": [
+    "BEL-ENG": [
       "Sport TV 5"
     ],
     "ESP-NOR": [
       "Sport TV 5"
     ],
-    "BEL-ENG": [
+    "POR-ENG": [
       "Sport TV 5"
     ],
     "ECU-KOR": [
@@ -151,13 +151,10 @@
     "JOR-QAT": [
       "Sport TV 5"
     ],
-    "CRO-GER": [
-      "Sport TV 5"
-    ],
     "CZE-POR": [
       "Sport TV 5"
     ],
-    "FRA-NOR": [
+    "CRO-GER": [
       "Sport TV 5"
     ],
     "NED-FRA": [
@@ -166,22 +163,25 @@
     "POR-SCO": [
       "Sport TV 5"
     ],
-    "CZE-NED": [
-      "Sport TV 5"
-    ],
     "GER-AUT": [
       "Sport TV 5"
     ],
+    "FRA-NOR": [
+      "Sport TV 5"
+    ],
+    "CZE-NED": [
+      "Sport TV 5"
+    ],
     "ENG-ESP": [
+      "Sport TV 5"
+    ],
+    "SCO-FRA": [
       "Sport TV 5"
     ],
     "CZE-SUI": [
       "Sport TV 5"
     ],
     "NED-SUI": [
-      "Sport TV 5"
-    ],
-    "SCO-FRA": [
       "Sport TV 5"
     ],
     "CRO-BEL": [
@@ -232,16 +232,16 @@
     "AUT-TUR": [
       "Sport TV 5"
     ],
-    "NED-AUT": [
+    "FRA-CRO": [
+      "Sport TV 5"
+    ],
+    "BEL-GER": [
       "Sport TV 5"
     ],
     "FRA-ESP": [
       "Sport TV 5"
     ],
-    "FRA-CRO": [
-      "Sport TV 5"
-    ],
-    "BEL-GER": [
+    "NED-AUT": [
       "Sport TV 5"
     ],
     "ESP-POR": [
@@ -253,10 +253,10 @@
     "GER-TUR": [
       "Sport TV 5"
     ],
-    "AUT-CZE": [
+    "FRA-BEL": [
       "Sport TV 5"
     ],
-    "FRA-BEL": [
+    "AUT-CZE": [
       "Sport TV 5"
     ],
     "NOR-POR": [
