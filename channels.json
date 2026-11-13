@@ -1,15 +1,6 @@
 {
-  "generated": "2026-11-12 21:56",
+  "generated": "2026-11-13 02:15",
   "channels": {
-    "TUR-BEL": [
-      "Sport TV 1"
-    ],
-    "ENG-CRO": [
-      "Sport TV"
-    ],
-    "CZE-ESP": [
-      "Sport TV 5"
-    ],
     "TUR-CZE": [
       "Sport TV 5"
     ],
@@ -122,6 +113,9 @@
       "Sport TV 5"
     ],
     "KSA-QAT": [
+      "Sport TV 5"
+    ],
+    "CZE-ESP": [
       "Sport TV 5"
     ],
     "FRA-GER": [
