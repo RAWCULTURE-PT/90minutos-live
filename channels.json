@@ -1,15 +1,6 @@
 {
-  "generated": "2026-11-13 18:49",
+  "generated": "2026-11-14 00:29",
   "channels": {
-    "TUR-CZE": [
-      "Sport TV 5"
-    ],
-    "KSA-KOR": [
-      "Sport TV 5"
-    ],
-    "QAT-AUS": [
-      "Sport TV 5"
-    ],
     "SWE-BIH": [
       "Sport TV"
     ],
@@ -254,6 +245,9 @@
       "Sport TV 5"
     ],
     "NOR-POR": [
+      "Sport TV 5"
+    ],
+    "TUR-CZE": [
       "Sport TV 5"
     ],
     "BEL-NED": [
