@@ -1,22 +1,13 @@
 {
-  "generated": "2026-11-14 21:42",
+  "generated": "2026-11-15 01:22",
   "channels": {
-    "SWE-BIH": [
-      "Sport TV"
-    ],
-    "ARG-URU": [
-      "Sport TV 5"
-    ],
-    "JPN-BRA": [
-      "Sport TV 5"
-    ],
-    "FRA-TUR": [
-      "Sport TV"
-    ],
     "ESP-ENG": [
       "Sport TV 5"
     ],
     "CRO-CZE": [
+      "Sport TV"
+    ],
+    "FRA-TUR": [
       "Sport TV"
     ],
     "USA-MEX": [
