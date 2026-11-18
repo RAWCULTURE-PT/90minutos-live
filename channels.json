@@ -1,21 +1,6 @@
 {
-  "generated": "2026-11-17 23:11",
+  "generated": "2026-11-18 04:49",
   "channels": {
-    "CZE-TUR": [
-      "Sport TV 5"
-    ],
-    "JPN-PAR": [
-      "Sport TV 5"
-    ],
-    "QAT-KOR": [
-      "Sport TV 5"
-    ],
-    "JOR-AUS": [
-      "Sport TV 5"
-    ],
-    "IRQ-IRN": [
-      "Sport TV 5"
-    ],
     "FRA-HAI": [
       "Sport TV 5"
     ],
@@ -47,6 +32,9 @@
       "Sport TV 5"
     ],
     "URU-HAI": [
+      "Sport TV 5"
+    ],
+    "CAN-USA": [
       "Sport TV 5"
     ],
     "UZB-KSA": [
@@ -167,6 +155,9 @@
       "Sport TV 5"
     ],
     "ALG-USA": [
+      "Sport TV 5"
+    ],
+    "USA-CAN": [
       "Sport TV 5"
     ],
     "JPN-AUS": [
