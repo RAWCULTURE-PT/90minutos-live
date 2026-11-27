@@ -1,54 +1,6 @@
 {
-  "generated": "2026-11-26 22:38",
+  "generated": "2026-11-27 05:30",
   "channels": {
-    "CRO-GER": [
-      "Sport TV 5"
-    ],
-    "ESP-ENG": [
-      "Sport TV 5"
-    ],
-    "CZE-POR": [
-      "Sport TV 5"
-    ],
-    "NED-FRA": [
-      "Sport TV 5"
-    ],
-    "POR-SCO": [
-      "Sport TV 5"
-    ],
-    "GER-AUT": [
-      "Sport TV 5"
-    ],
-    "FRA-NOR": [
-      "Sport TV 5"
-    ],
-    "CZE-NED": [
-      "Sport TV 5"
-    ],
-    "ENG-ESP": [
-      "Sport TV 5"
-    ],
-    "SCO-FRA": [
-      "Sport TV 5"
-    ],
-    "NED-SUI": [
-      "Sport TV 5"
-    ],
-    "CZE-SUI": [
-      "Sport TV 5"
-    ],
-    "CRO-BEL": [
-      "Sport TV 5"
-    ],
-    "GER-NED": [
-      "Sport TV 5"
-    ],
-    "NZL-BEL": [
-      "Sport TV 5"
-    ],
-    "MAR-ESP": [
-      "Sport TV 5"
-    ],
     "ALG-USA": [
       "Sport TV 5"
     ],
@@ -85,6 +37,9 @@
     "ENG-FRA": [
       "Sport TV 5"
     ],
+    "ESP-ENG": [
+      "Sport TV 5"
+    ],
     "ENG-GER": [
       "Sport TV 5"
     ],
@@ -94,10 +49,16 @@
     "QAT-KSA": [
       "Sport TV 5"
     ],
+    "ENG-ESP": [
+      "Sport TV 5"
+    ],
     "NED-ESP": [
       "Sport TV 5"
     ],
     "ENG-POR": [
+      "Sport TV 5"
+    ],
+    "FRA-NOR": [
       "Sport TV 5"
     ],
     "GER-FRA": [
